@@ -113,14 +113,14 @@ header.page
     float: none
     margin-top: 100px
     overflow: hidden
-    background: #F5A862
+    background: $backgroundHeaderColor
     +single-transition(height, 0.5s)
     &.active
       height: 205px
     li
       margin-left: 0px
       border: 0px
-      background-color: #F5A862
+      background-color: $backgroundHeaderColor
       a
         text-align: center
         border: none
@@ -129,6 +129,7 @@ header.page
         &:hover
           border-top: none!important
       &.active
+        background-color: $backgroundHeaderColor
         a
           border-top: none
           border-bottom: 1px solid #FFFFFF
@@ -149,7 +150,7 @@ header.page
       li
         a
           line-height: 38px
-          background: #F5A862
+          background: $backgroundHeaderColor
 
 section[role=main]
   padding-bottom: 40px

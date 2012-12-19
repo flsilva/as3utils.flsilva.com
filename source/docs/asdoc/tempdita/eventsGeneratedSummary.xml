@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allClasses>
+   <apiPackage id="org.as3utils">
+      <apiName>org.as3utils</apiName>
+      <apiClassifier id="org.as3utils:ReflectionUtil">
+         <apiName>ReflectionUtil</apiName>
+         <shortdesc>
+	 Provides a very basic reflection API.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiFinal/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 Provides a very basic reflection API.
+	 <p>This is a static class and shouldn't be instantiated.</p>
+	 
+	        </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:BooleanUtil">
+         <apiName>BooleanUtil</apiName>
+         <shortdesc>
+	 A utility class to work with Boolean objects.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class to work with <codeph>Boolean</codeph> objects.
+	 
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:DrawUtil">
+         <apiName>DrawUtil</apiName>
+         <shortdesc>
+	 A utility class for working with drawings.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class for working with drawings.
+	 
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:MathUtil">
+         <apiName>MathUtil</apiName>
+         <shortdesc>
+	 A utility class for working with mathematical operations.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class for working with mathematical operations.
+	 
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:EquatableUtil">
+         <apiName>EquatableUtil</apiName>
+         <shortdesc>
+	 A utility class to work with objects that implement org.as3coreaddendum.system.IEquatable.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiFinal/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class to work with objects that implement <codeph>org.as3coreaddendum.system.IEquatable</codeph>.
+	 
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:RandomUtil">
+         <apiName>RandomUtil</apiName>
+         <shortdesc>
+	 A utility class for working with random numbers.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class for working with random numbers.
+	 
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:StringUtil">
+         <apiName>StringUtil</apiName>
+         <shortdesc>
+	 A utility class to work with String objects.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiFinal/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class to work with <codeph>String</codeph> objects.
+	 <p>StringUtil handles <codeph>null</codeph> input Strings quietly. That is to say that a <codeph>null</codeph> input will return <codeph>null</codeph>.
+	 Where a <codeph>Boolean</codeph> or <codeph>int</codeph> is being returned details vary by method.</p>
+	           <p>Some terms used by this class related to <codeph>String</codeph> handling:</p>
+	           <p>
+               <ul>
+	                 <li>empty: a zero-length <codeph>String</codeph> ("")</li>
+	                 <li>space: the space character (" ", char 32)</li>
+	                 <li>blank: a <codeph>String</codeph> object only with control chars (space, \t, \n, \s)</li>
+	              </ul>
+            </p>
+	 
+	        </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:URLUtil">
+         <apiName>URLUtil</apiName>
+         <shortdesc>
+	 A utility class to work with URL strings.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiFinal/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class to work with <codeph>URL</codeph> strings.
+	 
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:ArrayUtil">
+         <apiName>ArrayUtil</apiName>
+         <shortdesc>
+	 A utility class to work with Array objects.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class to work with <codeph>Array</codeph> objects.
+	 <p>ArrayUtil handles <codeph>null</codeph> input arrays quietly in almost all methods.
+	 When not, it's documented in the method.
+	 That is to say that a <codeph>null</codeph> input will not thrown an error in almost all methods.</p>
+	 
+	        </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:ByteConversionUtil">
+         <apiName>ByteConversionUtil</apiName>
+         <shortdesc>
+	 A utility class for working with conversion of bytes.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class for working with conversion of bytes.
+	 
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="org.as3utils:NumberUtil">
+         <apiName>NumberUtil</apiName>
+         <shortdesc>
+	 A utility class to work with Number objects.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiFinal/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 A utility class to work with <codeph>Number</codeph> objects.
+	 
+	 </apiDesc>
+      </apiClassifier>
+   </apiPackage>
+</allClasses>

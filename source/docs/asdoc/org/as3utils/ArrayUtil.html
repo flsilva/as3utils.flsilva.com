@@ -1,0 +1,653 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><meta name="keywords" content="ArrayUtil,org.as3utils.ArrayUtil,abbreviate,addAt,appendVar,areEqual,border,bytesToGigabytes,bytesToKilobytes,bytesToMegabytes,bytesToTerabytes,capitalize,circ,classNameEquals,classPackageEquals,classPathEquals,contains,contains,containsAny,containsDuplication,containsNone,containsOnly,containsOnlyType,containsType,countMatches,defaultIfEmpty,degreesToRadians,endsWith,equals,equals,filterByType,firstChar,getClassName,getClassPackage,getClassPath,getDuplicate,getSuperClassName,getSuperClassPackage,getSuperClassPath,getURLRequest,gigabytesToBytes,isAllLowerCase,isAllUpperCase,isAlphanumeric,isAlphanumericSpace,isBlank,isBooleanString,isEmpty,isEmpty,isEven,isHttps,isHttp,isNotBlank,isNotEmpty,isNotEmpty,isNotNumber,isNumber,isNumeric,isNumericSpace,isOdd,isSameLength,isValidEmail,kilobytesToBytes,lastChar,ltrim,maxValue,maxValueIndex,megabytesToBytes,millisecondsToSeconds,navigateToURL,nullToEmpty,percentToRange,radiansToDegrees,random,randomArray,rangeToPercent,rect,remove,removeAccentuation,removeAllOccurances,removeAt,removeEnd,removeFirstCharacter,removeFirstOccurance,removeLastCharacter,removeLastOccurance,removeStart,replaceExtended,reverse,round,rtrim,shuffle,sortAlphabetically,sortAlphabeticallyByObjectProperty,sortAscending,sortAscendingByObjectProperty,sortDescending,sortDescendingByObjectProperty,startsWith,string2Boolean,superClassNameEquals,superClassPackageEquals,superClassPathEquals,swap,swapAt,swapPositions,terabytesToBytes,trim,trimToEmpty,trimToNull,uncapitalize,uniqueCopy,zeroPrecedent"><title>org.as3utils.ArrayUtil</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'ArrayUtil - AS3Utils API Documentation';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">AS3Utils API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?org/as3utils/ArrayUtil.html&amp;org/as3utils/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">ArrayUtil</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ArrayUtil"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">org.as3utils</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  ArrayUtil</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ArrayUtil  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>
+	 A utility class to work with <code>Array</code> objects.
+	 <p>ArrayUtil handles <code>null</code> input arrays quietly in almost all methods.
+	 When not, it's documented in the method.
+	 That is to say that a <code>null</code> input will not thrown an error in almost all methods.</p>
+	 
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#ArrayUtil()" class="signatureLink">ArrayUtil</a>()</div><div class="summaryTableDescription">
+		 ArrayUtil is a static class and shouldn't be instantiated.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addAt()" class="signatureLink">addAt</a>(array:Array, index:int, element:*):Array</div><div class="summaryTableDescription">[static] 
+		 Adds the element at the specified position in the specified array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#contains()" class="signatureLink">contains</a>(array:Array, element:*):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the element is in the given array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#containsDuplication()" class="signatureLink">containsDuplication</a>(array:Array):Boolean</div><div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#containsOnlyType()" class="signatureLink">containsOnlyType</a>(array:Array, type:*, strict:Boolean = false):Boolean</div><div class="summaryTableDescription">[static] 
+		 Returns true if the array contains only elements of the type argument.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#containsType()" class="signatureLink">containsType</a>(array:Array, type:*, strict:Boolean = false):Boolean</div><div class="summaryTableDescription">[static] 
+		 Returns true if the array contains some element of the type argument.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#equals()" class="signatureLink">equals</a>(array1:Array, array2:Array):Boolean</div><div class="summaryTableDescription">[static] 
+		 Compares two arrays, returning true if they are equal (same length, objects and order).</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#filterByType()" class="signatureLink">filterByType</a>(array:Array, type:Class, strict:Boolean = false):Array</div><div class="summaryTableDescription">[static] 
+		 Returns the array containing only objects of the type of the type argument.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDuplicate()" class="signatureLink">getDuplicate</a>(array:Array):Array</div><div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isEmpty()" class="signatureLink">isEmpty</a>(array:Array):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if an array is empty (zero-length) or null.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isNotEmpty()" class="signatureLink">isNotEmpty</a>(array:Array):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the array is not empty (zero-length) nor not null.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isSameLength()" class="signatureLink">isSameLength</a>(array1:Array, array2:Array):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks whether two arrays are the same length, treating null arrays as length 0.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#maxValue()" class="signatureLink">maxValue</a>(array:Array):Number</div><div class="summaryTableDescription">[static] 
+		 Returns the largest number in the array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#maxValueIndex()" class="signatureLink">maxValueIndex</a>(array:Array):int</div><div class="summaryTableDescription">[static] 
+		 Returns the index position of the largest number in the array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#nullToEmpty()" class="signatureLink">nullToEmpty</a>(array:Array):Array</div><div class="summaryTableDescription">[static] 
+		 Returns an empty array for a null input array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeAllOccurances()" class="signatureLink">removeAllOccurances</a>(array:Array, element:*):Array</div><div class="summaryTableDescription">[static] 
+		 Removes all occurances of a the given element argument from the given array argument.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeAt()" class="signatureLink">removeAt</a>(array:Array, index:int):Array</div><div class="summaryTableDescription">[static] 
+		 Removes the element at the specified position from the specified array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeFirstOccurance()" class="signatureLink">removeFirstOccurance</a>(array:Array, element:*):Array</div><div class="summaryTableDescription">[static] 
+		 Removes the first occurrence of the specified element from the specified array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeLastOccurance()" class="signatureLink">removeLastOccurance</a>(array:Array, element:*):Array</div><div class="summaryTableDescription">[static] 
+		 Removes the last occurrence of the specified element from the specified array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#shuffle()" class="signatureLink">shuffle</a>(array:Array):Array</div><div class="summaryTableDescription">[static] 
+		 Shuffles the position of the elements of the given array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sortAlphabetically()" class="signatureLink">sortAlphabetically</a>(array:Array, comparison:AlphabeticalComparison):Array</div><div class="summaryTableDescription">[static] 
+		 Sorts the array of String objects alphabetically.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sortAlphabeticallyByObjectProperty()" class="signatureLink">sortAlphabeticallyByObjectProperty</a>(array:Array, property:String, comparison:AlphabeticalComparison):Array</div><div class="summaryTableDescription">[static] 
+		 Sorts the array of objects alphabetically through the object's property.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sortAscending()" class="signatureLink">sortAscending</a>(array:Array):Array</div><div class="summaryTableDescription">[static] 
+		 Sorts the array of Number objects ascending.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sortAscendingByObjectProperty()" class="signatureLink">sortAscendingByObjectProperty</a>(array:Array, property:String):Array</div><div class="summaryTableDescription">[static] 
+		 Sorts the array of objects ascending through the object's property (must be a numeric value).</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sortDescending()" class="signatureLink">sortDescending</a>(array:Array):Array</div><div class="summaryTableDescription">[static] 
+		 Sorts the array of Number objects descending.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sortDescendingByObjectProperty()" class="signatureLink">sortDescendingByObjectProperty</a>(array:Array, property:String):Array</div><div class="summaryTableDescription">[static] 
+		 Sorts the array of objects descending through the object's property (must be a numeric value).</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#swap()" class="signatureLink">swap</a>(array:Array, element1:*, element2:*):void</div><div class="summaryTableDescription">[static] 
+		 Swaps the position of the elements.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#swapAt()" class="signatureLink">swapAt</a>(array:Array, index1:*, index2:*):void</div><div class="summaryTableDescription">[static] 
+		 Swaps the position of the elements in the specified indexes.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#swapPositions()" class="signatureLink">swapPositions</a>(array:Array, newPositions:Array):void</div><div class="summaryTableDescription">[static] 
+		 Swaps the position of all elements in the array according to newPositions.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#uniqueCopy()" class="signatureLink">uniqueCopy</a>(array:Array):Array</div><div class="summaryTableDescription">[static] 
+		 Creates a new array containing only unique instances of the objects in the given array.</div></td><td class="summaryTableOwnerCol">ArrayUtil</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="ArrayUtil()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ArrayUtil</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function ArrayUtil()</code><p></p><p>
+		 ArrayUtil is a static class and shouldn't be instantiated.
+		 
+		 </p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; 	ArrayUtil is a static class and shouldn't be instantiated.
+		 </td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addAt()"></a><a name="addAt(Array,int,any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public static function addAt(array:Array, index:int, element:*):Array</code><p></p><p></p><p>
+		 Adds the element at the specified position in the specified array.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to remove the element from.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; 		the position of the element to be removed.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">element</span>:*</code> &mdash; 	the element to add.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the array with the element added.
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; 	if the <code>array</code> argument is <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; 		if the <code>index</code> argument is a negative integer or greater than the <code>array.length - 1</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+         
+         ArrayUtil.addAt(arr, 0, 0)       // [0,abc,def,123,1,2,3,abc,7]
+         ArrayUtil.addAt(arr, 7, 4)       // [0,abc,def,123,1,2,3,4,abc,7]
+         ArrayUtil.addAt(arr, 10, "z")    // [0,abc,def,123,1,2,3,4,abc,7,z]
+         
+         </pre></div>
+		 
+		 </div></div><a name="contains()"></a><a name="contains(Array,any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contains</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function contains(array:Array, element:*):Boolean</code><p></p><p></p><p>
+		 Checks if the element is in the given array.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to search through. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">element</span>:*</code> &mdash; 	the element to find.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the array contains the element.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var obj:Object = {label:"ghi"};
+         var arr:Array = ["abc", 123, {label:"def"}, obj];
+         
+         ArrayUtil.contains([], null)              // false
+         ArrayUtil.contains([null], null)          // true
+         ArrayUtil.contains(arr, "abc")            // true
+         ArrayUtil.contains(arr, "ab")             // false
+         ArrayUtil.contains(arr, "abcd")           // false
+         ArrayUtil.contains(arr, 123)              // true
+         ArrayUtil.contains(arr, "123")            // false
+         ArrayUtil.contains(arr, 1234)             // false
+         ArrayUtil.contains(arr, {label:"def"})    // false
+         ArrayUtil.contains(arr, {label:"ghi"})    // false
+         ArrayUtil.contains(arr, obj)              // true
+         </pre></div>
+		 
+		 </div></div><a name="containsDuplication()"></a><a name="containsDuplication(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">containsDuplication</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function containsDuplication(array:Array):Boolean</code><p></p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="containsOnlyType()"></a><a name="containsOnlyType(Array,any,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">containsOnlyType</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function containsOnlyType(array:Array, type:*, strict:Boolean = false):Boolean</code><p></p><p></p><p>
+		 Returns <code>true</code> if the array contains only elements of the <code>type</code> argument.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">type</span>:*</code> &mdash; 	the type of the elements.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">strict</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; 		defines if the type of the elements should be strictly equal.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the array contains only elements of the <code>type</code> argument. If the array is <code>null</code> or empty returns <code>false</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         ArrayUtil.containsOnlyType(["a", "b", "c"], String)                  // true
+         ArrayUtil.containsOnlyType(["a", "b", "c"], String, true)            // true
+         ArrayUtil.containsOnlyType(["a", "b", "c", 5], String)               // false
+         ArrayUtil.containsOnlyType([[], [], [], [], []], Array)              // true
+         ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Array)           // false
+         ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Object)          // true
+         ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Object, true)    // false
+         </pre></div>
+		 
+		 </div></div><a name="containsType()"></a><a name="containsType(Array,any,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">containsType</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function containsType(array:Array, type:*, strict:Boolean = false):Boolean</code><p></p><p></p><p>
+		 Returns <code>true</code> if the array contains some element of the <code>type</code> argument.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">type</span>:*</code> &mdash; 	the type of the elements.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">strict</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; 		defines if the type of the elements should be strictly equal.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the array contains some element of the <code>type</code> argument. If the array is <code>null</code> or empty returns <code>false</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         ArrayUtil.containsType(["a", "b", "c"], String)                  // true
+         ArrayUtil.containsType(["a", "b", "c"], String, true)            // true
+         ArrayUtil.containsType(["a", "b", "c", 5], String)               // true
+         ArrayUtil.containsType(["a", "b", "c"], Number):                 // false
+         ArrayUtil.containsType(["a", "b", "c", 5], Number)               // true
+         ArrayUtil.containsType([[], [], [], [], []], Array)              // true
+         ArrayUtil.containsType([[], [], [], 3, [], []], Array)           // true
+         ArrayUtil.containsType([[], [], [], 3, [], []], Number)          // true
+         ArrayUtil.containsType([[], [], [], 3, [], []], Object)          // true
+         ArrayUtil.containsType([[], [], [], 3, [], []], Object, true)    // false
+         ArrayUtil.containsType([[], [], [], 3, [], []], Boolean)         // false
+         </pre></div>
+		 
+		 </div></div><a name="equals()"></a><a name="equals(Array,Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">equals</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function equals(array1:Array, array2:Array):Boolean</code><p></p><p></p><p>
+		 Compares two arrays, returning <code>true</code> if they are equal (same length, objects and order).
+		 <p>Two <code>null</code> references are considered to be equal.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array1</span>:Array</code> &mdash; 	the first array. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">array2</span>:Array</code> &mdash; 	the second array. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the arrays are equal or both are <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var obj:Object = {label:"jlm"};
+         var n1:int = 1;
+         var n2:Number = 2;
+         var n3:Number = 3.1;
+         var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+         var arr2:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+         var arr3:Array = ["abc", "def", 123, obj, n1, n2, n3];
+         var arr4:Array = ["abc", "def", 123, obj, n1, n2, n3];
+         var arr5:Array = ["abc", "def", 123, obj, n2, n1, n3];
+         
+         ArrayUtil.equals(null, null)           // true
+         ArrayUtil.equals(null, [])             // false
+         ArrayUtil.equals([], [])               // true
+         ArrayUtil.equals([1], [1])             // true
+         ArrayUtil.equals(["abc"], ["abc"])     // true
+         ArrayUtil.equals(["abc"], ["abcd"])    // false
+         ArrayUtil.equals(arr, [])              // false
+         ArrayUtil.equals(arr, arr)             // true
+         ArrayUtil.equals(arr, arr2)            // false
+         ArrayUtil.equals(arr3, arr4)           // true
+         ArrayUtil.equals(arr4, arr5)           // false
+         </pre></div>
+		 
+		 </div></div><a name="filterByType()"></a><a name="filterByType(Array,Class,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">filterByType</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function filterByType(array:Array, type:Class, strict:Boolean = false):Array</code><p></p><p></p><p>
+		 Returns the array containing only objects of the type of the <code>type</code> argument.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array for filtering. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">type</span>:Class</code> &mdash; 	the type of the objects that should remain in the array.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">strict</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; 	defines if the type of the elements should be strictly equal.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the array containing only objects of the type of the <code>type</code> argument.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var obj:Object = {label:"jlm"};
+         var n1:int = 1;
+         var n2:Number = 2;
+         var n3:Number = 3.1;
+         var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+         
+         ArrayUtil.filterByType(null, null)             // null
+         ArrayUtil.filterByType([], null)               // 
+         ArrayUtil.filterByType(null, Array)            // null
+         ArrayUtil.filterByType(arr, String)            // abc,def
+         ArrayUtil.filterByType(arr, String, true)      // abc,def
+         ArrayUtil.filterByType(arr, Object)            // abc,def,123,[object Object],[object Object],1,2,3.1
+         ArrayUtil.filterByType(arr, Object, true)      // [object Object],[object Object]
+         ArrayUtil.filterByType(arr, Number)            // 123,1,2,3.1
+         ArrayUtil.filterByType(arr, Number, true)      // 3.1
+         ArrayUtil.filterByType(arr, int)               // 123,1,2
+         ArrayUtil.filterByType(arr, int, true)         // 123,1,2
+         
+         // for this to work the array must be re-declared with values for each call, because filterByType changes the original array.
+         </pre></div>
+		 
+		 </div></div><a name="getDuplicate()"></a><a name="getDuplicate(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDuplicate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function getDuplicate(array:Array):Array</code><p></p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code></td></tr></table></div><a name="isEmpty()"></a><a name="isEmpty(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isEmpty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isEmpty(array:Array):Boolean</code><p></p><p></p><p>
+		 Checks if an array is empty (zero-length) or <code>null</code>.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to check.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the array is empty or <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         ArrayUtil.isEmpty(null)      // true
+         ArrayUtil.isEmpty([])        // true
+         ArrayUtil.isEmpty([null])    // false
+         ArrayUtil.isEmpty([123])     // false
+         </pre></div>
+		 
+		 </div></div><a name="isNotEmpty()"></a><a name="isNotEmpty(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isNotEmpty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isNotEmpty(array:Array):Boolean</code><p></p><p></p><p>
+		 Checks if the array is not empty (zero-length) nor not <code>null</code>.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to check.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the array is not empty nor not <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         ArrayUtil.isNotEmpty(null)      // false
+         ArrayUtil.isNotEmpty([])        // false
+         ArrayUtil.isNotEmpty([null])    // true
+         ArrayUtil.isNotEmpty([123])     // true
+         </pre></div>
+		 
+		 </div></div><a name="isSameLength()"></a><a name="isSameLength(Array,Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSameLength</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isSameLength(array1:Array, array2:Array):Boolean</code><p></p><p></p><p>
+		 Checks whether two arrays are the same length, treating <code>null</code> arrays as length 0.
+		 <p>Two <code>null</code> references are considered to be equal.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array1</span>:Array</code> &mdash; 	the first array. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">array2</span>:Array</code> &mdash; 	the second array. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if length of arrays matches, treating <code>null</code> as an empty array.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         ArrayUtil.isSameLength(null, null)            // true
+         ArrayUtil.isSameLength(null, [])              // true
+         ArrayUtil.isSameLength([], [])                // true
+         ArrayUtil.isSameLength([1], [2])              // true
+         ArrayUtil.isSameLength([1, "a"], [2])         // false
+         ArrayUtil.isSameLength([1, "a"], [2, "b"])    // true
+         </pre></div>
+		 
+		 </div></div><a name="maxValue()"></a><a name="maxValue(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">maxValue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function maxValue(array:Array):Number</code><p></p><p></p><p>
+		 Returns the largest number in the array.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to check. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; the largest number in the array. If the <code>array</code> argument is <code>null</code> or empty then the return is <code>NaN</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [5, 3, 9.1, 9.12, -10];
+         var arr2:Array = [-15, -8, -25, -90, -66];
+         
+         ArrayUtil.maxValue(null)    // NaN
+         ArrayUtil.maxValue([])      // NaN
+         ArrayUtil.maxValue(arr)     // 9.12
+         ArrayUtil.maxValue(arr2)    // -8
+         </pre></div>
+		 
+		 </div></div><a name="maxValueIndex()"></a><a name="maxValueIndex(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">maxValueIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function maxValueIndex(array:Array):int</code><p></p><p></p><p>
+		 Returns the index position of the largest number in the array.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to check. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; the index position of the largest number in the array. If the <code>array</code> argument is <code>null</code> or empty then the return is -1.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [5, 3, 9.1, 9.12, -10];
+         var arr2:Array = [-15, -8, -25, -90, -66];
+         
+         ArrayUtil.maxValue(null)    // -1
+         ArrayUtil.maxValue([])      // -1
+         ArrayUtil.maxValue(arr)     // 3
+         ArrayUtil.maxValue(arr2)    // 1
+         </pre></div>
+		 
+		 </div></div><a name="nullToEmpty()"></a><a name="nullToEmpty(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nullToEmpty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function nullToEmpty(array:Array):Array</code><p></p><p></p><p>
+		 Returns an empty array for a <code>null</code> input array.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to check for <code>null</code> or empty.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the same array or an empty array if <code>null</code> input.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         ArrayUtil.nullToEmpty(null)            // []
+         ArrayUtil.nullToEmpty([])              // []
+         ArrayUtil.nullToEmpty([1])             // [1]
+         ArrayUtil.nullToEmpty(["abc", 123])    // [abc,123]
+         </pre></div>
+		 
+		 </div></div><a name="removeAllOccurances()"></a><a name="removeAllOccurances(Array,any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeAllOccurances</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeAllOccurances(array:Array, element:*):Array</code><p></p><p></p><p>
+		 Removes all occurances of a the given <code>element</code> argument from the given <code>array</code> argument.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to remove the element. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">element</span>:*</code> &mdash; 	the element to be removed from the array.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the updated array or <code>null</code> if the <code>array</code> argument is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+         
+         ArrayUtil.removeAllOccurances(arr, "abc")    // [def,123,1,2,3,7]
+         </pre></div>
+		 
+		 </div></div><a name="removeAt()"></a><a name="removeAt(Array,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeAt(array:Array, index:int):Array</code><p></p><p></p><p>
+		 Removes the element at the specified position from the specified array.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to remove the element from.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; 	the position of the element to be removed.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the array with the element removed.
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; 	if the <code>array</code> argument is <code>null</code> or empty.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; 		if the <code>index</code> argument is a negative integer or greater than the <code>array.length - 1</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+         
+         ArrayUtil.removeAt(arr, 0)    // [def,123,1,2,3,abc,7]
+         ArrayUtil.removeAt(arr, 5)    // [abc,def,123,1,2,abc,7]
+         ArrayUtil.removeAt(arr, 6)    // [abc,def,123,1,2,3,7]
+         
+         //for this to work exactly that way is necessary to redefine the array for every call because the original array is modified at each call.
+         </pre></div>
+		 
+		 </div></div><a name="removeFirstOccurance()"></a><a name="removeFirstOccurance(Array,any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeFirstOccurance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeFirstOccurance(array:Array, element:*):Array</code><p></p><p></p><p>
+		 Removes the first occurrence of the specified element from the specified array.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to remove the element from.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">element</span>:*</code> &mdash; 	the element to be removed.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the array with the element removed.
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; 	if the <code>array</code> argument is <code>null</code> or empty.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+         
+         ArrayUtil.removeFirstOccurance(arr, "abc")    // [def,123,1,2,3,abc,7]
+         </pre></div>
+		 
+		 </div></div><a name="removeLastOccurance()"></a><a name="removeLastOccurance(Array,any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeLastOccurance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeLastOccurance(array:Array, element:*):Array</code><p></p><p></p><p>
+		 Removes the last occurrence of the specified element from the specified array.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to remove the element from.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">element</span>:*</code> &mdash; 	the element to be removed.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the array with the element removed.
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; 	if the <code>array</code> argument is <code>null</code> or empty.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+         
+         ArrayUtil.removeLastOccurance(arr, "abc")    // [abc,def,123,1,2,3,7]
+         </pre></div>
+		 
+		 </div></div><a name="shuffle()"></a><a name="shuffle(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">shuffle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function shuffle(array:Array):Array</code><p></p><p></p><p>
+		 Shuffles the position of the elements of the given <code>array</code>.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to shuffle. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the modified array.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+         
+         ArrayUtil.shuffle(arr)    // [123,abc,2,def,abc,7,3,1]
+         </pre></div>
+		 
+		 </div></div><a name="sortAlphabetically()"></a><a name="sortAlphabetically(Array,org.as3coreaddendum.system.comparators.AlphabeticalComparison)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sortAlphabetically</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function sortAlphabetically(array:Array, comparison:AlphabeticalComparison):Array</code><p></p><p></p><p>
+		 Sorts the array of <code>String</code> objects alphabetically.
+		 <p>This method uses the <code>org.as3coreaddendum.system.comparators.AlphabeticalComparator</code> object.</p>
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 			the array to sort.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">comparison</span>:AlphabeticalComparison</code> &mdash; 	indicates which type of comparison will be used.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the sorted array.
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso">AlphabeticalComparator</div><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["a", "ab", "abc", "aba", "A", "Ab", "Abc", "Aba", "AB", "ABC", "ABA"];
+         
+         ArrayUtil.shuffle(arr)                                                          // [aba,Ab,ABC,AB,abc,Aba,ab,ABA,a,Abc,A]
+         
+         ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.LOWER_CASE_FIRST)      // [a,ab,aba,abc,A,Ab,Aba,Abc,AB,ABA,ABC]
+         ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.UPPER_CASE_FIRST)      // [A,AB,ABA,ABC,Ab,Aba,Abc,a,ab,aba,abc]
+         ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.CASE_INSENSITIVE)      // [a,A,AB,ab,Ab,ABA,Aba,aba,ABC,Abc,abc]
+         </pre></div>
+		 
+		 </div></div><a name="sortAlphabeticallyByObjectProperty()"></a><a name="sortAlphabeticallyByObjectProperty(Array,String,org.as3coreaddendum.system.comparators.AlphabeticalComparison)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sortAlphabeticallyByObjectProperty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function sortAlphabeticallyByObjectProperty(array:Array, property:String, comparison:AlphabeticalComparison):Array</code><p></p><p></p><p>
+		 Sorts the array of objects alphabetically through the object's <code>property</code>.
+		 <p>This method uses the <code>org.as3coreaddendum.system.comparators.AlphabeticalComparator</code> and <code>org.as3coreaddendum.system.comparators.PropertyComparator</code> objects together.</p>
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 			the array to sort.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">property</span>:String</code> &mdash; 		the name of the property to be recovered and compared between the objects.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">comparison</span>:AlphabeticalComparison</code> &mdash; 	indicates which type of comparison will be used.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the sorted array.
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso">AlphabeticalComparator<br/>PropertyComparator</div><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [{label:"a"}, {label:"ab"}, {label:"abc"}, {label:"aba"}, {label:"A"}, {label:"Ab"}, {label:"Abc"}, {label:"Aba"}, {label:"AB"}, {label:"ABC"}, {label:"ABA"}];
+         
+         ArrayUtil.shuffle(arr)
+         ArrayUtil.sortAlphabeticallyByObjectProperty(arr, "label", AlphabeticalComparison.CASE_INSENSITIVE)
+         
+         arr[0].label    // A
+         arr[1].label    // a
+         arr[2].label    // Ab
+         arr[3].label    // ab
+         arr[4].label    // AB
+         arr[5].label    // Aba
+         arr[6].label    // ABA
+         arr[7].label    // aba
+         arr[8].label    // ABC
+         arr[9].label    // abc
+         </pre></div>
+		 
+		 </div></div><a name="sortAscending()"></a><a name="sortAscending(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sortAscending</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function sortAscending(array:Array):Array</code><p></p><p></p><p>
+		 Sorts the array of <code>Number</code> objects ascending.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to sort.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the sorted array.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [-3, -2.55, -2.54, -1, 0, 1, 2, 3, 4, 4.1, 5, 5.01, 5.02, 6, 7, 8];
+         
+         ArrayUtil.shuffle(arr)          // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+         
+         ArrayUtil.sortAscending(arr)    // [-3,-2.55,-2.54,-1,0,1,2,3,4,4.1,5,5.01,5.02,6,7,8]
+         </pre></div>
+		 
+		 </div></div><a name="sortAscendingByObjectProperty()"></a><a name="sortAscendingByObjectProperty(Array,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sortAscendingByObjectProperty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function sortAscendingByObjectProperty(array:Array, property:String):Array</code><p></p><p></p><p>
+		 Sorts the array of objects ascending through the object's property (must be a numeric value).
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to sort.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">property</span>:String</code> &mdash; 	the name of the property to be recovered and compared between the objects.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the sorted array.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [{num:-3}, {num:-2.55}, {num:-2.54}, {num:-1}, {num:0}, {num:1}, {num:2}, {num:3}, {num:4}, {num:4.1}, {num:5}, {num:5.01}, {num:5.02}, {num:6}, {num:7}, {num:8}];
+         
+         ArrayUtil.shuffle(arr)             // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+         
+         ArrayUtil.sortAscendingByObjectProperty(arr, "num")
+         
+         arr[0].num     // -3
+         arr[1].num     // -2.55
+         arr[2].num     // -2.54
+         arr[3].num     // -1
+         arr[4].num     // 0
+         arr[5].num     // 1
+         arr[6].num     // 2
+         arr[7].num     // 3
+         arr[8].num     // 4
+         arr[9].num     // 4.1
+         arr[10].num    // 5
+         arr[11].num    // 5.01
+         arr[12].num    // 5.02
+         arr[13].num    // 6
+         arr[14].num    // 7
+         arr[15].num    // 8
+         </pre></div>
+		 
+		 </div></div><a name="sortDescending()"></a><a name="sortDescending(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sortDescending</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function sortDescending(array:Array):Array</code><p></p><p></p><p>
+		 Sorts the array of <code>Number</code> objects descending.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to sort.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the sorted array.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [-3, -2.55, -2.54, -1, 0, 1, 2, 3, 4, 4.1, 5, 5.01, 5.02, 6, 7, 8];
+         
+         ArrayUtil.shuffle(arr)           // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+         
+         ArrayUtil.sortDescending(arr)    // [8,7,6,5.02,5.01,5,4.1,4,3,2,1,0,-1,-2.54,-2.55,-3]
+         </pre></div>
+		 
+		 </div></div><a name="sortDescendingByObjectProperty()"></a><a name="sortDescendingByObjectProperty(Array,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sortDescendingByObjectProperty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function sortDescendingByObjectProperty(array:Array, property:String):Array</code><p></p><p></p><p>
+		 Sorts the array of objects descending through the object's property (must be a numeric value).
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to sort.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">property</span>:String</code> &mdash; 	the name of the property to be recovered and compared between the objects.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; the sorted array.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [{num:-3}, {num:-2.55}, {num:-2.54}, {num:-1}, {num:0}, {num:1}, {num:2}, {num:3}, {num:4}, {num:4.1}, {num:5}, {num:5.01}, {num:5.02}, {num:6}, {num:7}, {num:8}];
+         
+         ArrayUtil.shuffle(arr)             // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+         
+         ArrayUtil.sortDescendingByObjectProperty(arr, "num")
+         
+         arr[0].num     // 8
+         arr[1].num     // 7
+         arr[2].num     // 6
+         arr[3].num     // 5.02
+         arr[4].num     // 5.01
+         arr[5].num     // 5
+         arr[6].num     // 4.1
+         arr[7].num     // 4
+         arr[8].num     // 3
+         arr[9].num     // 2
+         arr[10].num    // 1
+         arr[11].num    // 0
+         arr[12].num    // -1
+         arr[13].num    // -2.54
+         arr[14].num    // -2.55
+         arr[15].num    // -3
+         </pre></div>
+		 
+		 </div></div><a name="swap()"></a><a name="swap(Array,any,any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">swap</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function swap(array:Array, element1:*, element2:*):void</code><p></p><p></p><p>
+		 Swaps the position of the elements.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 		the array to swap the position of the elements.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">element1</span>:*</code> &mdash; 	the first element.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">element2</span>:*</code> &mdash; 	the second element.
+		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [1, 9, 3, 7, 5];
+         
+         ArrayUtil.swap(arr, 9, 5)      // [1,5,3,7,9]
+         
+         ArrayUtil.swap(arr, 3, 5)      // [1,3,5,7,9]
+         </pre></div>
+		 
+		 </div></div><a name="swapAt()"></a><a name="swapAt(Array,any,any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">swapAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function swapAt(array:Array, index1:*, index2:*):void</code><p></p><p></p><p>
+		 Swaps the position of the elements in the specified indexes.
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to swap the position of the elements.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">index1</span>:*</code> &mdash; 	the index of the first element.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">index2</span>:*</code> &mdash; 	the index of the second element.
+		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = [1, 9, 3, 7, 5];
+         
+         ArrayUtil.swapAt(arr, 1, 4)      // [1,5,3,7,9]
+         
+         ArrayUtil.swapAt(arr, 2, 1)      // [1,3,5,7,9]
+         </pre></div>
+		 
+		 </div></div><a name="swapPositions()"></a><a name="swapPositions(Array,Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">swapPositions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function swapPositions(array:Array, newPositions:Array):void</code><p></p><p></p><p>
+		 Swaps the position of all elements in the array according to <code>newPositions</code>.
+		 <p>
+		 <ul><li><code>array[0]</code> will be equal <code>array[ newPositions[0] ]</code></li>
+		 <li><code>array[1]</code> will be equal <code>array[ newPositions[1] ]</code></li>
+		 <li>and so on...</li></ul></p>
+		 <p>The length of both arrays must be equal.</p>
+		 <p>This method modifies the original array.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 			the array to swap the position of all elements.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">newPositions</span>:Array</code> &mdash; 	the array with the new positions.
+		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["c", "a", "b", "e", "d"];
+         
+         var positions:Array = [1, 2, 0, 4, 3];
+         
+         ArrayUtil.swapPositions(arr, positions)     // [a,b,c,d,e]
+         </pre></div>
+		 
+		 </div></div><a name="uniqueCopy()"></a><a name="uniqueCopy(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">uniqueCopy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function uniqueCopy(array:Array):Array</code><p></p><p></p><p>
+		 Creates a new array containing only unique instances of the objects in the given array. In other words, removes duplicated objects.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">array</span>:Array</code> &mdash; 	the array to copy.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; a new array without duplicated objects.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.ArrayUtil;
+         
+         var arr:Array = ["a", "b", "c", "a", "b", "a"];
+         
+         ArrayUtil.uniqueCopy(arr)    // [a,b,c]
+         </pre></div>
+		 
+		 </div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright 2010-2011 Flavio Silva - http://flsilva.com</footer><br/>Sun Oct 9 2011, 06:33 PM -03:00  </center></div></body></html><!--Copyright 2010-2011 Flavio Silva - http://flsilva.com<br/>Sun Oct 9 2011, 06:33 PM -03:00  -->

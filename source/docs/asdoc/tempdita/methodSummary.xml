@@ -1,0 +1,2361 @@
+<?xml version="1.0" encoding="UTF-8"?><allClasses><apiPackage id="org.as3utils"><apiName>org.as3utils</apiName><apiClassifier id="org.as3utils:ReflectionUtil"><apiName>ReflectionUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiFinal/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example>
+	 
+	 <b>getClassName()</b>
+	 <codeblock rev="3.0">
+	 import flash.display.Sprite;
+	 import org.as3coreaddendum.system.Reflection;
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+	 
+	 var str  :String             = "";
+	 var s    :Sprite             = new Sprite();
+	 var n    :NumberComparator   = new NumberComparator();
+	 
+	 Reflection.getClassName(str)                 // String
+	 Reflection.getClassName(String)              // String
+	   
+	 Reflection.getClassName(s)                   // Sprite
+	 Reflection.getClassName(Sprite)              // Sprite
+	 
+	 Reflection.getClassName(n)                   // NumberComparator
+	 Reflection.getClassName(NumberComparator)    // NumberComparator
+	 </codeblock>
+	 
+	 <b>getClassPackage()</b>
+	 <codeblock rev="3.0">
+	 import flash.display.Sprite;
+	 import org.as3coreaddendum.system.Reflection;
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+	 
+	 var str  :String             = "";
+	 var s    :Sprite             = new Sprite();
+	 var n    :NumberComparator   = new NumberComparator();
+	 
+	 Reflection.getClassPackage(str)                 // null
+	 Reflection.getClassPackage(String)              // null
+	   
+	 Reflection.getClassPackage(s)                   // flash.display
+	 Reflection.getClassPackage(Sprite)              // flash.display
+	 
+	 Reflection.getClassPackage(n)                   // org.as3coreaddendum.system.comparators
+	 Reflection.getClassPackage(NumberComparator)    // org.as3coreaddendum.system.comparators
+	 </codeblock>
+	 
+	 <b>getClassPath()</b>
+	 <codeblock rev="3.0">
+	 import flash.display.Sprite;
+	 import org.as3coreaddendum.system.Reflection;
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+	 
+	 var str  :String             = "";
+	 var s    :Sprite             = new Sprite();
+	 var n    :NumberComparator   = new NumberComparator();
+	 
+	 Reflection.getClassPath(str)                 // String
+	 Reflection.getClassPath(String)              // String
+	   
+	 Reflection.getClassPath(s)                   // flash.display.Sprite
+	 Reflection.getClassPath(Sprite)              // flash.display.Sprite
+	 
+	 Reflection.getClassPath(n)                   // org.as3coreaddendum.system.comparators.NumberComparator
+	 Reflection.getClassPath(NumberComparator)    // org.as3coreaddendum.system.comparators.NumberComparator
+	 </codeblock>
+	 
+	 <b>getSuperClassName()</b>
+	 <codeblock rev="3.0">
+	 import flash.display.Sprite;
+	 import org.as3coreaddendum.system.Reflection;
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+	 
+	 var str  :String             = "";
+	 var s    :Sprite             = new Sprite();
+	 var n    :NumberComparator   = new NumberComparator();
+	 
+	 Reflection.getSuperClassName(str)                 // Object
+	 Reflection.getSuperClassName(String)              // Object
+	   
+	 Reflection.getSuperClassName(s)                   // DisplayObjectContainer
+	 Reflection.getSuperClassName(Sprite)              // DisplayObjectContainer
+	 
+	 Reflection.getSuperClassName(n)                   // Object
+	 Reflection.getSuperClassName(NumberComparator)    // Object
+	 </codeblock>
+	 
+	 <b>getSuperClassPackage()</b>
+	 <codeblock rev="3.0">
+	 import flash.display.Sprite;
+	 import org.as3coreaddendum.system.Reflection;
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+	 
+	 var str  :String             = "";
+	 var s    :Sprite             = new Sprite();
+	 var n    :NumberComparator   = new NumberComparator();
+	 
+	 Reflection.getSuperClassPackage(str)                 // null
+	 Reflection.getSuperClassPackage(String)              // null
+	   
+	 Reflection.getSuperClassPackage(s)                   // flash.display
+	 Reflection.getSuperClassPackage(Sprite)              // flash.display
+	 
+	 Reflection.getSuperClassPackage(n)                   // null
+	 Reflection.getSuperClassPackage(NumberComparator)    // null
+	 </codeblock>
+	 
+	 <b>getSuperClassPath()</b>
+	 <codeblock rev="3.0">
+	 import flash.display.Sprite;
+	 import org.as3coreaddendum.system.Reflection;
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+	 
+	 var str  :String             = "";
+	 var s    :Sprite             = new Sprite();
+	 var n    :NumberComparator   = new NumberComparator();
+	 
+	 Reflection.getSuperClassPath(str)                 // Object
+	 Reflection.getSuperClassPath(String)              // Object
+	   
+	 Reflection.getSuperClassPath(s)                   // flash.display.DisplayObjectContainer
+	 Reflection.getSuperClassPath(Sprite)              // flash.display.DisplayObjectContainer
+	 
+	 Reflection.getSuperClassPath(n)                   // Object
+	 Reflection.getSuperClassPath(NumberComparator)    // Object
+	 </codeblock>
+	 
+	 </example></apiClassifierDetail><apiOperation id="org.as3utils:ReflectionUtil:classNameEquals"><apiName>classNameEquals</apiName><shortdesc>
+		 Performs the comparison between the two arguments using the getClassName() method.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>True</codeph> if the class names are equal.
+		 </apiDesc></apiReturn><apiParam><apiItemName>o1</apiItemName><apiType value="any"/><apiDesc>The first instance or type (Class) to be compared.
+		 </apiDesc></apiParam><apiParam><apiItemName>o2</apiItemName><apiType value="any"/><apiDesc>The second instance or type (Class) to be compared.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs the comparison between the two arguments using the <codeph>getClassName()</codeph> method.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:classPackageEquals"><apiName>classPackageEquals</apiName><shortdesc>
+		 Performs the comparison between the two arguments using the getClassPackage() method.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>True</codeph> if the class packages are equal.
+		 </apiDesc></apiReturn><apiParam><apiItemName>o1</apiItemName><apiType value="any"/><apiDesc>The first instance or type (Class) to be compared.
+		 </apiDesc></apiParam><apiParam><apiItemName>o2</apiItemName><apiType value="any"/><apiDesc>The second instance or type (Class) to be compared.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs the comparison between the two arguments using the <codeph>getClassPackage()</codeph> method.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:classPathEquals"><apiName>classPathEquals</apiName><shortdesc>
+		 Performs the comparison between the two arguments using the getClassPath() method.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>True</codeph> if the class path are equal.
+		 </apiDesc></apiReturn><apiParam><apiItemName>o1</apiItemName><apiType value="any"/><apiDesc>The first instance or type (Class) to be compared.
+		 </apiDesc></apiParam><apiParam><apiItemName>o2</apiItemName><apiType value="any"/><apiDesc>The second instance or type (Class) to be compared.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs the comparison between the two arguments using the <codeph>getClassPath()</codeph> method.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:getClassName"><apiName>getClassName</apiName><shortdesc>
+		 Retrieves the class name of the target instance or type (Class).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>The class name of the target instance or type (Class).
+		 </apiDesc></apiReturn><apiParam><apiItemName>o</apiItemName><apiType value="any"/><apiDesc>	The target instance or type (Class).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves the class name of the target instance or type (Class).
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:getClassPackage"><apiName>getClassPackage</apiName><shortdesc>
+		 Retrieves the class package of the target instance or type (Class).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>The package string representation of the target instance or type (Class).
+		 </apiDesc></apiReturn><apiParam><apiItemName>o</apiItemName><apiType value="any"/><apiDesc>The target instance or type (Class).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves the class package of the target instance or type (Class).
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:getClassPath"><apiName>getClassPath</apiName><shortdesc>
+		 Retrieves the full qualified class name of the target instance or type (Class).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>The full qualified class name string representation (package + name) of the target instance or type (Class).
+		 </apiDesc></apiReturn><apiParam><apiItemName>o</apiItemName><apiType value="any"/><apiDesc>The target instance or type (Class).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves the full qualified class name of the target instance or type (Class).
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:getSuperClassName"><apiName>getSuperClassName</apiName><shortdesc>
+		 Retrieves the super class name of the target instance or type (Class).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>The super class name of the target instance or type (Class).
+		 </apiDesc></apiReturn><apiParam><apiItemName>o</apiItemName><apiType value="any"/><apiDesc>The target instance or type (Class).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves the super class name of the target instance or type (Class).
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:getSuperClassPackage"><apiName>getSuperClassPackage</apiName><shortdesc>
+		 Retrieves the super class package of the target instance or type (Class).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>The package string representation of the target instance or type (Class).
+		 </apiDesc></apiReturn><apiParam><apiItemName>o</apiItemName><apiType value="any"/><apiDesc>The target instance or type (Class).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves the super class package of the target instance or type (Class).
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:getSuperClassPath"><apiName>getSuperClassPath</apiName><shortdesc>
+		 Retrieves the full qualified class name of the super class of the target instance or type (Class).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>The full qualified class name string representation (package + name) of the super class of the target instance or type (Class).
+		 </apiDesc></apiReturn><apiParam><apiItemName>o</apiItemName><apiType value="any"/><apiDesc>The target instance or type (Class).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves the full qualified class name of the super class of the target instance or type (Class).
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:superClassNameEquals"><apiName>superClassNameEquals</apiName><shortdesc>
+		 Performs the comparison between the two arguments using the getSuperClassName() method.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>True</codeph> if the super class names are equal.
+		 </apiDesc></apiReturn><apiParam><apiItemName>o1</apiItemName><apiType value="any"/><apiDesc>The first instance or type (Class) to be compared.
+		 </apiDesc></apiParam><apiParam><apiItemName>o2</apiItemName><apiType value="any"/><apiDesc>The second instance or type (Class) to be compared.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs the comparison between the two arguments using the <codeph>getSuperClassName()</codeph> method.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:superClassPackageEquals"><apiName>superClassPackageEquals</apiName><shortdesc>
+		 Performs the comparison between the two arguments using the getSuperClassPackage() method.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>True</codeph> if the class packages are equal.
+		 </apiDesc></apiReturn><apiParam><apiItemName>o1</apiItemName><apiType value="any"/><apiDesc>The first instance or type (Class) to be compared.
+		 </apiDesc></apiParam><apiParam><apiItemName>o2</apiItemName><apiType value="any"/><apiDesc>The second instance or type (Class) to be compared.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs the comparison between the two arguments using the <codeph>getSuperClassPackage()</codeph> method.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ReflectionUtil:superClassPathEquals"><apiName>superClassPathEquals</apiName><shortdesc>
+		 Performs the comparison between the two arguments using the getSuperClassPath() method.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>True</codeph> if the class path are equal.
+		 </apiDesc></apiReturn><apiParam><apiItemName>o1</apiItemName><apiType value="any"/><apiDesc>The first instance or type (Class) to be compared.
+		 </apiDesc></apiParam><apiParam><apiItemName>o2</apiItemName><apiType value="any"/><apiDesc>The second instance or type (Class) to be compared.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs the comparison between the two arguments using the <codeph>getSuperClassPath()</codeph> method.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:ReflectionUtil:ReflectionUtil"><apiName>ReflectionUtil</apiName><shortdesc>
+		 Reflection is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	Reflection is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 Reflection is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:BooleanUtil"><apiName>BooleanUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:BooleanUtil:isBooleanString"><apiName>isBooleanString</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:BooleanUtil:string2Boolean"><apiName>string2Boolean</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:BooleanUtil:BooleanUtil"><apiName>BooleanUtil</apiName><shortdesc>
+		 BooleanUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	BooleanUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 BooleanUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:DrawUtil"><apiName>DrawUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:DrawUtil:border"><apiName>border</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="flash.display:Shape"/></apiReturn><apiParam><apiItemName>bounds</apiItemName><apiType value="flash.geom:Rectangle"/></apiParam><apiParam><apiItemName>thickness</apiItemName><apiType value="Number"/><apiData>1</apiData></apiParam><apiParam><apiItemName>color</apiItemName><apiType value="uint"/><apiData>0xFFFFFF</apiData></apiParam><apiParam><apiItemName>alpha</apiItemName><apiType value="Number"/><apiData>1</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:DrawUtil:circ"><apiName>circ</apiName><shortdesc>
+		 Returns a Shape object using the Shape.Graphics.drawCircle method.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="flash.display:Shape"/><apiDesc>a <codeph>Shape</codeph> object using the <codeph>Shape.Graphics.drawCircle</codeph> method.
+		 </apiDesc></apiReturn><apiParam><apiItemName>x</apiItemName><apiType value="Number"/><apiDesc>			the <i>x</i> location of the center of the circle relative to the registration point of the <codeph>Shape</codeph> object (in pixels).
+		 </apiDesc></apiParam><apiParam><apiItemName>y</apiItemName><apiType value="Number"/><apiDesc>			the <i>y</i> location of the center of the circle relative to the registration point of the <codeph>Shape</codeph> object (in pixels).
+		 </apiDesc></apiParam><apiParam><apiItemName>radius</apiItemName><apiType value="Number"/><apiDesc>	the radius of the circle (in pixels).
+		 </apiDesc></apiParam><apiParam><apiItemName>color</apiItemName><apiType value="uint"/><apiData>0xFFFFFF</apiData><apiDesc>		the color of the <codeph>Shape</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>alpha</apiItemName><apiType value="Number"/><apiData>1</apiData><apiDesc>		the alpha of the <codeph>Shape</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns a <codeph>Shape</codeph> object using the <codeph>Shape.Graphics.drawCircle</codeph> method.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import flash.display.Shape;
+		 import org.as3coreaddendum.utils.DrawUtil;
+		 
+		 var s:Shape = DrawUtil.circ(0, 0, 50, 0xFF0000);
+		 addChild(s);
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:DrawUtil:rect"><apiName>rect</apiName><shortdesc>
+		 Returns a Shape object using the Shape.Graphics.drawRect method.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="flash.display:Shape"/><apiDesc>a <codeph>Shape</codeph> object using the <codeph>Shape.Graphics.drawRect</codeph> method.
+		 </apiDesc></apiReturn><apiParam><apiItemName>x</apiItemName><apiType value="Number"/><apiDesc>			a number indicating the horizontal position relative to the registration point of the <codeph>Shape</codeph> object (in pixels).
+		 </apiDesc></apiParam><apiParam><apiItemName>y</apiItemName><apiType value="Number"/><apiDesc>			a number indicating the vertical position relative to the registration point of the <codeph>Shape</codeph> object (in pixels).
+		 </apiDesc></apiParam><apiParam><apiItemName>w</apiItemName><apiType value="Number"/><apiDesc>			the width of the <codeph>Shape</codeph> (in pixels).
+		 </apiDesc></apiParam><apiParam><apiItemName>h</apiItemName><apiType value="Number"/><apiDesc>			the height of the <codeph>Shape</codeph> (in pixels).
+		 </apiDesc></apiParam><apiParam><apiItemName>color</apiItemName><apiType value="uint"/><apiData>0xFFFFFF</apiData><apiDesc>		the color of the <codeph>Shape</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>alpha</apiItemName><apiType value="Number"/><apiData>1</apiData><apiDesc>		the alpha of the <codeph>Shape</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns a <codeph>Shape</codeph> object using the <codeph>Shape.Graphics.drawRect</codeph> method.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import flash.display.Shape;
+		 import org.as3coreaddendum.utils.DrawUtil;
+		 
+		 var s:Shape = DrawUtil.rect(0, 0, 250, 250, 0xFF0000);
+		 addChild(s);
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:DrawUtil:DrawUtil"><apiName>DrawUtil</apiName><shortdesc>
+		 DrawUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	DrawUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 DrawUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:MathUtil"><apiName>MathUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:MathUtil:degreesToRadians"><apiName>degreesToRadians</apiName><shortdesc>
+		 Converts degrees to radians.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of degrees converted to radians.
+		 </apiDesc></apiReturn><apiParam><apiItemName>degrees</apiItemName><apiType value="Number"/><apiDesc>		the number of degrees to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>18</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts degrees to radians.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.MathUtil;
+		 
+		 MathUtil.degreesToRadians(null)    // 0
+		 MathUtil.degreesToRadians(0)       // 0
+		 MathUtil.degreesToRadians(1)       // 0.017453292519943295
+		 MathUtil.degreesToRadians(1, 0)    // 0
+		 MathUtil.degreesToRadians(1, 1)    // 0
+		 MathUtil.degreesToRadians(1, 2)    // 0.02
+		 MathUtil.degreesToRadians(1, 3)    // 0.017
+		 MathUtil.degreesToRadians(1.5)     // 0.02617993877991494
+		 MathUtil.degreesToRadians(30)      // 0.5235987755982988
+		 MathUtil.degreesToRadians(-8)      // -0.13962634015954636
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:MathUtil:millisecondsToSeconds"><apiName>millisecondsToSeconds</apiName><shortdesc>
+		 Converts milliseconds to seconds.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of milliseconds converted to seconds.
+		 </apiDesc></apiReturn><apiParam><apiItemName>milliseconds</apiItemName><apiType value="Number"/><apiDesc>	the number of milliseconds to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts milliseconds to seconds.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.MathUtil;
+		 
+		 MathUtil.millisecondsToSeconds(null)        // 0
+		 MathUtil.millisecondsToSeconds(0)           // 0
+		 MathUtil.millisecondsToSeconds(1)           // 0
+		 MathUtil.millisecondsToSeconds(300)         // 0
+		 MathUtil.millisecondsToSeconds(300, 1)      // 0.3
+		 MathUtil.millisecondsToSeconds(500)         // 1
+		 MathUtil.millisecondsToSeconds(500, 1)      // 0.5
+		 MathUtil.millisecondsToSeconds(1000)        // 1
+		 MathUtil.millisecondsToSeconds(1000, 1)     // 1
+		 MathUtil.millisecondsToSeconds(1500)        // 2
+		 MathUtil.millisecondsToSeconds(1500, 1)     // 1.5
+		 MathUtil.millisecondsToSeconds(1500, 2)     // 1.5
+		 MathUtil.millisecondsToSeconds(2123)        // 2
+		 MathUtil.millisecondsToSeconds(2123, 1)     // 2.1
+		 MathUtil.millisecondsToSeconds(2123, 2)     // 2.12
+		 MathUtil.millisecondsToSeconds(-2123)       // -2
+		 MathUtil.millisecondsToSeconds(-2123, 1)    // -2.1
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:MathUtil:percentToRange"><apiName>percentToRange</apiName><shortdesc>
+		 Returns the number that corresponds to the percentage in a given range.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number that corresponds to the percentage in the range.
+		 </apiDesc></apiReturn><apiParam><apiItemName>percent</apiItemName><apiType value="Number"/><apiDesc>	the percent to be used in the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>min</apiItemName><apiType value="Number"/><apiDesc>		the begin of the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>max</apiItemName><apiType value="Number"/><apiDesc>		the end of the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>rounding</apiItemName><apiType value="org.as3coreaddendum.system:NumericRounding"/><apiData>null</apiData><apiDesc>	determines whether the number should be rounded.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the number that corresponds to the percentage in a given range.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.MathUtil;
+		 
+		 MathUtil.percentToRange(50, 0, 100)                           // 50
+		 MathUtil.percentToRange(50, 100, 200)                         // 150
+		 MathUtil.percentToRange(1, 26, 77)                            // 26.51
+		 MathUtil.percentToRange(33, 26, 77)                           // 42.83
+		 MathUtil.percentToRange(33, 26, 77, NumericRounding.FLOOR)    // 42
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:MathUtil:radiansToDegrees"><apiName>radiansToDegrees</apiName><shortdesc>
+		 Converts radians to degrees.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of radians converted to degrees.
+		 </apiDesc></apiReturn><apiParam><apiItemName>radians</apiItemName><apiType value="Number"/><apiDesc>		the number of degrees to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>18</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts radians to degrees.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.MathUtil;
+		 
+		 MathUtil.radiansToDegrees(null)    // 0
+		 MathUtil.radiansToDegrees(0)       // 0
+		 MathUtil.radiansToDegrees(1)       // 57.29577951308232
+		 MathUtil.radiansToDegrees(1, 0)    // 57
+		 MathUtil.radiansToDegrees(1, 1)    // 57.3
+		 MathUtil.radiansToDegrees(1, 2)    // 57.3
+		 MathUtil.radiansToDegrees(1, 3)    // 57.296
+		 MathUtil.radiansToDegrees(1.5)     // 85.94366926962348
+		 MathUtil.radiansToDegrees(30)      // 1718.8733853924698
+		 MathUtil.radiansToDegrees(-8)      // -458.3662361046586
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:MathUtil:rangeToPercent"><apiName>rangeToPercent</apiName><shortdesc>
+		 Returns the percentage corresponding to the number in a given range.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the percentage that corresponds to the number in the range.
+		 </apiDesc></apiReturn><apiParam><apiItemName>num</apiItemName><apiType value="Number"/><apiDesc>		the number to be used in the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>min</apiItemName><apiType value="Number"/><apiDesc>		the begin of the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>max</apiItemName><apiType value="Number"/><apiDesc>		the end of the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>rounding</apiItemName><apiType value="org.as3coreaddendum.system:NumericRounding"/><apiData>null</apiData><apiDesc>	determines whether the number should be rounded.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the percentage corresponding to the number in a given range.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.MathUtil;
+		 
+		 MathUtil.rangeToPercent(50, 0, 100)                           // 50
+		 MathUtil.rangeToPercent(50, 100, 200)                         // -50
+		 MathUtil.rangeToPercent(150, 100, 200)                        // 50
+		 MathUtil.rangeToPercent(27, 26, 77)                           // 1.9607843137254901
+		 MathUtil.rangeToPercent(33, 26, 77)                           // 13.725490196078432
+		 MathUtil.rangeToPercent(33, 26, 77, NumericRounding.FLOOR)    // 13
+		 MathUtil.rangeToPercent(51.5, 26, 77)                         // 50
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:MathUtil:MathUtil"><apiName>MathUtil</apiName><shortdesc>
+		 MathUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	MathUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 MathUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:EquatableUtil"><apiName>EquatableUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiFinal/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:EquatableUtil:areEqual"><apiName>areEqual</apiName><shortdesc>
+		 Checks if objects are equal.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the value is NaN (not a number) and <codeph>false</codeph> otherwise.
+		 </apiDesc></apiReturn><apiParam><apiItemName>o1</apiItemName><apiType value="any"/><apiDesc>	 a <codeph>Number</codeph> object to evaluate.
+		 </apiDesc></apiParam><apiParam><apiItemName>o2</apiItemName><apiType value="any"/></apiParam></apiOperationDef><apiDesc>
+		 Checks if objects are equal.
+		 <p>First thi method compare objects using <codeph>o1 == o2</codeph>.
+		 If it returns true then the method returns true.
+		 Otherwise it will be checked if both objects implement <codeph>org.as3coreaddendum.system.IEquatable</codeph> interface and then use <codeph>o1.equals(o2)</codeph>.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 package test
+		 {
+		     import org.as3coreaddendum.system.IEquatable;
+		     import org.as3utils.ReflectionUtil;
+		 
+		     public class EquatableObject implements IEquatable
+		     {
+		         private var _id:String;
+		 
+		         public function get id(): String { return _id; }
+		 
+		         public function EquatableObject(id:String)
+		         {
+		             _id = id;
+		         }
+		 
+		         public function equals(other:: Boolean
+		         {
+		             if (!other) return false;
+		             if (!ReflectionUtil.classPathEquals(this, other)) return false;
+		             return id == (other as EquatableObject).id;
+		         }
+		     }
+		 }
+		 </codeblock>
+		 
+		 <codeblock rev="3.0">
+		 import test.EquatableObject;
+		 import org.as3coreaddendum.system.IEquatable;
+		 
+		 trace(EquatableUtil.areEqual(1, 1))            // false
+		 trace(EquatableUtil.areEqual("test1", 99))     // false
+		 
+		 var equatableObject1A:EquatableObject = new EquatableObject("object-1");
+		 var equatableObject1B:EquatableObject = new EquatableObject("object-1");
+		 var equatableObject2:EquatableObject = new EquatableObject("object-2");
+		 
+		 trace(EquatableUtil.areEqual(equatableObject1A, equatableObject1B))            // true
+		 trace(EquatableUtil.areEqual(equatableObject1A, equatableObject2))             // false
+		 
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:EquatableUtil:EquatableUtil"><apiName>EquatableUtil</apiName><shortdesc>
+		 NumberUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	NumberUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 NumberUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:RandomUtil"><apiName>RandomUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:RandomUtil:randomArray"><apiName>randomArray</apiName><shortdesc>
+		 Returns an array of random numbers that can be repeated.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiException><apiDesc>	if the <codeph>length</codeph> argument is less than zero.
+		 </apiDesc><apiItemName>ArgumentError</apiItemName><apiOperationClassifier>ArgumentError</apiOperationClassifier></apiException><apiReturn><apiType value="Array"/><apiDesc>an array of random numbers that can be repeated.
+		 </apiDesc></apiReturn><apiParam><apiItemName>min</apiItemName><apiType value="Number"/><apiDesc>			the begin of the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>max</apiItemName><apiType value="Number"/><apiDesc>			the end of the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>length</apiItemName><apiType value="int"/><apiDesc>			the length of the array, must be greater than zero.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns an array of random numbers that can be repeated.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.RandomUtil;
+		 
+		 RandomUtil.randomArray(0, 10, 5)             // [7,5,3,3,9]
+		 RandomUtil.randomArray(0, 10, 5, 1)          // [5.6,4.6,8.7,3.5,0.9]
+		 RandomUtil.randomArray(10, 20, 5)            // [16,10,15,16,16]
+		 RandomUtil.randomArray(-10, 10, 5)           // [-7,-4,-10,7,-3]
+		 RandomUtil.randomArray(-7, 4, 5)             // [-2,-7,2,2,3]
+		 RandomUtil.randomArray(-7, 4, 5, 2)          // [-4.88,-4.98,3.38,-0.3,2.41]
+		 RandomUtil.randomArray(-20, -10, 5)          // [-15,-14,-18,-13,-15]
+		 RandomUtil.randomArray(-1000, 1000, 5, 2)    // [146.31,-839.97,-85.05,-525.63,-739.22]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:RandomUtil:random"><apiName>random</apiName><shortdesc>
+		 Returns a random number between a range.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiException><apiDesc>	if the <codeph>max</codeph> argument is less than the <codeph>min</codeph> argument.
+		 </apiDesc><apiItemName>ArgumentError</apiItemName><apiOperationClassifier>ArgumentError</apiOperationClassifier></apiException><apiReturn><apiType value="Number"/><apiDesc>a random number between the range (min, max).
+		 </apiDesc></apiReturn><apiParam><apiItemName>min</apiItemName><apiType value="Number"/><apiDesc>			the begin of the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>max</apiItemName><apiType value="Number"/><apiDesc>			the end of the range.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns a random number between a range.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.RandomUtil;
+		 
+		 RandomUtil.random(0, 10)              // 3
+		 RandomUtil.random(0, 10)              // 0
+		 RandomUtil.random(0, 10)              // 10
+		 RandomUtil.random(0, 10, 1)           // 0.9
+		 RandomUtil.random(0, 10, 1)           // 9.6
+		 RandomUtil.random(0, 10, 1)           // 5.4
+		 RandomUtil.random(0, 10, 2)           // 2.87
+		 RandomUtil.random(0, 10, 3)           // 4.602
+		 RandomUtil.random(-13, 11, 1)         // -9.8
+		 RandomUtil.random(-13, 11, 1)         // -12.9
+		 RandomUtil.random(-13, 11, 1)         // 10.6
+		 RandomUtil.random(-1000, 1000, 1)     // 273.6
+		 RandomUtil.random(-1000, 1000, 1)     // -847.2
+		 RandomUtil.random(-20, -10)           // -15
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:RandomUtil:RandomUtil"><apiName>RandomUtil</apiName><shortdesc>
+		 RandomUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	RandomUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 RandomUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:StringUtil"><apiName>StringUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiFinal/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:StringUtil:abbreviate"><apiName>abbreviate</apiName><shortdesc>
+		 Abbreviates a String object using ellipses.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiException><apiDesc>	If the <codeph>maxWidth</codeph> argument is less than 4.
+		 </apiDesc><apiItemName>ArgumentError</apiItemName><apiOperationClassifier>ArgumentError</apiOperationClassifier></apiException><apiReturn><apiType value="String"/><apiDesc>the abbreviated <codeph>String</codeph> object. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>. 
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>		the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>maxWidth</apiItemName><apiType value="int"/><apiDesc>maximum length of the result <codeph>String</codeph> object, must be at least 4.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Abbreviates a <codeph>String</codeph> object using ellipses.
+		 
+		 </apiDesc><example>
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.abbreviate(null          , 4)    // null
+		 StringUtil.abbreviate(""            , 4)    // 
+		 StringUtil.abbreviate(" "           , 4)    //  
+		 StringUtil.abbreviate("a"           , 4)    // a
+		 StringUtil.abbreviate("ab"          , 4)    // ab
+		 StringUtil.abbreviate("abcdefghij"  , 4)    // a...
+		 StringUtil.abbreviate("abcdefghij"  , 5)    // ab...
+		 StringUtil.abbreviate(" abcdefghij" , 5)    //  a...
+		 StringUtil.abbreviate("a bcdefghij" , 5)    // a...
+		 StringUtil.abbreviate(" a bcdefghij", 5)    //  a...
+		 StringUtil.abbreviate("abcdefghij"  , 6)    // abc...
+		 StringUtil.abbreviate(" abcdefghij" , 6)    //  ab...
+		 StringUtil.abbreviate("a bcdefghij" , 6)    // a b...
+		 StringUtil.abbreviate(" a bcdefghij", 6)    //  a...
+		 StringUtil.abbreviate("abcdefghij"  , 7)    // abcd...
+		 StringUtil.abbreviate("abcdefghij"  , 8)    // abcde...
+		 StringUtil.abbreviate("abcdefghij"  , 9)    // abcdef...
+		 StringUtil.abbreviate("abcdefghij"  , 10)   // abcdefghij
+		 StringUtil.abbreviate("abcdefghij"  , 11)   // abcdefghij
+		 StringUtil.abbreviate("abcdefghij"  , 12)   // abcdefghij
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:capitalize"><apiName>capitalize</apiName><shortdesc>
+		 Capitalizes a String object, changing only the first letter to uppercase.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the capitalized <codeph>String</codeph>. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to capitalize. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Capitalizes a <codeph>String</codeph> object, changing only the first letter to uppercase.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.capitalize(null)      // null
+		 StringUtil.capitalize(" ")       // 
+		 StringUtil.capitalize("a")       // A
+		 StringUtil.capitalize("A")       // A
+		 StringUtil.capitalize("ab")      // Ab
+		 StringUtil.capitalize("Ab")      // Ab
+		 StringUtil.capitalize("aB")      // AB
+		 StringUtil.capitalize("AB")      // AB
+		 StringUtil.capitalize("abc")     // Abc
+		 StringUtil.capitalize(" abc")    //  abc
+		 StringUtil.capitalize(" Abc")    //  Abc
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:containsAny"><apiName>containsAny</apiName><shortdesc>
+		 Checks if the String object contains any character in the given set of characters.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object contains any of the chars of the search <codeph>String</codeph> object, <codeph>false</codeph> if not. If the <codeph>str</codeph> or <codeph>search</codeph> argument is <codeph>null</codeph> then the return is <codeph>false</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>search</apiItemName><apiType value="String"/><apiDesc>			the chars to find. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains any character in the given set of characters.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.containsAny(null , null)            // false
+		 StringUtil.containsAny("abc", "")              // false
+		 StringUtil.containsAny("abc", "a")             // true
+		 StringUtil.containsAny("b"  , "abc")           // true
+		 StringUtil.containsAny("A"  , "abc")           // false
+		 StringUtil.containsAny("A"  , "abc", false)    // true
+		 StringUtil.containsAny("a"  , "ABC")           // false
+		 StringUtil.containsAny("a"  , "ABC", false)    // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:containsNone"><apiName>containsNone</apiName><shortdesc>
+		 Checks if the String object does not contain any of the characters of the given set of characters.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object does not contains any of the chars of the invalidChars <codeph>String</codeph> object, <codeph>false</codeph> if does. If the <codeph>str</codeph> or <codeph>invalidChars</codeph> argument is <codeph>null</codeph> then the return is <codeph>true</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>invalidChars</apiItemName><apiType value="String"/><apiDesc>the invalid chars. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object does not contain any of the characters of the given set of characters.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.containsNone(null  , null)           // true
+		 StringUtil.containsNone("abc" , "")             // true
+		 StringUtil.containsNone("abc", "a")             // false
+		 StringUtil.containsNone("b"  , "abc")           // false
+		 StringUtil.containsNone("A"  , "abc")           // true
+		 StringUtil.containsNone("A"  , "abc", false)    // false
+		 StringUtil.containsNone("a"  , "ABC")           // true
+		 StringUtil.containsNone("a"  , "ABC", false)    // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:containsOnly"><apiName>containsOnly</apiName><shortdesc>
+		 Checks if the String object contains only characters in the given set of characters.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object contains only characters that exist in the <codeph>validChars</codeph> argument, <codeph>false</codeph> if contains any other characters. If the <codeph>str</codeph> or <codeph>validChars</codeph> argument is <codeph>null</codeph> then the return is <codeph>false</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>validChars</apiItemName><apiType value="String"/><apiDesc>	the valid chars. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains only characters in the given set of characters.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.containsOnly(null , null)            // false
+		 StringUtil.containsOnly("abc", "")              // false
+		 StringUtil.containsOnly("abc", "a")             // false
+		 StringUtil.containsOnly("abc", "b")             // false
+		 StringUtil.containsOnly("b"  , "abc")           // true
+		 StringUtil.containsOnly("ba" , "abc")           // true
+		 StringUtil.containsOnly("A"  , "abc")           // false
+		 StringUtil.containsOnly("A"  , "abc", false)    // true
+		 StringUtil.containsOnly("a"  , "ABC")           // false
+		 StringUtil.containsOnly("a"  , "ABC", false)    // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:contains"><apiName>contains</apiName><shortdesc>
+		 Checks if the String object contains the specified search String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object contains the search <codeph>String</codeph> object, <codeph>false</codeph> if not. If the <codeph>str</codeph> or <codeph>search</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>search</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to find. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains the specified search <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.contains(null , null)          // false
+		 StringUtil.contains(null , "")            // false
+		 StringUtil.contains(""   , null)          // false
+		 StringUtil.contains(" "  , " ")           // true
+		 StringUtil.contains(" "  , "")            // true
+		 StringUtil.contains(""   , " ")           // false
+		 StringUtil.contains("abc", "")            // true
+		 StringUtil.contains(""   , "abc")         // false
+		 StringUtil.contains("abc", "a")           // true
+		 StringUtil.contains("abc", "A")           // false
+		 StringUtil.contains("abc", "A", false)    // true
+		 StringUtil.contains("Abc", "a")           // false
+		 StringUtil.contains("Abc", "a", false)    // true
+		 StringUtil.contains("abc", "á")           // false
+		 StringUtil.contains("ábc", "a")           // false
+		 StringUtil.contains("ábc", "á")           // true
+		 StringUtil.contains("a"  , "abc")         // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:countMatches"><apiName>countMatches</apiName><shortdesc>
+		 Counts how many times the substring appears in the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="int"/><apiDesc>the number of occurrences or 0 if either argument is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>sub</apiItemName><apiType value="String"/><apiDesc>			the substring to count. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Counts how many times the substring appears in the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.countMatches(null   , null)          // 0
+		 StringUtil.countMatches("abc"  , "")            // 0
+		 StringUtil.countMatches("abc"  , "a")           // 1
+		 StringUtil.countMatches("abc"  , "á")           // 0
+		 StringUtil.countMatches("ábca" , "á")           // 1
+		 StringUtil.countMatches("abc"  , "b")           // 1
+		 StringUtil.countMatches("a"    , "abc")         // 0
+		 StringUtil.countMatches("abc"  , "aa")          // 0
+		 StringUtil.countMatches("abca" , "a")           // 2
+		 StringUtil.countMatches("abca" , "aa")          // 0
+		 StringUtil.countMatches("aabca", "aa")          // 1
+		 StringUtil.countMatches("abc"  , "ba")          // 0
+		 StringUtil.countMatches("abc"  , "A")           // 0
+		 StringUtil.countMatches("abc"  , "A", false)    // 1
+		 StringUtil.countMatches("abca" , "A", false)    // 2
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:defaultIfEmpty"><apiName>defaultIfEmpty</apiName><shortdesc>
+		 Returns either the passed in String object, or if the String object is empty ("") or null, the value of defaultStr.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>defaultStr</codeph> argument if the <codeph>str</codeph> argument is empty ("") or <codeph>null</codeph>, or the <codeph>str</codeph> argument otherwise.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>		the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>defaultStr</apiItemName><apiType value="String"/><apiDesc>	the default <codeph>String</codeph> object to return if the <codeph>str</codeph> argument is empty ("") or <codeph>null</codeph>. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns either the passed in <codeph>String</codeph> object, or if the <codeph>String</codeph> object is empty ("") or <codeph>null</codeph>, the value of defaultStr.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.defaultIfEmpty(null      , null)     // null
+		 StringUtil.defaultIfEmpty(""        , null)     // null
+		 StringUtil.defaultIfEmpty(null      , "abc")    // abc
+		 StringUtil.defaultIfEmpty("abc"     , "")       // abc
+		 StringUtil.defaultIfEmpty("abc"     , null)     // abc
+		 StringUtil.defaultIfEmpty("   "     , "abc")    // abc
+		 StringUtil.defaultIfEmpty("  \n\t  ", "abc")    // abc
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:endsWith"><apiName>endsWith</apiName><shortdesc>
+		 Check if the String object ends with a specified suffix.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object ends with the suffix or if both arguments are <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>suffix</apiItemName><apiType value="String"/><apiDesc>			the suffix to find. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Check if the <codeph>String</codeph> object ends with a specified suffix.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.endsWith(null    , null)           // true
+		 StringUtil.endsWith(""      , null)           // false
+		 StringUtil.endsWith(null    , "abc")          // false
+		 StringUtil.endsWith("abcdef", "f")            // true
+		 StringUtil.endsWith("abcdef", "F")            // false
+		 StringUtil.endsWith("abcdef", "F", false)     // true
+		 StringUtil.endsWith("abcdEF", "eF")           // false
+		 StringUtil.endsWith("abcdEF", "eF", false)    // true
+		 StringUtil.endsWith("abcdef", "ef")           // true
+		 StringUtil.endsWith("abcdef", "abcdef")       // true
+		 StringUtil.endsWith("abcdef", "abcdefg")      // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:equals"><apiName>equals</apiName><shortdesc>
+		 Compares two String objects, returning true if they are equal.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> objects are equal or both are <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str1</apiItemName><apiType value="String"/><apiDesc>			the first <codeph>String</codeph> object. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>str2</apiItemName><apiType value="String"/><apiDesc>			the second <codeph>String</codeph> object. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Compares two <codeph>String</codeph> objects, returning <codeph>true</codeph> if they are equal.
+		 <p>Two <codeph>null</codeph> references are considered to be equal.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 var obj:Object = {label:"jlm"};
+		 var n1:int = 1;
+		 var n2:Number = 2;
+		 var n3:Number = 3.1;
+		 var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+		 
+		 StringUtil.equals(null , null)            // true
+		 StringUtil.equals(""   , null)            // false
+		 StringUtil.equals(null , "abc")           // false
+		 StringUtil.equals("abc", "a")             // false
+		 StringUtil.equals("abc", "abc")           // true
+		 StringUtil.equals("abc", "AbC")           // false
+		 StringUtil.equals("abc", "AbC", false)    // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:firstChar"><apiName>firstChar</apiName><shortdesc>
+		 Returns the first char of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the first char of the <codeph>String</codeph> object. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to return the first char. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the first char of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.firstChar(null)       // null
+		 StringUtil.firstChar("")         // 
+		 StringUtil.firstChar(" ")        //  
+		 StringUtil.firstChar("a")        // a
+		 StringUtil.firstChar("ab")       // a
+		 StringUtil.firstChar("abc")      // a
+		 StringUtil.firstChar(" abc")     //  
+		 StringUtil.firstChar(" abc ")    //  
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isAllLowerCase"><apiName>isAllLowerCase</apiName><shortdesc>
+		 Checks if the String object contains only lowercase characters.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if only contains lowercase characters, and is not <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains only lowercase characters.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isAllLowerCase(null)        // false
+		 StringUtil.isAllLowerCase("")          // false
+		 StringUtil.isAllLowerCase("    ")      // false
+		 StringUtil.isAllLowerCase("  \t  ")    // false
+		 StringUtil.isAllLowerCase("abc")       // true
+		 StringUtil.isAllLowerCase("Abc")       // false
+		 StringUtil.isAllLowerCase("ABC")       // false
+		 StringUtil.isAllLowerCase("óbc")       // true
+		 StringUtil.isAllLowerCase("Óbc")       // false
+		 StringUtil.isAllLowerCase("ÓBC")       // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isAllUpperCase"><apiName>isAllUpperCase</apiName><shortdesc>
+		 Checks if the String object contains only uppercase characters.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if only contains uppercase characters, and is not <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains only uppercase characters.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isAllUpperCase(null)          // false
+		 StringUtil.isAllUpperCase("")            // false
+		 StringUtil.isAllUpperCase("    ")        // false
+		 StringUtil.isAllUpperCase("  	  ")    // false
+		 StringUtil.isAllUpperCase("abc")         // false
+		 StringUtil.isAllUpperCase("Abc")         // false
+		 StringUtil.isAllUpperCase("ABC")         // true
+		 StringUtil.isAllUpperCase("óbc")         // false
+		 StringUtil.isAllUpperCase("Óbc")         // false
+		 StringUtil.isAllUpperCase("ÓBC")         // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isAlphanumericSpace"><apiName>isAlphanumericSpace</apiName><shortdesc>
+		 Checks if the String object contains only unicode letters, digits or spaces.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if only contains unicode letters, digits and spaces and is not <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>. 	
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains only unicode letters, digits or spaces.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isAlphanumericSpace(null)              // false
+		 StringUtil.isAlphanumericSpace("")                // false
+		 StringUtil.isAlphanumericSpace("    ")            // true
+		 StringUtil.isAlphanumericSpace("  \t  ")          // false
+		 StringUtil.isAlphanumericSpace("abc")             // true
+		 StringUtil.isAlphanumericSpace("123456")          // true
+		 StringUtil.isAlphanumericSpace("abc123")          // true
+		 StringUtil.isAlphanumericSpace("123abc456def")    // true
+		 StringUtil.isAlphanumericSpace("abc123 ")         // true
+		 StringUtil.isAlphanumericSpace("ABC123 ")         // true
+		 StringUtil.isAlphanumericSpace("áóbc123")         // true
+		 StringUtil.isAlphanumericSpace("ÁÓbc123")         // true
+		 StringUtil.isAlphanumericSpace("ÁÓbc123-")        // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isAlphanumeric"><apiName>isAlphanumeric</apiName><shortdesc>
+		 Checks if the String object contains only unicode letters or digits.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if only contains unicode letters or digits, and is not <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>. 	
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains only unicode letters or digits.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isAlphanumeric(null)              // false
+		 StringUtil.isAlphanumeric("")                // false
+		 StringUtil.isAlphanumeric("    ")            // false
+		 StringUtil.isAlphanumeric("  \t  ")          // false
+		 StringUtil.isAlphanumeric("abc")             // true
+		 StringUtil.isAlphanumeric("123456")          // true
+		 StringUtil.isAlphanumeric("abc123")          // true
+		 StringUtil.isAlphanumeric("123abc456def")    // true
+		 StringUtil.isAlphanumeric("abc123 ")         // false
+		 StringUtil.isAlphanumeric("ABC123 ")         // false
+		 StringUtil.isAlphanumeric("áóbc123")         // true
+		 StringUtil.isAlphanumeric("ÁÓbc123")         // true
+		 StringUtil.isAlphanumeric("ÁÓbc123-")        // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isBlank"><apiName>isBlank</apiName><shortdesc>
+		 Checks if a String object is empty (""), null or if it contains only control characters(char &amp;lt;= 32).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object is <codeph>null</codeph>, empty or contains only control characters(char &lt;= 32).
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if a <codeph>String</codeph> object is empty (""), <codeph>null</codeph> or if it contains only control characters(char &lt;= 32).
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isBlank(null)         // true
+		 StringUtil.isBlank("")           // true
+		 StringUtil.isBlank("    ")       // true
+		 StringUtil.isBlank("  \t  ")     // true
+		 StringUtil.isBlank("abc")        // false
+		 StringUtil.isBlank(" abc ")      // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isEmpty"><apiName>isEmpty</apiName><shortdesc>
+		 Checks if a String object is empty ("") or null.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object is empty or <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if a <codeph>String</codeph> object is empty ("") or <codeph>null</codeph>.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isEmpty(null)         // true
+		 StringUtil.isEmpty("")           // true
+		 StringUtil.isEmpty("    ")       // false
+		 StringUtil.isEmpty("  \t  ")     // false
+		 StringUtil.isEmpty("abc")        // false
+		 StringUtil.isEmpty(" abc ")      // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isNotBlank"><apiName>isNotBlank</apiName><shortdesc>
+		 Checks if a String object is not empty (""), not null and not contains only control characters(char &amp;lt;= 32).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object is not empty, not <codeph>null</codeph> and not contains only control characters(char &lt;= 32).
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if a <codeph>String</codeph> object is not empty (""), not <codeph>null</codeph> and not contains only control characters(char &lt;= 32).
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isNotBlank(null)         // false
+		 StringUtil.isNotBlank("")           // false
+		 StringUtil.isNotBlank("    ")       // false
+		 StringUtil.isNotBlank("  \t  ")     // false
+		 StringUtil.isNotBlank("abc")        // true
+		 StringUtil.isNotBlank(" abc ")      // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isNotEmpty"><apiName>isNotEmpty</apiName><shortdesc>
+		 Checks if a String object is not empty ("") and not null.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object is not empty and is not <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if a <codeph>String</codeph> object is not empty ("") and not <codeph>null</codeph>.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isNotEmpty(null)         // false
+		 StringUtil.isNotEmpty("")           // false
+		 StringUtil.isNotEmpty("    ")       // true
+		 StringUtil.isNotEmpty("  \t  ")     // true
+		 StringUtil.isNotEmpty("abc")        // true
+		 StringUtil.isNotEmpty(" abc ")      // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isNumericSpace"><apiName>isNumericSpace</apiName><shortdesc>
+		 Checks if the String object contains only unicode digits or spaces.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object only contains unicode digits or spaces and is not <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains only unicode digits or spaces. A decimal point is not a unicode digit and returns <codeph>false</codeph>.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isNumericSpace(null)       // false
+		 StringUtil.isNumericSpace("")         // true
+		 StringUtil.isNumericSpace("    ")     // true
+		 StringUtil.isNumericSpace("  \t ")    // false
+		 StringUtil.isNumericSpace("123")      // true
+		 StringUtil.isNumericSpace("12.3")     // false
+		 StringUtil.isNumericSpace("a123")     // false
+		 StringUtil.isNumericSpace(" 123")     // true
+		 StringUtil.isNumericSpace("  123")    // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isNumeric"><apiName>isNumeric</apiName><shortdesc>
+		 Checks if the String object contains only unicode digits.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object only contains unicode digits and is not <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the <codeph>String</codeph> object contains only unicode digits. A decimal point is not a unicode digit and returns <codeph>false</codeph>.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isNumeric(null)       // false
+		 StringUtil.isNumeric("")         // true
+		 StringUtil.isNumeric("    ")     // false
+		 StringUtil.isNumeric("  \t ")    // false
+		 StringUtil.isNumeric("123")      // true
+		 StringUtil.isNumeric("12.3")     // false
+		 StringUtil.isNumeric("a123")     // false
+		 StringUtil.isNumeric(" 123")     // false
+		 StringUtil.isNumeric("  123")    // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:isValidEmail"><apiName>isValidEmail</apiName><shortdesc>
+		 Validates an input e-mail address.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object is a valid e-mail address according to this implementation.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to be validates as an e-mail address.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Validates an input e-mail address.
+		 <p>This implementation does not conform with any specification and is very restrictive.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.isValidEmail(null)                   // false
+		 StringUtil.isValidEmail("")                     // false
+		 StringUtil.isValidEmail("a")                    // false
+		 StringUtil.isValidEmail("a@a.a")                // false
+		 StringUtil.isValidEmail("aa@aa.aa")             // true
+		 StringUtil.isValidEmail("a/a@aa.aa")            // false
+		 StringUtil.isValidEmail("a=a@aa.aa")            // false
+		 StringUtil.isValidEmail("1a@1a.1a")             // false
+		 StringUtil.isValidEmail("a1@a1.a1")             // false
+		 StringUtil.isValidEmail("a1@a1.aa")             // true
+		 StringUtil.isValidEmail("11@11.11")             // false
+		 StringUtil.isValidEmail("aa-aa@a-a.a-a")        // false
+		 StringUtil.isValidEmail("aa-aa@aa-aa.aa-aa")    // false
+		 StringUtil.isValidEmail("aa-aa@aa-aa-aa.aa")    // true
+		 StringUtil.isValidEmail("aa-aa@aa.aa.aa")       // true
+		 StringUtil.isValidEmail("áa-aa@aa.aa.aa")       // false
+		 StringUtil.isValidEmail("Aa-aa@aa.aa.aA")       // true
+		 StringUtil.isValidEmail("aa-aa@aa.aa.aa")       // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:lastChar"><apiName>lastChar</apiName><shortdesc>
+		 Returns the last char of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the last char of the <codeph>String</codeph> object. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to return the last char. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the last char of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.lastChar(null)       // null
+		 StringUtil.lastChar("")         // 
+		 StringUtil.lastChar(" ")        //  
+		 StringUtil.lastChar("a")        // a
+		 StringUtil.lastChar("ab")       // b
+		 StringUtil.lastChar("abc")      // c
+		 StringUtil.lastChar(" abc")     // c
+		 StringUtil.lastChar(" abc ")    //  
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:ltrim"><apiName>ltrim</apiName><shortdesc>
+		 Removes control characters(char &amp;lt;= 32) from the start of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the trimmed <codeph>String</codeph> object. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>the <codeph>String</codeph> object to be trimmed. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes control characters(char &lt;= 32) from the start of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.ltrim(null)                    // null
+		 StringUtil.ltrim("")                      // 
+		 StringUtil.ltrim(" ")                     // 
+		 StringUtil.ltrim("  ")                    // 
+		 StringUtil.ltrim("     ")                 // 
+		 StringUtil.ltrim("abc"):                  // abc
+		 StringUtil.ltrim(" abc")                  // abc
+		 StringUtil.ltrim("   abc")                // abc
+		 StringUtil.ltrim("   abc ")               // abc 
+		 StringUtil.ltrim(" \t\n  abc  ")          // abc  
+		 StringUtil.ltrim(" \t\n  abc \t\n ")      // abc \t\n 
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:removeAccentuation"><apiName>removeAccentuation</apiName><shortdesc>
+		 Remove accented characters from the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>String</codeph> object without accented characters.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to remove accented characters. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Remove accented characters from the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.removeAccentuation(null)                  // null
+		 StringUtil.removeAccentuation("")                    // 
+		 StringUtil.removeAccentuation("    ")                //     
+		 StringUtil.removeAccentuation("aáeéiíoóuúçÇÁbÜõ")    // aaeeiioouucCAbUo
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:removeEnd"><apiName>removeEnd</apiName><shortdesc>
+		 Removes a substring only if it is at the end of the source String object, otherwise returns the source String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>String</codeph> object with the substring removed if found. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to search. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>remove</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to search for and remove. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a substring only if it is at the end of the source <codeph>String</codeph> object, otherwise returns the source <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.removeEnd(null    , null)           // null
+		 StringUtil.removeEnd(""      , null)           // 
+		 StringUtil.removeEnd(null    , "abc")          // null
+		 StringUtil.removeEnd(""      , "")             // 
+		 StringUtil.removeEnd("abc"   , "")             // abc
+		 StringUtil.removeEnd(""      , "abc")          // 
+		 StringUtil.removeEnd("abcdef", "c")            // abcdef
+		 StringUtil.removeEnd("abcdef", "C")            // abcdef
+		 StringUtil.removeEnd("abcdef", "C", false)     // abcdef
+		 StringUtil.removeEnd("ABcdef", "aB")           // ABcdef
+		 StringUtil.removeEnd("ABcdef", "aB", false)    // ABcdef
+		 StringUtil.removeEnd("ABcdeF", "Ef")           // ABcdeF
+		 StringUtil.removeEnd("ABcdeF", "Ef", false)    // ABcd
+		 StringUtil.removeEnd("abcdef", "ab")           // abcdef
+		 StringUtil.removeEnd("abcdef", "abcdef")       // 
+		 StringUtil.removeEnd("abcdef", "abcdefg")      // abcdef
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:removeFirstCharacter"><apiName>removeFirstCharacter</apiName><shortdesc>
+		 Removes the first character of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>String</codeph> object without first character. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to remove the first character from. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes the first character of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.removeFirstCharacter(null)            // null
+		 StringUtil.removeFirstCharacter(""):             // 
+		 StringUtil.removeFirstCharacter("a"):            // 
+		 StringUtil.removeFirstCharacter("ab")            // b
+		 StringUtil.removeFirstCharacter("abc")           // bc
+		 StringUtil.removeFirstCharacter("abc\t\ndef")    // bc\t\ndef
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:removeLastCharacter"><apiName>removeLastCharacter</apiName><shortdesc>
+		 Removes the last character of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>String</codeph> object without last character. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to remove last character from. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes the last character of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.removeLastCharacter(null)            // null
+		 StringUtil.removeLastCharacter(""):             // 
+		 StringUtil.removeLastCharacter("a"):            // 
+		 StringUtil.removeLastCharacter("ab")            // a
+		 StringUtil.removeLastCharacter("abc")           // ab
+		 StringUtil.removeLastCharacter("abc\t\ndef")    // abc\t\nde
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:removeStart"><apiName>removeStart</apiName><shortdesc>
+		 Removes a substring only if it is at the start of the source String object, otherwise returns the source String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>String</codeph> object with the substring removed if found. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to search. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>remove</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to search for and remove. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a substring only if it is at the start of the source <codeph>String</codeph> object, otherwise returns the source <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.removeStart(null    , null)           // null
+		 StringUtil.removeStart(""      , null)           // 
+		 StringUtil.removeStart(null    , "abc")          // null
+		 StringUtil.removeStart(""      , "")             // 
+		 StringUtil.removeStart("abc"   , "")             // abc
+		 StringUtil.removeStart(""      , "abc")          // 
+		 StringUtil.removeStart("abcdef", "c")            // abcdef
+		 StringUtil.removeStart("abcdef", "C")            // abcdef
+		 StringUtil.removeStart("abcdef", "C", false)     // abcdef
+		 StringUtil.removeStart("ABcdef", "aB")           // ABcdef
+		 StringUtil.removeStart("ABcdef", "aB", false)    // cdef
+		 StringUtil.removeStart("ABcdeF", "Ef")           // ABcdeF
+		 StringUtil.removeStart("ABcdeF", "Ef", false)    // ABcdeF
+		 StringUtil.removeStart("abcdef", "ab")           // cdef
+		 StringUtil.removeStart("abcdef", "abcdef")       // 
+		 StringUtil.removeStart("abcdef", "abcdefg")      // abcdef
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:remove"><apiName>remove</apiName><shortdesc>
+		 Removes all occurrences of a substring from within the source String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>String</codeph> object with the substring removed if found. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to search. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>remove</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to search for and remove. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes all occurrences of a substring from within the source <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.remove(null    , null)           // null
+		 StringUtil.remove(""      , null)           // 
+		 StringUtil.remove(null    , "abc")          // null
+		 StringUtil.remove(""      , "")             // 
+		 StringUtil.remove("abc"   , "")             // abc
+		 StringUtil.remove(""      , "abc")          // 
+		 StringUtil.remove("abcdef", "c")            // abdef
+		 StringUtil.remove("abcdef", "C")            // abcdef
+		 StringUtil.remove("abcdef", "C", false)     // abdef
+		 StringUtil.remove("ABcdef", "aB")           // ABcdef
+		 StringUtil.remove("ABcdef", "aB", false)    // cdef
+		 StringUtil.remove("ABcdeF", "Ef")           // ABcdeF
+		 StringUtil.remove("ABcdeF", "Ef", false)    // ABcd
+		 StringUtil.remove("abcdef", "ab")           // cdef
+		 StringUtil.remove("abcdef", "abcdef")       // 
+		 StringUtil.remove("abcdef", "abcdefg")      // abcdef
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:replaceExtended"><apiName>replaceExtended</apiName><shortdesc>
+		 Search for all occurrences of the String find within the String str and replaces by the String replaceBy.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>String</codeph> <codeph>str</codeph> with the <codeph>String</codeph> <codeph>find</codeph> replaced by the <codeph>String</codeph> <codeph>replaceBy</codeph>. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to search. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>find</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to search for and replace. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam><apiParam><apiItemName>replaceBy</apiItemName><apiType value="String"/><apiDesc>		the <codeph>String</codeph> object that will replace the <codeph>String</codeph> <codeph>find</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Search for all occurrences of the <codeph>String</codeph> <codeph>find</codeph> within the <codeph>String</codeph> <codeph>str</codeph> and replaces by the <codeph>String</codeph> <codeph>replaceBy</codeph>.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.replaceExtended(null        , null , "x")           // null
+		 StringUtil.replaceExtended(""          , null , "x")           // 
+		 StringUtil.replaceExtended(null        , "abc", "x")           // null
+		 StringUtil.replaceExtended(""          , ""   , "x")           // 
+		 StringUtil.replaceExtended("abc"       , ""   , "x")           // abc
+		 StringUtil.replaceExtended(""          , "abc", "x")           // 
+		 StringUtil.replaceExtended("abcdefabca", "a"  , "x")           // xbcdefxbcx
+		 StringUtil.replaceExtended("AbcdefabcA", "a"  , "x")           // AbcdefxbcA
+		 StringUtil.replaceExtended("AbcdefabcA", "a"  , "x", false)    // xbcdefxbcx
+		 StringUtil.replaceExtended("abcdef"    , "y"  , "x")           // abcdef
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:reverse"><apiName>reverse</apiName><shortdesc>
+		 Reverses the chars of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the <codeph>String</codeph> object with the chars reversed. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to reverse. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Reverses the chars of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.reverse(null)       // null
+		 StringUtil.reverse("")         // 
+		 StringUtil.reverse(" ")        //  
+		 StringUtil.reverse("a")        // a
+		 StringUtil.reverse("ab")       // ba
+		 StringUtil.reverse("abc")      // cba
+		 StringUtil.reverse(" abc")     // cba 
+		 StringUtil.reverse(" abc ")    //  cba 
+		 StringUtil.reverse("abc\td")   // d\tcba
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:rtrim"><apiName>rtrim</apiName><shortdesc>
+		 Removes control characters(char &amp;lt;= 32) from the start of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the trimmed <codeph>String</codeph> object. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>the <codeph>String</codeph> object to be trimmed. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes control characters(char &lt;= 32) from the start of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.rtrim(null)                   // null
+		 StringUtil.rtrim("")                     // 
+		 StringUtil.rtrim(" ")                    // 
+		 StringUtil.rtrim("abc")                  // abc
+		 StringUtil.rtrim(" abc")                 //  abc
+		 StringUtil.rtrim("   abc ")              //    abc
+		 StringUtil.rtrim("   abc  ")             //    abc
+		 StringUtil.rtrim(" \n\t  abc  ")         // \n\t  abc
+		 StringUtil.rtrim(" \n\t  abc  \n\t ")    // \n\t  abc
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:startsWith"><apiName>startsWith</apiName><shortdesc>
+		 Check if the String object starts with a specified prefix.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the <codeph>String</codeph> object starts with the prefix or if both arguments are <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>			the <codeph>String</codeph> object to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>prefix</apiItemName><apiType value="String"/><apiDesc>			the prefix to find. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam><apiParam><apiItemName>stringCase</apiItemName><apiType value="org.as3coreaddendum.system:StringCase"/><apiDesc>		indicates whether case sensitivity is considered or not in the comparison.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Check if the <codeph>String</codeph> object starts with a specified prefix.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.startsWith(null    , null)           // true
+		 StringUtil.startsWith(""      , null)           // false
+		 StringUtil.startsWith(null    , "abc")          // false
+		 StringUtil.startsWith("abcdef", "a")            // true
+		 StringUtil.startsWith("abcdef", "A")            // false
+		 StringUtil.startsWith("abcdef", "A", false)     // true
+		 StringUtil.startsWith("ABcdef", "aB")           // false
+		 StringUtil.startsWith("ABcdef", "aB", false)    // true
+		 StringUtil.startsWith("abcdef", "ab")           // true
+		 StringUtil.startsWith("abcdef", "abcdef")       // true
+		 StringUtil.startsWith("abcdef", "abcdefg")      // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:trimToEmpty"><apiName>trimToEmpty</apiName><shortdesc>
+		 Removes control characters(char &amp;lt;= 32) from the start and end of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the trimmed <codeph>String</codeph> object. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is an empty <codeph>String</codeph> ("").
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>the <codeph>String</codeph> object to be trimmed. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes control characters(char &lt;= 32) from the start and end of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.trimToEmpty(null)                   // 
+		 StringUtil.trimToEmpty("")                     // 
+		 StringUtil.trimToEmpty(" ")                    // 
+		 StringUtil.trimToEmpty("  ")                   // 
+		 StringUtil.trimToEmpty("  \t  ")               // 
+		 StringUtil.trimToEmpty("abc")                  // abc
+		 StringUtil.trimToEmpty(" abc")                 // abc
+		 StringUtil.trimToEmpty("   abc ")              // abc
+		 StringUtil.trimToEmpty("   abc  ")             // abc
+		 StringUtil.trimToEmpty(" \n\t  abc  ")         // abc
+		 StringUtil.trimToEmpty(" \n\t  abc  \n\t ")    // abc
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:trimToNull"><apiName>trimToNull</apiName><shortdesc>
+		 Removes control characters(char &amp;lt;= 32) from the start and end of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the trimmed <codeph>String</codeph> object if it contains any characters that isn't control characters(char &lt;= 32), or <codeph>null</codeph> if it contains only those characters. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>the <codeph>String</codeph> object to be trimmed. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes control characters(char &lt;= 32) from the start and end of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.trimToNull(null)                   // null
+		 StringUtil.trimToNull("")                     // null
+		 StringUtil.trimToNull(" ")                    // null
+		 StringUtil.trimToNull("  ")                   // null
+		 StringUtil.trimToNull("  \t  ")               // null
+		 StringUtil.trimToNull("abc")                  // abc
+		 StringUtil.trimToNull(" abc")                 // abc
+		 StringUtil.trimToNull("   abc ")              // abc
+		 StringUtil.trimToNull("   abc  ")             // abc
+		 StringUtil.trimToNull(" \n\t  abc  ")         // abc
+		 StringUtil.trimToNull(" \n\t  abc  \n\t ")    // abc
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:trim"><apiName>trim</apiName><shortdesc>
+		 Removes control characters(char &amp;lt;= 32) from the start and end of the String object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the trimmed <codeph>String</codeph> object. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>the <codeph>String</codeph> object to be trimmed. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes control characters(char &lt;= 32) from the start and end of the <codeph>String</codeph> object.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.trim(null)                   // null
+		 StringUtil.trim("")                     // 
+		 StringUtil.trim(" ")                    // 
+		 StringUtil.trimToEmpty("  \t  ")        // 
+		 StringUtil.trim("abc")                  // abc
+		 StringUtil.trim(" abc")                 // abc
+		 StringUtil.trim("   abc ")              // abc
+		 StringUtil.trim("   abc  ")             // abc
+		 StringUtil.trim(" \n\t  abc  ")         // abc
+		 StringUtil.trim(" \n\t  abc  \n\t ")    // abc
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:StringUtil:uncapitalize"><apiName>uncapitalize</apiName><shortdesc>
+		 Uncapitalizes a String object, changing only the first letter to lowercase.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/><apiDesc>the uncapitalized <codeph>String</codeph>. If the <codeph>str</codeph> argument is <codeph>null</codeph> then the return is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/><apiDesc>	the <codeph>String</codeph> object to uncapitalize. May be <codeph>null</codeph>. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Uncapitalizes a <codeph>String</codeph> object, changing only the first letter to lowercase.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.StringUtil;
+		 
+		 StringUtil.uncapitalize(null)      // null
+		 StringUtil.uncapitalize(" ")       // 
+		 StringUtil.uncapitalize("a")       // a
+		 StringUtil.uncapitalize("A")       // a
+		 StringUtil.uncapitalize("ab")      // ab
+		 StringUtil.uncapitalize("Ab")      // ab
+		 StringUtil.uncapitalize("aB")      // aB
+		 StringUtil.uncapitalize("AB")      // aB
+		 StringUtil.uncapitalize("abc")     // abc
+		 StringUtil.uncapitalize(" abc")    //  abc
+		 StringUtil.uncapitalize(" Abc")    //  Abc
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:StringUtil:StringUtil"><apiName>StringUtil</apiName><shortdesc>
+		 StringUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	StringUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 StringUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:URLUtil"><apiName>URLUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiFinal/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:URLUtil:appendVar"><apiName>appendVar</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/></apiReturn><apiParam><apiItemName>url</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>varName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>varValue</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:URLUtil:getURLRequest"><apiName>getURLRequest</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="flash.net:URLRequest"/></apiReturn><apiParam><apiItemName>url</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:URLUtil:isHttps"><apiName>isHttps</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>url</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:URLUtil:isHttp"><apiName>isHttp</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>url</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:URLUtil:navigateToURL"><apiName>navigateToURL</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>url</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>window</apiItemName><apiType value="String"/><apiData>null</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:URLUtil:URLUtil"><apiName>URLUtil</apiName><shortdesc>
+		 URLUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	URLUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 URLUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:ArrayUtil"><apiName>ArrayUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:ArrayUtil:addAt"><apiName>addAt</apiName><shortdesc>
+		 Adds the element at the specified position in the specified array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiException><apiDesc>	if the <codeph>array</codeph> argument is <codeph>null</codeph>.
+		 </apiDesc><apiItemName>ArgumentError</apiItemName><apiOperationClassifier>ArgumentError</apiOperationClassifier></apiException><apiException><apiDesc>		if the <codeph>index</codeph> argument is a negative integer or greater than the <codeph>array.length - 1</codeph>.
+		 </apiDesc><apiItemName>RangeError</apiItemName><apiOperationClassifier>RangeError</apiOperationClassifier></apiException><apiReturn><apiType value="Array"/><apiDesc>the array with the element added.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to remove the element from.
+		 </apiDesc></apiParam><apiParam><apiItemName>index</apiItemName><apiType value="int"/><apiDesc>		the position of the element to be removed.
+		 </apiDesc></apiParam><apiParam><apiItemName>element</apiItemName><apiType value="any"/><apiDesc>	the element to add.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Adds the element at the specified position in the specified array.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+		 
+		 ArrayUtil.addAt(arr, 0, 0)       // [0,abc,def,123,1,2,3,abc,7]
+		 ArrayUtil.addAt(arr, 7, 4)       // [0,abc,def,123,1,2,3,4,abc,7]
+		 ArrayUtil.addAt(arr, 10, "z")    // [0,abc,def,123,1,2,3,4,abc,7,z]
+		 
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:containsDuplication"><apiName>containsDuplication</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:containsOnlyType"><apiName>containsOnlyType</apiName><shortdesc>
+		 Returns true if the array contains only elements of the type argument.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the array contains only elements of the <codeph>type</codeph> argument. If the array is <codeph>null</codeph> or empty returns <codeph>false</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>type</apiItemName><apiType value="any"/><apiDesc>	the type of the elements.
+		 </apiDesc></apiParam><apiParam><apiItemName>strict</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>		defines if the type of the elements should be strictly equal.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns <codeph>true</codeph> if the array contains only elements of the <codeph>type</codeph> argument.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 ArrayUtil.containsOnlyType(["a", "b", "c"], String)                  // true
+		 ArrayUtil.containsOnlyType(["a", "b", "c"], String, true)            // true
+		 ArrayUtil.containsOnlyType(["a", "b", "c", 5], String)               // false
+		 ArrayUtil.containsOnlyType([[], [], [], [], []], Array)              // true
+		 ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Array)           // false
+		 ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Object)          // true
+		 ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Object, true)    // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:containsType"><apiName>containsType</apiName><shortdesc>
+		 Returns true if the array contains some element of the type argument.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the array contains some element of the <codeph>type</codeph> argument. If the array is <codeph>null</codeph> or empty returns <codeph>false</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>type</apiItemName><apiType value="any"/><apiDesc>	the type of the elements.
+		 </apiDesc></apiParam><apiParam><apiItemName>strict</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>		defines if the type of the elements should be strictly equal.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns <codeph>true</codeph> if the array contains some element of the <codeph>type</codeph> argument.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 ArrayUtil.containsType(["a", "b", "c"], String)                  // true
+		 ArrayUtil.containsType(["a", "b", "c"], String, true)            // true
+		 ArrayUtil.containsType(["a", "b", "c", 5], String)               // true
+		 ArrayUtil.containsType(["a", "b", "c"], Number):                 // false
+		 ArrayUtil.containsType(["a", "b", "c", 5], Number)               // true
+		 ArrayUtil.containsType([[], [], [], [], []], Array)              // true
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Array)           // true
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Number)          // true
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Object)          // true
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Object, true)    // false
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Boolean)         // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:contains"><apiName>contains</apiName><shortdesc>
+		 Checks if the element is in the given array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the array contains the element.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to search through. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>element</apiItemName><apiType value="any"/><apiDesc>	the element to find.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the element is in the given array.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var obj:Object = {label:"ghi"};
+		 var arr:Array = ["abc", 123, {label:"def"}, obj];
+		 
+		 ArrayUtil.contains([], null)              // false
+		 ArrayUtil.contains([null], null)          // true
+		 ArrayUtil.contains(arr, "abc")            // true
+		 ArrayUtil.contains(arr, "ab")             // false
+		 ArrayUtil.contains(arr, "abcd")           // false
+		 ArrayUtil.contains(arr, 123)              // true
+		 ArrayUtil.contains(arr, "123")            // false
+		 ArrayUtil.contains(arr, 1234)             // false
+		 ArrayUtil.contains(arr, {label:"def"})    // false
+		 ArrayUtil.contains(arr, {label:"ghi"})    // false
+		 ArrayUtil.contains(arr, obj)              // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:equals"><apiName>equals</apiName><shortdesc>
+		 Compares two arrays, returning true if they are equal (same length, objects and order).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the arrays are equal or both are <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array1</apiItemName><apiType value="Array"/><apiDesc>	the first array. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>array2</apiItemName><apiType value="Array"/><apiDesc>	the second array. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Compares two arrays, returning <codeph>true</codeph> if they are equal (same length, objects and order).
+		 <p>Two <codeph>null</codeph> references are considered to be equal.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var obj:Object = {label:"jlm"};
+		 var n1:int = 1;
+		 var n2:Number = 2;
+		 var n3:Number = 3.1;
+		 var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+		 var arr2:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+		 var arr3:Array = ["abc", "def", 123, obj, n1, n2, n3];
+		 var arr4:Array = ["abc", "def", 123, obj, n1, n2, n3];
+		 var arr5:Array = ["abc", "def", 123, obj, n2, n1, n3];
+		 
+		 ArrayUtil.equals(null, null)           // true
+		 ArrayUtil.equals(null, [])             // false
+		 ArrayUtil.equals([], [])               // true
+		 ArrayUtil.equals([1], [1])             // true
+		 ArrayUtil.equals(["abc"], ["abc"])     // true
+		 ArrayUtil.equals(["abc"], ["abcd"])    // false
+		 ArrayUtil.equals(arr, [])              // false
+		 ArrayUtil.equals(arr, arr)             // true
+		 ArrayUtil.equals(arr, arr2)            // false
+		 ArrayUtil.equals(arr3, arr4)           // true
+		 ArrayUtil.equals(arr4, arr5)           // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:filterByType"><apiName>filterByType</apiName><shortdesc>
+		 Returns the array containing only objects of the type of the type argument.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the array containing only objects of the type of the <codeph>type</codeph> argument.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array for filtering. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>type</apiItemName><apiType value="Class"/><apiDesc>	the type of the objects that should remain in the array.
+		 </apiDesc></apiParam><apiParam><apiItemName>strict</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>	defines if the type of the elements should be strictly equal.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the array containing only objects of the type of the <codeph>type</codeph> argument.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var obj:Object = {label:"jlm"};
+		 var n1:int = 1;
+		 var n2:Number = 2;
+		 var n3:Number = 3.1;
+		 var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+		 
+		 ArrayUtil.filterByType(null, null)             // null
+		 ArrayUtil.filterByType([], null)               // 
+		 ArrayUtil.filterByType(null, Array)            // null
+		 ArrayUtil.filterByType(arr, String)            // abc,def
+		 ArrayUtil.filterByType(arr, String, true)      // abc,def
+		 ArrayUtil.filterByType(arr, Object)            // abc,def,123,[object Object],[object Object],1,2,3.1
+		 ArrayUtil.filterByType(arr, Object, true)      // [object Object],[object Object]
+		 ArrayUtil.filterByType(arr, Number)            // 123,1,2,3.1
+		 ArrayUtil.filterByType(arr, Number, true)      // 3.1
+		 ArrayUtil.filterByType(arr, int)               // 123,1,2
+		 ArrayUtil.filterByType(arr, int, true)         // 123,1,2
+		 
+		 // for this to work the array must be re-declared with values for each call, because filterByType changes the original array.
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:getDuplicate"><apiName>getDuplicate</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:isEmpty"><apiName>isEmpty</apiName><shortdesc>
+		 Checks if an array is empty (zero-length) or null.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the array is empty or <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to check.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if an array is empty (zero-length) or <codeph>null</codeph>.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 ArrayUtil.isEmpty(null)      // true
+		 ArrayUtil.isEmpty([])        // true
+		 ArrayUtil.isEmpty([null])    // false
+		 ArrayUtil.isEmpty([123])     // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:isNotEmpty"><apiName>isNotEmpty</apiName><shortdesc>
+		 Checks if the array is not empty (zero-length) nor not null.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the array is not empty nor not <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to check.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the array is not empty (zero-length) nor not <codeph>null</codeph>.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 ArrayUtil.isNotEmpty(null)      // false
+		 ArrayUtil.isNotEmpty([])        // false
+		 ArrayUtil.isNotEmpty([null])    // true
+		 ArrayUtil.isNotEmpty([123])     // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:isSameLength"><apiName>isSameLength</apiName><shortdesc>
+		 Checks whether two arrays are the same length, treating null arrays as length 0.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if length of arrays matches, treating <codeph>null</codeph> as an empty array.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array1</apiItemName><apiType value="Array"/><apiDesc>	the first array. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>array2</apiItemName><apiType value="Array"/><apiDesc>	the second array. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether two arrays are the same length, treating <codeph>null</codeph> arrays as length 0.
+		 <p>Two <codeph>null</codeph> references are considered to be equal.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 ArrayUtil.isSameLength(null, null)            // true
+		 ArrayUtil.isSameLength(null, [])              // true
+		 ArrayUtil.isSameLength([], [])                // true
+		 ArrayUtil.isSameLength([1], [2])              // true
+		 ArrayUtil.isSameLength([1, "a"], [2])         // false
+		 ArrayUtil.isSameLength([1, "a"], [2, "b"])    // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:maxValueIndex"><apiName>maxValueIndex</apiName><shortdesc>
+		 Returns the index position of the largest number in the array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="int"/><apiDesc>the index position of the largest number in the array. If the <codeph>array</codeph> argument is <codeph>null</codeph> or empty then the return is -1.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the index position of the largest number in the array.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [5, 3, 9.1, 9.12, -10];
+		 var arr2:Array = [-15, -8, -25, -90, -66];
+		 
+		 ArrayUtil.maxValue(null)    // -1
+		 ArrayUtil.maxValue([])      // -1
+		 ArrayUtil.maxValue(arr)     // 3
+		 ArrayUtil.maxValue(arr2)    // 1
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:maxValue"><apiName>maxValue</apiName><shortdesc>
+		 Returns the largest number in the array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the largest number in the array. If the <codeph>array</codeph> argument is <codeph>null</codeph> or empty then the return is <codeph>NaN</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to check. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the largest number in the array.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [5, 3, 9.1, 9.12, -10];
+		 var arr2:Array = [-15, -8, -25, -90, -66];
+		 
+		 ArrayUtil.maxValue(null)    // NaN
+		 ArrayUtil.maxValue([])      // NaN
+		 ArrayUtil.maxValue(arr)     // 9.12
+		 ArrayUtil.maxValue(arr2)    // -8
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:nullToEmpty"><apiName>nullToEmpty</apiName><shortdesc>
+		 Returns an empty array for a null input array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the same array or an empty array if <codeph>null</codeph> input.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to check for <codeph>null</codeph> or empty.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns an empty array for a <codeph>null</codeph> input array.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 ArrayUtil.nullToEmpty(null)            // []
+		 ArrayUtil.nullToEmpty([])              // []
+		 ArrayUtil.nullToEmpty([1])             // [1]
+		 ArrayUtil.nullToEmpty(["abc", 123])    // [abc,123]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:removeAllOccurances"><apiName>removeAllOccurances</apiName><shortdesc>
+		 Removes all occurances of a the given element argument from the given array argument.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the updated array or <codeph>null</codeph> if the <codeph>array</codeph> argument is <codeph>null</codeph>.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to remove the element. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>element</apiItemName><apiType value="any"/><apiDesc>	the element to be removed from the array.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes all occurances of a the given <codeph>element</codeph> argument from the given <codeph>array</codeph> argument.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+		 
+		 ArrayUtil.removeAllOccurances(arr, "abc")    // [def,123,1,2,3,7]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:removeAt"><apiName>removeAt</apiName><shortdesc>
+		 Removes the element at the specified position from the specified array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiException><apiDesc>	if the <codeph>array</codeph> argument is <codeph>null</codeph> or empty.
+		 </apiDesc><apiItemName>ArgumentError</apiItemName><apiOperationClassifier>ArgumentError</apiOperationClassifier></apiException><apiException><apiDesc>		if the <codeph>index</codeph> argument is a negative integer or greater than the <codeph>array.length - 1</codeph>.
+		 </apiDesc><apiItemName>RangeError</apiItemName><apiOperationClassifier>RangeError</apiOperationClassifier></apiException><apiReturn><apiType value="Array"/><apiDesc>the array with the element removed.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to remove the element from.
+		 </apiDesc></apiParam><apiParam><apiItemName>index</apiItemName><apiType value="int"/><apiDesc>	the position of the element to be removed.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes the element at the specified position from the specified array.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+		 
+		 ArrayUtil.removeAt(arr, 0)    // [def,123,1,2,3,abc,7]
+		 ArrayUtil.removeAt(arr, 5)    // [abc,def,123,1,2,abc,7]
+		 ArrayUtil.removeAt(arr, 6)    // [abc,def,123,1,2,3,7]
+		 
+		 //for this to work exactly that way is necessary to redefine the array for every call because the original array is modified at each call.
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:removeFirstOccurance"><apiName>removeFirstOccurance</apiName><shortdesc>
+		 Removes the first occurrence of the specified element from the specified array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiException><apiDesc>	if the <codeph>array</codeph> argument is <codeph>null</codeph> or empty.
+		 </apiDesc><apiItemName>ArgumentError</apiItemName><apiOperationClassifier>ArgumentError</apiOperationClassifier></apiException><apiReturn><apiType value="Array"/><apiDesc>the array with the element removed.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to remove the element from.
+		 </apiDesc></apiParam><apiParam><apiItemName>element</apiItemName><apiType value="any"/><apiDesc>	the element to be removed.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes the first occurrence of the specified element from the specified array.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+		 
+		 ArrayUtil.removeFirstOccurance(arr, "abc")    // [def,123,1,2,3,abc,7]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:removeLastOccurance"><apiName>removeLastOccurance</apiName><shortdesc>
+		 Removes the last occurrence of the specified element from the specified array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiException><apiDesc>	if the <codeph>array</codeph> argument is <codeph>null</codeph> or empty.
+		 </apiDesc><apiItemName>ArgumentError</apiItemName><apiOperationClassifier>ArgumentError</apiOperationClassifier></apiException><apiReturn><apiType value="Array"/><apiDesc>the array with the element removed.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to remove the element from.
+		 </apiDesc></apiParam><apiParam><apiItemName>element</apiItemName><apiType value="any"/><apiDesc>	the element to be removed.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes the last occurrence of the specified element from the specified array.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+		 
+		 ArrayUtil.removeLastOccurance(arr, "abc")    // [abc,def,123,1,2,3,7]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:shuffle"><apiName>shuffle</apiName><shortdesc>
+		 Shuffles the position of the elements of the given array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the modified array.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to shuffle. May be <codeph>null</codeph>.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Shuffles the position of the elements of the given <codeph>array</codeph>.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+		 
+		 ArrayUtil.shuffle(arr)    // [123,abc,2,def,abc,7,3,1]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:sortAlphabeticallyByObjectProperty"><apiName>sortAlphabeticallyByObjectProperty</apiName><shortdesc>
+		 Sorts the array of objects alphabetically through the object's property.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the sorted array.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>			the array to sort.
+		 </apiDesc></apiParam><apiParam><apiItemName>property</apiItemName><apiType value="String"/><apiDesc>		the name of the property to be recovered and compared between the objects.
+		 </apiDesc></apiParam><apiParam><apiItemName>comparison</apiItemName><apiType value="org.as3coreaddendum.system.comparators:AlphabeticalComparison"/><apiDesc>	indicates which type of comparison will be used.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sorts the array of objects alphabetically through the object's <codeph>property</codeph>.
+		 <p>This method uses the <codeph>org.as3coreaddendum.system.comparators.AlphabeticalComparator</codeph> and <codeph>org.as3coreaddendum.system.comparators.PropertyComparator</codeph> objects together.</p>
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [{label:"a"}, {label:"ab"}, {label:"abc"}, {label:"aba"}, {label:"A"}, {label:"Ab"}, {label:"Abc"}, {label:"Aba"}, {label:"AB"}, {label:"ABC"}, {label:"ABA"}];
+		 
+		 ArrayUtil.shuffle(arr)
+		 ArrayUtil.sortAlphabeticallyByObjectProperty(arr, "label", AlphabeticalComparison.CASE_INSENSITIVE)
+		 
+		 arr[0].label    // A
+		 arr[1].label    // a
+		 arr[2].label    // Ab
+		 arr[3].label    // ab
+		 arr[4].label    // AB
+		 arr[5].label    // Aba
+		 arr[6].label    // ABA
+		 arr[7].label    // aba
+		 arr[8].label    // ABC
+		 arr[9].label    // abc
+		 </codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="" invalidHref="org.as3coreaddendum.system.comparators.AlphabeticalComparator.xml"><linktext>AlphabeticalComparator</linktext></link><link href="" invalidHref="org.as3coreaddendum.system.comparators.PropertyComparator.xml"><linktext>PropertyComparator</linktext></link></related-links></apiOperation><apiOperation id="org.as3utils:ArrayUtil:sortAlphabetically"><apiName>sortAlphabetically</apiName><shortdesc>
+		 Sorts the array of String objects alphabetically.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the sorted array.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>			the array to sort.
+		 </apiDesc></apiParam><apiParam><apiItemName>comparison</apiItemName><apiType value="org.as3coreaddendum.system.comparators:AlphabeticalComparison"/><apiDesc>	indicates which type of comparison will be used.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sorts the array of <codeph>String</codeph> objects alphabetically.
+		 <p>This method uses the <codeph>org.as3coreaddendum.system.comparators.AlphabeticalComparator</codeph> object.</p>
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["a", "ab", "abc", "aba", "A", "Ab", "Abc", "Aba", "AB", "ABC", "ABA"];
+		 
+		 ArrayUtil.shuffle(arr)                                                          // [aba,Ab,ABC,AB,abc,Aba,ab,ABA,a,Abc,A]
+		 
+		 ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.LOWER_CASE_FIRST)      // [a,ab,aba,abc,A,Ab,Aba,Abc,AB,ABA,ABC]
+		 ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.UPPER_CASE_FIRST)      // [A,AB,ABA,ABC,Ab,Aba,Abc,a,ab,aba,abc]
+		 ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.CASE_INSENSITIVE)      // [a,A,AB,ab,Ab,ABA,Aba,aba,ABC,Abc,abc]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="" invalidHref="org.as3coreaddendum.system.comparators.AlphabeticalComparator.xml"><linktext>AlphabeticalComparator</linktext></link></related-links></apiOperation><apiOperation id="org.as3utils:ArrayUtil:sortAscendingByObjectProperty"><apiName>sortAscendingByObjectProperty</apiName><shortdesc>
+		 Sorts the array of objects ascending through the object's property (must be a numeric value).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the sorted array.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to sort.
+		 </apiDesc></apiParam><apiParam><apiItemName>property</apiItemName><apiType value="String"/><apiDesc>	the name of the property to be recovered and compared between the objects.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sorts the array of objects ascending through the object's property (must be a numeric value).
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [{num:-3}, {num:-2.55}, {num:-2.54}, {num:-1}, {num:0}, {num:1}, {num:2}, {num:3}, {num:4}, {num:4.1}, {num:5}, {num:5.01}, {num:5.02}, {num:6}, {num:7}, {num:8}];
+		 
+		 ArrayUtil.shuffle(arr)             // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+		 
+		 ArrayUtil.sortAscendingByObjectProperty(arr, "num")
+		 
+		 arr[0].num     // -3
+		 arr[1].num     // -2.55
+		 arr[2].num     // -2.54
+		 arr[3].num     // -1
+		 arr[4].num     // 0
+		 arr[5].num     // 1
+		 arr[6].num     // 2
+		 arr[7].num     // 3
+		 arr[8].num     // 4
+		 arr[9].num     // 4.1
+		 arr[10].num    // 5
+		 arr[11].num    // 5.01
+		 arr[12].num    // 5.02
+		 arr[13].num    // 6
+		 arr[14].num    // 7
+		 arr[15].num    // 8
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:sortAscending"><apiName>sortAscending</apiName><shortdesc>
+		 Sorts the array of Number objects ascending.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the sorted array.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to sort.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sorts the array of <codeph>Number</codeph> objects ascending.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [-3, -2.55, -2.54, -1, 0, 1, 2, 3, 4, 4.1, 5, 5.01, 5.02, 6, 7, 8];
+		 
+		 ArrayUtil.shuffle(arr)          // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+		 
+		 ArrayUtil.sortAscending(arr)    // [-3,-2.55,-2.54,-1,0,1,2,3,4,4.1,5,5.01,5.02,6,7,8]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:sortDescendingByObjectProperty"><apiName>sortDescendingByObjectProperty</apiName><shortdesc>
+		 Sorts the array of objects descending through the object's property (must be a numeric value).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the sorted array.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to sort.
+		 </apiDesc></apiParam><apiParam><apiItemName>property</apiItemName><apiType value="String"/><apiDesc>	the name of the property to be recovered and compared between the objects.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sorts the array of objects descending through the object's property (must be a numeric value).
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [{num:-3}, {num:-2.55}, {num:-2.54}, {num:-1}, {num:0}, {num:1}, {num:2}, {num:3}, {num:4}, {num:4.1}, {num:5}, {num:5.01}, {num:5.02}, {num:6}, {num:7}, {num:8}];
+		 
+		 ArrayUtil.shuffle(arr)             // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+		 
+		 ArrayUtil.sortDescendingByObjectProperty(arr, "num")
+		 
+		 arr[0].num     // 8
+		 arr[1].num     // 7
+		 arr[2].num     // 6
+		 arr[3].num     // 5.02
+		 arr[4].num     // 5.01
+		 arr[5].num     // 5
+		 arr[6].num     // 4.1
+		 arr[7].num     // 4
+		 arr[8].num     // 3
+		 arr[9].num     // 2
+		 arr[10].num    // 1
+		 arr[11].num    // 0
+		 arr[12].num    // -1
+		 arr[13].num    // -2.54
+		 arr[14].num    // -2.55
+		 arr[15].num    // -3
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:sortDescending"><apiName>sortDescending</apiName><shortdesc>
+		 Sorts the array of Number objects descending.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>the sorted array.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to sort.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sorts the array of <codeph>Number</codeph> objects descending.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [-3, -2.55, -2.54, -1, 0, 1, 2, 3, 4, 4.1, 5, 5.01, 5.02, 6, 7, 8];
+		 
+		 ArrayUtil.shuffle(arr)           // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+		 
+		 ArrayUtil.sortDescending(arr)    // [8,7,6,5.02,5.01,5,4.1,4,3,2,1,0,-1,-2.54,-2.55,-3]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:swapAt"><apiName>swapAt</apiName><shortdesc>
+		 Swaps the position of the elements in the specified indexes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to swap the position of the elements.
+		 </apiDesc></apiParam><apiParam><apiItemName>index1</apiItemName><apiType value="any"/><apiDesc>	the index of the first element.
+		 </apiDesc></apiParam><apiParam><apiItemName>index2</apiItemName><apiType value="any"/><apiDesc>	the index of the second element.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Swaps the position of the elements in the specified indexes.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [1, 9, 3, 7, 5];
+		 
+		 ArrayUtil.swapAt(arr, 1, 4)      // [1,5,3,7,9]
+		 
+		 ArrayUtil.swapAt(arr, 2, 1)      // [1,3,5,7,9]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:swapPositions"><apiName>swapPositions</apiName><shortdesc>
+		 Swaps the position of all elements in the array according to newPositions.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>			the array to swap the position of all elements.
+		 </apiDesc></apiParam><apiParam><apiItemName>newPositions</apiItemName><apiType value="Array"/><apiDesc>	the array with the new positions.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Swaps the position of all elements in the array according to <codeph>newPositions</codeph>.
+		 <p>
+		 <ul><li><codeph>array[0]</codeph> will be equal <codeph>array[ newPositions[0] ]</codeph></li>
+		 <li><codeph>array[1]</codeph> will be equal <codeph>array[ newPositions[1] ]</codeph></li>
+		 <li>and so on...</li></ul></p>
+		 <p>The length of both arrays must be equal.</p>
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["c", "a", "b", "e", "d"];
+		 
+		 var positions:Array = [1, 2, 0, 4, 3];
+		 
+		 ArrayUtil.swapPositions(arr, positions)     // [a,b,c,d,e]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:swap"><apiName>swap</apiName><shortdesc>
+		 Swaps the position of the elements.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>		the array to swap the position of the elements.
+		 </apiDesc></apiParam><apiParam><apiItemName>element1</apiItemName><apiType value="any"/><apiDesc>	the first element.
+		 </apiDesc></apiParam><apiParam><apiItemName>element2</apiItemName><apiType value="any"/><apiDesc>	the second element.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Swaps the position of the elements.
+		 <p>This method modifies the original array.</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = [1, 9, 3, 7, 5];
+		 
+		 ArrayUtil.swap(arr, 9, 5)      // [1,5,3,7,9]
+		 
+		 ArrayUtil.swap(arr, 3, 5)      // [1,3,5,7,9]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ArrayUtil:uniqueCopy"><apiName>uniqueCopy</apiName><shortdesc>
+		 Creates a new array containing only unique instances of the objects in the given array.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Array"/><apiDesc>a new array without duplicated objects.
+		 </apiDesc></apiReturn><apiParam><apiItemName>array</apiItemName><apiType value="Array"/><apiDesc>	the array to copy.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Creates a new array containing only unique instances of the objects in the given array. In other words, removes duplicated objects.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ArrayUtil;
+		 
+		 var arr:Array = ["a", "b", "c", "a", "b", "a"];
+		 
+		 ArrayUtil.uniqueCopy(arr)    // [a,b,c]
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:ArrayUtil:ArrayUtil"><apiName>ArrayUtil</apiName><shortdesc>
+		 ArrayUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	ArrayUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 ArrayUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:ByteConversionUtil"><apiName>ByteConversionUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:ByteConversionUtil:bytesToGigabytes"><apiName>bytesToGigabytes</apiName><shortdesc>
+		 Converts the number of bytes to gigabytes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of bytes converted to gigabytes.
+		 </apiDesc></apiReturn><apiParam><apiItemName>bytes</apiItemName><apiType value="Number"/><apiDesc>			the number of bytes to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>1</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts the number of bytes to gigabytes.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+		 
+		 var num:Number;
+		 
+		 trace("num: " + num)                               // NaN
+		 
+		 ByteConversionUtil.bytesToGigabytes(null)          // 0
+		 ByteConversionUtil.bytesToGigabytes(num)           // NaN
+		 ByteConversionUtil.bytesToGigabytes(0)             // 0
+		 ByteConversionUtil.bytesToGigabytes(1)             // 0.1
+		 ByteConversionUtil.bytesToGigabytes(1, 0)          // 1
+		 ByteConversionUtil.bytesToGigabytes(1024)          // 0.1
+		 ByteConversionUtil.bytesToGigabytes(2048)          // 0
+		 ByteConversionUtil.bytesToGigabytes(2048, 2)       // 0
+		 ByteConversionUtil.bytesToGigabytes(35347)         // 0
+		 ByteConversionUtil.bytesToGigabytes(353470)        // 0
+		 ByteConversionUtil.bytesToGigabytes(3534701)       // 0
+		 ByteConversionUtil.bytesToGigabytes(35347012)      // 0
+		 ByteConversionUtil.bytesToGigabytes(353470123)     // 0.3
+		 ByteConversionUtil.bytesToGigabytes(3534701234)    // 3.3
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ByteConversionUtil:bytesToKilobytes"><apiName>bytesToKilobytes</apiName><shortdesc>
+		 Converts the number of bytes to kilobytes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of bytes converted to kilobytes.
+		 </apiDesc></apiReturn><apiParam><apiItemName>bytes</apiItemName><apiType value="Number"/><apiDesc>			the number of bytes to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>1</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts the number of bytes to kilobytes.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+		 
+		 var num:Number;
+		 
+		 trace("num: " + num)                               // NaN
+		 
+		 ByteConversionUtil.bytesToKilobytes(null)          // 0
+		 ByteConversionUtil.bytesToKilobytes(num)           // NaN
+		 ByteConversionUtil.bytesToKilobytes(0)             // 0
+		 ByteConversionUtil.bytesToKilobytes(1)             // 0.1
+		 ByteConversionUtil.bytesToKilobytes(1, 0)          // 1
+		 ByteConversionUtil.bytesToKilobytes(1000)          // 1
+		 ByteConversionUtil.bytesToKilobytes(1024)          // 1
+		 ByteConversionUtil.bytesToKilobytes(2048)          // 2
+		 ByteConversionUtil.bytesToKilobytes(2048, 2)       // 2
+		 ByteConversionUtil.bytesToKilobytes(2560)          // 2.5
+		 ByteConversionUtil.bytesToKilobytes(2560, 2)       // 2.5
+		 ByteConversionUtil.bytesToKilobytes(2560, 3)       // 2.5
+		 ByteConversionUtil.bytesToKilobytes(2363)          // 2.3
+		 ByteConversionUtil.bytesToKilobytes(2363, 0)       // 2
+		 ByteConversionUtil.bytesToKilobytes(2363, 2)       // 2.31
+		 ByteConversionUtil.bytesToKilobytes(2363, 3)       // 2.308
+		 ByteConversionUtil.bytesToKilobytes(2963)          // 2.9
+		 ByteConversionUtil.bytesToKilobytes(2963, 0)       // 3
+		 ByteConversionUtil.bytesToKilobytes(35347)         // 34.5
+		 ByteConversionUtil.bytesToKilobytes(353470)        // 345.2
+		 ByteConversionUtil.bytesToKilobytes(3534701)       // 3451.9
+		 ByteConversionUtil.bytesToKilobytes(35347012)      // 34518.6
+		 ByteConversionUtil.bytesToKilobytes(353470123)     // 345185.7
+		 ByteConversionUtil.bytesToKilobytes(3534701234)    // 3451856.7
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ByteConversionUtil:bytesToMegabytes"><apiName>bytesToMegabytes</apiName><shortdesc>
+		 Converts the number of bytes to megabytes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of bytes converted to megabytes.
+		 </apiDesc></apiReturn><apiParam><apiItemName>bytes</apiItemName><apiType value="Number"/><apiDesc>			the number of bytes to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>1</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts the number of bytes to megabytes.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+		 
+		 var num:Number;
+		 
+		 trace("num: " + num)                               // NaN
+		 
+		 ByteConversionUtil.bytesToMegabytes(null)          // 0
+		 ByteConversionUtil.bytesToMegabytes(num)           // NaN
+		 ByteConversionUtil.bytesToMegabytes(0)             // 0
+		 ByteConversionUtil.bytesToMegabytes(1)             // 0.1
+		 ByteConversionUtil.bytesToMegabytes(1, 0)          // 1
+		 ByteConversionUtil.bytesToMegabytes(1024)          // 0.1
+		 ByteConversionUtil.bytesToMegabytes(2048)          // 0
+		 ByteConversionUtil.bytesToMegabytes(2048, 1)       // 0
+		 ByteConversionUtil.bytesToMegabytes(2048, 2)       // 0
+		 ByteConversionUtil.bytesToMegabytes(2363)          // 0
+		 ByteConversionUtil.bytesToMegabytes(2363, 0)       // 0
+		 ByteConversionUtil.bytesToMegabytes(2363, 2)       // 0
+		 ByteConversionUtil.bytesToMegabytes(2363, 3)       // 0.002
+		 ByteConversionUtil.bytesToMegabytes(35347)         // 0
+		 ByteConversionUtil.bytesToMegabytes(353470)        // 0.3
+		 ByteConversionUtil.bytesToMegabytes(3534701)       // 3.4
+		 ByteConversionUtil.bytesToMegabytes(35347012)      // 33.7
+		 ByteConversionUtil.bytesToMegabytes(353470123)     // 337.1
+		 ByteConversionUtil.bytesToMegabytes(3534701234)    // 3371
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ByteConversionUtil:bytesToTerabytes"><apiName>bytesToTerabytes</apiName><shortdesc>
+		 Converts the number of bytes to terabytes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of bytes converted to terabytes.
+		 </apiDesc></apiReturn><apiParam><apiItemName>bytes</apiItemName><apiType value="Number"/><apiDesc>			the number of bytes to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>1</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts the number of bytes to terabytes.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+		 
+		 var num:Number;
+		 
+		 trace("num: " + num)                                  // NaN
+		 
+		 ByteConversionUtil.bytesToTerabytes(null)             // 0
+		 ByteConversionUtil.bytesToTerabytes(num)              // NaN
+		 ByteConversionUtil.bytesToTerabytes(0)                // 0
+		 ByteConversionUtil.bytesToTerabytes(1)                // 0.1
+		 ByteConversionUtil.bytesToTerabytes(1, 0)             // 1
+		 ByteConversionUtil.bytesToTerabytes(1024)             // 0.1
+		 ByteConversionUtil.bytesToTerabytes(2048)             // 0
+		 ByteConversionUtil.bytesToTerabytes(2048, 1)          // 0
+		 ByteConversionUtil.bytesToTerabytes(2048, 2)          // 0
+		 ByteConversionUtil.bytesToTerabytes(35347)            // 0
+		 ByteConversionUtil.bytesToTerabytes(353470)           // 0
+		 ByteConversionUtil.bytesToTerabytes(3534701)          // 0
+		 ByteConversionUtil.bytesToTerabytes(35347012)         // 0
+		 ByteConversionUtil.bytesToTerabytes(353470123)        // 0
+		 ByteConversionUtil.bytesToTerabytes(3534701234)       // 0
+		 ByteConversionUtil.bytesToTerabytes(35347012345)      // 0
+		 ByteConversionUtil.bytesToTerabytes(353470123456)     // 0.3
+		 ByteConversionUtil.bytesToTerabytes(3534701234567)    // 3.2
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ByteConversionUtil:gigabytesToBytes"><apiName>gigabytesToBytes</apiName><shortdesc>
+		 Converts the number of gigabytes to bytes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of gigabytes converted to bytes.
+		 </apiDesc></apiReturn><apiParam><apiItemName>gigabytes</apiItemName><apiType value="Number"/><apiDesc>	the number of gigabytes to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts the number of gigabytes to bytes.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+		 
+		 ByteConversionUtil.gigabytesToBytes(null)      // 0
+		 ByteConversionUtil.gigabytesToBytes(0.1)       // 107374182
+		 ByteConversionUtil.gigabytesToBytes(0.1, 1)    // 107374182.4
+		 ByteConversionUtil.gigabytesToBytes(1)         // 1073741824
+		 ByteConversionUtil.gigabytesToBytes(1.1)       // 1181116006
+		 ByteConversionUtil.gigabytesToBytes(1.1, 1)    // 1181116006.4
+		 ByteConversionUtil.gigabytesToBytes(1.5)       // 1610612736
+		 ByteConversionUtil.gigabytesToBytes(1.5, 1)    // 1610612736
+		 ByteConversionUtil.gigabytesToBytes(2)         // 2147483648
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ByteConversionUtil:kilobytesToBytes"><apiName>kilobytesToBytes</apiName><shortdesc>
+		 Converts the number of kilobytes to bytes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of kilobytes converted to bytes.
+		 </apiDesc></apiReturn><apiParam><apiItemName>kilobytes</apiItemName><apiType value="Number"/><apiDesc>	the number of kilobytes to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts the number of kilobytes to bytes.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+		 
+		 ByteConversionUtil.kilobytesToBytes(null)      // 0
+		 ByteConversionUtil.kilobytesToBytes(1)         // 1024
+		 ByteConversionUtil.kilobytesToBytes(1.1)       // 1126
+		 ByteConversionUtil.kilobytesToBytes(1.1, 1)    // 1126.4
+		 ByteConversionUtil.kilobytesToBytes(1.5)       // 1536
+		 ByteConversionUtil.kilobytesToBytes(1.5, 1)    // 1536
+		 ByteConversionUtil.kilobytesToBytes(2)         // 2048
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ByteConversionUtil:megabytesToBytes"><apiName>megabytesToBytes</apiName><shortdesc>
+		 Converts the number of megabytes to bytes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of megabytes converted to bytes.
+		 </apiDesc></apiReturn><apiParam><apiItemName>megabytes</apiItemName><apiType value="Number"/><apiDesc>	the number of megabytes to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts the number of megabytes to bytes.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+		 
+		 ByteConversionUtil.megabytesToBytes(null)      // 0
+		 ByteConversionUtil.megabytesToBytes(0.1)       // 104858
+		 ByteConversionUtil.megabytesToBytes(0.1, 1)    // 104857.6
+		 ByteConversionUtil.megabytesToBytes(1)         // 1048576
+		 ByteConversionUtil.megabytesToBytes(1.1)       // 1153434
+		 ByteConversionUtil.megabytesToBytes(1.1, 1)    // 1153433.6
+		 ByteConversionUtil.megabytesToBytes(1.5)       // 1572864
+		 ByteConversionUtil.megabytesToBytes(1.5, 1)    // 1572864
+		 ByteConversionUtil.megabytesToBytes(2)         // 2097152
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:ByteConversionUtil:terabytesToBytes"><apiName>terabytesToBytes</apiName><shortdesc>
+		 Converts the number of terabytes to bytes.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/><apiDesc>the number of terabytes converted to bytes.
+		 </apiDesc></apiReturn><apiParam><apiItemName>terabytes</apiItemName><apiType value="Number"/><apiDesc>	the number of terabytes to be converted.
+		 </apiDesc></apiParam><apiParam><apiItemName>decimalPlaces</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>	the number of decimal places.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Converts the number of terabytes to bytes.
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+		 
+		 ByteConversionUtil.terabytesToBytes(null)      // 0
+		 ByteConversionUtil.terabytesToBytes(0.1)       // 109951162778
+		 ByteConversionUtil.terabytesToBytes(0.1, 1)    // 109951162777.6
+		 ByteConversionUtil.terabytesToBytes(1)         // 1099511627776
+		 ByteConversionUtil.terabytesToBytes(1.1)       // 1209462790554
+		 ByteConversionUtil.terabytesToBytes(1.1, 1)    // 1209462790553.6
+		 ByteConversionUtil.terabytesToBytes(1.5)       // 1649267441664
+		 ByteConversionUtil.terabytesToBytes(1.5, 1)    // 1649267441664
+		 ByteConversionUtil.terabytesToBytes(2)         // 2199023255552
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:ByteConversionUtil:ByteConversionUtil"><apiName>ByteConversionUtil</apiName><shortdesc>
+		 ByteConversionUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	ByteConversionUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 ByteConversionUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="org.as3utils:NumberUtil"><apiName>NumberUtil</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiFinal/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="org.as3utils:NumberUtil:isEven"><apiName>isEven</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="Number"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:NumberUtil:isNotNumber"><apiName>isNotNumber</apiName><shortdesc>
+		 Checks if the value of the Number object is NaN(not a number).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the value is NaN (not a number) and <codeph>false</codeph> otherwise.
+		 </apiDesc></apiReturn><apiParam><apiItemName>num</apiItemName><apiType value="Number"/><apiDesc>	 a <codeph>Number</codeph> object to evaluate.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the value of the <codeph>Number</codeph> object is NaN(not a number).
+		 <p>This method uses the native AS3 <codeph>isNaN()</codeph> global function</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.NumberUtil;
+		 
+		 var num:Number;
+		 
+		 trace("num: " + num)            // NaN
+		 
+		 NumberUtil.isNotNumber(null)    // false
+		 NumberUtil.isNotNumber(num)     // true
+		 NumberUtil.isNotNumber(1)       // false
+		 NumberUtil.isNotNumber(-1)      // false
+		 NumberUtil.isNotNumber(NaN)     // true
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:NumberUtil:isNumber"><apiName>isNumber</apiName><shortdesc>
+		 Checks if the value of the Number object is a number.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/><apiDesc><codeph>true</codeph> if the value is a number and <codeph>false</codeph> if it is NaN (not a number).
+		 </apiDesc></apiReturn><apiParam><apiItemName>num</apiItemName><apiType value="Number"/><apiDesc>	 a <codeph>Number</codeph> object to evaluate.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks if the value of the <codeph>Number</codeph> object is a number.
+		 <p>This method uses the native AS3 <codeph>isNaN()</codeph> global function</p>
+		 
+		 </apiDesc><example>
+		 
+		 <codeblock rev="3.0">
+		 import org.as3coreaddendum.utils.NumberUtil;
+		 
+		 var num:Number;
+		 
+		 trace("num: " + num)         // NaN
+		 
+		 NumberUtil.isNumber(null)    // true
+		 NumberUtil.isNumber(num)     // false
+		 NumberUtil.isNumber(1)       // true
+		 NumberUtil.isNumber(-1)      // true
+		 NumberUtil.isNumber(NaN)     // false
+		 </codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:NumberUtil:isOdd"><apiName>isOdd</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="Number"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:NumberUtil:round"><apiName>round</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="Number"/></apiReturn><apiParam><apiItemName>num</apiItemName><apiType value="Number"/></apiParam><apiParam><apiItemName>rounding</apiItemName><apiType value="org.as3coreaddendum.system:NumericRounding"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="org.as3utils:NumberUtil:zeroPrecedent"><apiName>zeroPrecedent</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/></apiReturn><apiParam><apiItemName>num</apiItemName><apiType value="Number"/></apiParam><apiParam><apiItemName>lessThan</apiItemName><apiType value="Number"/><apiData>10</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiConstructor id="org.as3utils:NumberUtil:NumberUtil"><apiName>NumberUtil</apiName><shortdesc>
+		 NumberUtil is a static class and shouldn't be instantiated.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiException><apiDesc>	NumberUtil is a static class and shouldn't be instantiated.
+		 </apiDesc><apiItemName>IllegalOperationError</apiItemName><apiOperationClassifier>IllegalOperationError</apiOperationClassifier></apiException></apiConstructorDef><apiDesc>
+		 NumberUtil is a static class and shouldn't be instantiated.
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage></allClasses>

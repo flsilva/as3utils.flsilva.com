@@ -1,0 +1,955 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><meta name="keywords" content="StringUtil,org.as3utils.StringUtil,abbreviate,addAt,appendVar,areEqual,border,bytesToGigabytes,bytesToKilobytes,bytesToMegabytes,bytesToTerabytes,capitalize,circ,classNameEquals,classPackageEquals,classPathEquals,contains,contains,containsAny,containsDuplication,containsNone,containsOnly,containsOnlyType,containsType,countMatches,defaultIfEmpty,degreesToRadians,endsWith,equals,equals,filterByType,firstChar,getClassName,getClassPackage,getClassPath,getDuplicate,getSuperClassName,getSuperClassPackage,getSuperClassPath,getURLRequest,gigabytesToBytes,isAllLowerCase,isAllUpperCase,isAlphanumeric,isAlphanumericSpace,isBlank,isBooleanString,isEmpty,isEmpty,isEven,isHttps,isHttp,isNotBlank,isNotEmpty,isNotEmpty,isNotNumber,isNumber,isNumeric,isNumericSpace,isOdd,isSameLength,isValidEmail,kilobytesToBytes,lastChar,ltrim,maxValue,maxValueIndex,megabytesToBytes,millisecondsToSeconds,navigateToURL,nullToEmpty,percentToRange,radiansToDegrees,random,randomArray,rangeToPercent,rect,remove,removeAccentuation,removeAllOccurances,removeAt,removeEnd,removeFirstCharacter,removeFirstOccurance,removeLastCharacter,removeLastOccurance,removeStart,replaceExtended,reverse,round,rtrim,shuffle,sortAlphabetically,sortAlphabeticallyByObjectProperty,sortAscending,sortAscendingByObjectProperty,sortDescending,sortDescendingByObjectProperty,startsWith,string2Boolean,superClassNameEquals,superClassPackageEquals,superClassPathEquals,swap,swapAt,swapPositions,terabytesToBytes,trim,trimToEmpty,trimToNull,uncapitalize,uniqueCopy,zeroPrecedent"><title>org.as3utils.StringUtil</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'StringUtil - AS3Utils API Documentation';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">AS3Utils API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?org/as3utils/StringUtil.html&amp;org/as3utils/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">StringUtil</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("StringUtil"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">org.as3utils</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  StringUtil</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">StringUtil  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>
+	 A utility class to work with <code>String</code> objects.
+	 <p>StringUtil handles <code>null</code> input Strings quietly. That is to say that a <code>null</code> input will return <code>null</code>.
+	 Where a <code>Boolean</code> or <code>int</code> is being returned details vary by method.</p>
+	              <p>Some terms used by this class related to <code>String</code> handling:</p>
+	              <p>
+                  <ul>
+	                    <li>empty: a zero-length <code>String</code> ("")</li>
+	                    <li>space: the space character (" ", char 32)</li>
+	                    <li>blank: a <code>String</code> object only with control chars (space, \t, \n, \s)</li>
+	                 </ul>
+               </p>
+	 
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#StringUtil()" class="signatureLink">StringUtil</a>()</div><div class="summaryTableDescription">
+		 StringUtil is a static class and shouldn't be instantiated.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#abbreviate()" class="signatureLink">abbreviate</a>(str:String, maxWidth:int):String</div><div class="summaryTableDescription">[static] 
+		 Abbreviates a String object using ellipses.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#capitalize()" class="signatureLink">capitalize</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Capitalizes a String object, changing only the first letter to uppercase.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#contains()" class="signatureLink">contains</a>(str:String, search:String, stringCase:StringCase):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains the specified search String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#containsAny()" class="signatureLink">containsAny</a>(str:String, search:String, stringCase:StringCase):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains any character in the given set of characters.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#containsNone()" class="signatureLink">containsNone</a>(str:String, invalidChars:String, stringCase:StringCase):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object does not contain any of the characters of the given set of characters.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#containsOnly()" class="signatureLink">containsOnly</a>(str:String, validChars:String, stringCase:StringCase):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains only characters in the given set of characters.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#countMatches()" class="signatureLink">countMatches</a>(str:String, sub:String, stringCase:StringCase):int</div><div class="summaryTableDescription">[static] 
+		 Counts how many times the substring appears in the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#defaultIfEmpty()" class="signatureLink">defaultIfEmpty</a>(str:String, defaultStr:String):String</div><div class="summaryTableDescription">[static] 
+		 Returns either the passed in String object, or if the String object is empty ("") or null, the value of defaultStr.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#endsWith()" class="signatureLink">endsWith</a>(str:String, suffix:String, stringCase:StringCase):Boolean</div><div class="summaryTableDescription">[static] 
+		 Check if the String object ends with a specified suffix.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#equals()" class="signatureLink">equals</a>(str1:String, str2:String, stringCase:StringCase):Boolean</div><div class="summaryTableDescription">[static] 
+		 Compares two String objects, returning true if they are equal.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#firstChar()" class="signatureLink">firstChar</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Returns the first char of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isAllLowerCase()" class="signatureLink">isAllLowerCase</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains only lowercase characters.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isAllUpperCase()" class="signatureLink">isAllUpperCase</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains only uppercase characters.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isAlphanumeric()" class="signatureLink">isAlphanumeric</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains only unicode letters or digits.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isAlphanumericSpace()" class="signatureLink">isAlphanumericSpace</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains only unicode letters, digits or spaces.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isBlank()" class="signatureLink">isBlank</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if a String object is empty (""), null or if it contains only control characters(char &lt;= 32).</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isEmpty()" class="signatureLink">isEmpty</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if a String object is empty ("") or null.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isNotBlank()" class="signatureLink">isNotBlank</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if a String object is not empty (""), not null and not contains only control characters(char &lt;= 32).</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isNotEmpty()" class="signatureLink">isNotEmpty</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if a String object is not empty ("") and not null.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isNumeric()" class="signatureLink">isNumeric</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains only unicode digits.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isNumericSpace()" class="signatureLink">isNumericSpace</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Checks if the String object contains only unicode digits or spaces.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isValidEmail()" class="signatureLink">isValidEmail</a>(str:String):Boolean</div><div class="summaryTableDescription">[static] 
+		 Validates an input e-mail address.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#lastChar()" class="signatureLink">lastChar</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Returns the last char of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#ltrim()" class="signatureLink">ltrim</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Removes control characters(char &lt;= 32) from the start of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#remove()" class="signatureLink">remove</a>(str:String, remove:String, stringCase:StringCase):String</div><div class="summaryTableDescription">[static] 
+		 Removes all occurrences of a substring from within the source String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeAccentuation()" class="signatureLink">removeAccentuation</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Remove accented characters from the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeEnd()" class="signatureLink">removeEnd</a>(str:String, remove:String, stringCase:StringCase):String</div><div class="summaryTableDescription">[static] 
+		 Removes a substring only if it is at the end of the source String object, otherwise returns the source String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeFirstCharacter()" class="signatureLink">removeFirstCharacter</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Removes the first character of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeLastCharacter()" class="signatureLink">removeLastCharacter</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Removes the last character of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeStart()" class="signatureLink">removeStart</a>(str:String, remove:String, stringCase:StringCase):String</div><div class="summaryTableDescription">[static] 
+		 Removes a substring only if it is at the start of the source String object, otherwise returns the source String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#replaceExtended()" class="signatureLink">replaceExtended</a>(str:String, find:String, replaceBy:String, stringCase:StringCase):String</div><div class="summaryTableDescription">[static] 
+		 Search for all occurrences of the String find within the String str and replaces by the String replaceBy.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#reverse()" class="signatureLink">reverse</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Reverses the chars of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#rtrim()" class="signatureLink">rtrim</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Removes control characters(char &lt;= 32) from the start of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#startsWith()" class="signatureLink">startsWith</a>(str:String, prefix:String, stringCase:StringCase):Boolean</div><div class="summaryTableDescription">[static] 
+		 Check if the String object starts with a specified prefix.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#trim()" class="signatureLink">trim</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Removes control characters(char &lt;= 32) from the start and end of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#trimToEmpty()" class="signatureLink">trimToEmpty</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Removes control characters(char &lt;= 32) from the start and end of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#trimToNull()" class="signatureLink">trimToNull</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Removes control characters(char &lt;= 32) from the start and end of the String object.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#uncapitalize()" class="signatureLink">uncapitalize</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+		 Uncapitalizes a String object, changing only the first letter to lowercase.</div></td><td class="summaryTableOwnerCol">StringUtil</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="StringUtil()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">StringUtil</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function StringUtil()</code><p></p><p>
+		 StringUtil is a static class and shouldn't be instantiated.
+		 
+		 </p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; 	StringUtil is a static class and shouldn't be instantiated.
+		 </td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="abbreviate()"></a><a name="abbreviate(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">abbreviate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public static function abbreviate(str:String, maxWidth:int):String</code><p></p><p></p><p>
+		 Abbreviates a <code>String</code> object using ellipses.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 		the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">maxWidth</span>:int</code> &mdash; maximum length of the result <code>String</code> object, must be at least 4.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the abbreviated <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>. 
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; 	If the <code>maxWidth</code> argument is less than 4.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.abbreviate(null          , 4)    // null
+         StringUtil.abbreviate(""            , 4)    // 
+         StringUtil.abbreviate(" "           , 4)    //  
+         StringUtil.abbreviate("a"           , 4)    // a
+         StringUtil.abbreviate("ab"          , 4)    // ab
+         StringUtil.abbreviate("abcdefghij"  , 4)    // a...
+         StringUtil.abbreviate("abcdefghij"  , 5)    // ab...
+         StringUtil.abbreviate(" abcdefghij" , 5)    //  a...
+         StringUtil.abbreviate("a bcdefghij" , 5)    // a...
+         StringUtil.abbreviate(" a bcdefghij", 5)    //  a...
+         StringUtil.abbreviate("abcdefghij"  , 6)    // abc...
+         StringUtil.abbreviate(" abcdefghij" , 6)    //  ab...
+         StringUtil.abbreviate("a bcdefghij" , 6)    // a b...
+         StringUtil.abbreviate(" a bcdefghij", 6)    //  a...
+         StringUtil.abbreviate("abcdefghij"  , 7)    // abcd...
+         StringUtil.abbreviate("abcdefghij"  , 8)    // abcde...
+         StringUtil.abbreviate("abcdefghij"  , 9)    // abcdef...
+         StringUtil.abbreviate("abcdefghij"  , 10)   // abcdefghij
+         StringUtil.abbreviate("abcdefghij"  , 11)   // abcdefghij
+         StringUtil.abbreviate("abcdefghij"  , 12)   // abcdefghij
+         </pre></div>
+		 
+		 </div></div><a name="capitalize()"></a><a name="capitalize(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">capitalize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function capitalize(str:String):String</code><p></p><p></p><p>
+		 Capitalizes a <code>String</code> object, changing only the first letter to uppercase.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to capitalize. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the capitalized <code>String</code>. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.capitalize(null)      // null
+         StringUtil.capitalize(" ")       // 
+         StringUtil.capitalize("a")       // A
+         StringUtil.capitalize("A")       // A
+         StringUtil.capitalize("ab")      // Ab
+         StringUtil.capitalize("Ab")      // Ab
+         StringUtil.capitalize("aB")      // AB
+         StringUtil.capitalize("AB")      // AB
+         StringUtil.capitalize("abc")     // Abc
+         StringUtil.capitalize(" abc")    //  abc
+         StringUtil.capitalize(" Abc")    //  Abc
+         </pre></div>
+		 
+		 </div></div><a name="contains()"></a><a name="contains(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contains</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function contains(str:String, search:String, stringCase:StringCase):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains the specified search <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">search</span>:String</code> &mdash; 			the <code>String</code> object to find. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object contains the search <code>String</code> object, <code>false</code> if not. If the <code>str</code> or <code>search</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.contains(null , null)          // false
+         StringUtil.contains(null , "")            // false
+         StringUtil.contains(""   , null)          // false
+         StringUtil.contains(" "  , " ")           // true
+         StringUtil.contains(" "  , "")            // true
+         StringUtil.contains(""   , " ")           // false
+         StringUtil.contains("abc", "")            // true
+         StringUtil.contains(""   , "abc")         // false
+         StringUtil.contains("abc", "a")           // true
+         StringUtil.contains("abc", "A")           // false
+         StringUtil.contains("abc", "A", false)    // true
+         StringUtil.contains("Abc", "a")           // false
+         StringUtil.contains("Abc", "a", false)    // true
+         StringUtil.contains("abc", "á")           // false
+         StringUtil.contains("ábc", "a")           // false
+         StringUtil.contains("ábc", "á")           // true
+         StringUtil.contains("a"  , "abc")         // false
+         </pre></div>
+		 
+		 </div></div><a name="containsAny()"></a><a name="containsAny(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">containsAny</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function containsAny(str:String, search:String, stringCase:StringCase):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains any character in the given set of characters.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">search</span>:String</code> &mdash; 			the chars to find. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object contains any of the chars of the search <code>String</code> object, <code>false</code> if not. If the <code>str</code> or <code>search</code> argument is <code>null</code> then the return is <code>false</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.containsAny(null , null)            // false
+         StringUtil.containsAny("abc", "")              // false
+         StringUtil.containsAny("abc", "a")             // true
+         StringUtil.containsAny("b"  , "abc")           // true
+         StringUtil.containsAny("A"  , "abc")           // false
+         StringUtil.containsAny("A"  , "abc", false)    // true
+         StringUtil.containsAny("a"  , "ABC")           // false
+         StringUtil.containsAny("a"  , "ABC", false)    // true
+         </pre></div>
+		 
+		 </div></div><a name="containsNone()"></a><a name="containsNone(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">containsNone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function containsNone(str:String, invalidChars:String, stringCase:StringCase):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object does not contain any of the characters of the given set of characters.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">invalidChars</span>:String</code> &mdash; the invalid chars. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object does not contains any of the chars of the invalidChars <code>String</code> object, <code>false</code> if does. If the <code>str</code> or <code>invalidChars</code> argument is <code>null</code> then the return is <code>true</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.containsNone(null  , null)           // true
+         StringUtil.containsNone("abc" , "")             // true
+         StringUtil.containsNone("abc", "a")             // false
+         StringUtil.containsNone("b"  , "abc")           // false
+         StringUtil.containsNone("A"  , "abc")           // true
+         StringUtil.containsNone("A"  , "abc", false)    // false
+         StringUtil.containsNone("a"  , "ABC")           // true
+         StringUtil.containsNone("a"  , "ABC", false)    // false
+         </pre></div>
+		 
+		 </div></div><a name="containsOnly()"></a><a name="containsOnly(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">containsOnly</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function containsOnly(str:String, validChars:String, stringCase:StringCase):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains only characters in the given set of characters.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">validChars</span>:String</code> &mdash; 	the valid chars. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object contains only characters that exist in the <code>validChars</code> argument, <code>false</code> if contains any other characters. If the <code>str</code> or <code>validChars</code> argument is <code>null</code> then the return is <code>false</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.containsOnly(null , null)            // false
+         StringUtil.containsOnly("abc", "")              // false
+         StringUtil.containsOnly("abc", "a")             // false
+         StringUtil.containsOnly("abc", "b")             // false
+         StringUtil.containsOnly("b"  , "abc")           // true
+         StringUtil.containsOnly("ba" , "abc")           // true
+         StringUtil.containsOnly("A"  , "abc")           // false
+         StringUtil.containsOnly("A"  , "abc", false)    // true
+         StringUtil.containsOnly("a"  , "ABC")           // false
+         StringUtil.containsOnly("a"  , "ABC", false)    // true
+         </pre></div>
+		 
+		 </div></div><a name="countMatches()"></a><a name="countMatches(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">countMatches</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function countMatches(str:String, sub:String, stringCase:StringCase):int</code><p></p><p></p><p>
+		 Counts how many times the substring appears in the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">sub</span>:String</code> &mdash; 			the substring to count. May be <code>null</code>. 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; the number of occurrences or 0 if either argument is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.countMatches(null   , null)          // 0
+         StringUtil.countMatches("abc"  , "")            // 0
+         StringUtil.countMatches("abc"  , "a")           // 1
+         StringUtil.countMatches("abc"  , "á")           // 0
+         StringUtil.countMatches("ábca" , "á")           // 1
+         StringUtil.countMatches("abc"  , "b")           // 1
+         StringUtil.countMatches("a"    , "abc")         // 0
+         StringUtil.countMatches("abc"  , "aa")          // 0
+         StringUtil.countMatches("abca" , "a")           // 2
+         StringUtil.countMatches("abca" , "aa")          // 0
+         StringUtil.countMatches("aabca", "aa")          // 1
+         StringUtil.countMatches("abc"  , "ba")          // 0
+         StringUtil.countMatches("abc"  , "A")           // 0
+         StringUtil.countMatches("abc"  , "A", false)    // 1
+         StringUtil.countMatches("abca" , "A", false)    // 2
+         </pre></div>
+		 
+		 </div></div><a name="defaultIfEmpty()"></a><a name="defaultIfEmpty(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">defaultIfEmpty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function defaultIfEmpty(str:String, defaultStr:String):String</code><p></p><p></p><p>
+		 Returns either the passed in <code>String</code> object, or if the <code>String</code> object is empty ("") or <code>null</code>, the value of defaultStr.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 		the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">defaultStr</span>:String</code> &mdash; 	the default <code>String</code> object to return if the <code>str</code> argument is empty ("") or <code>null</code>. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>defaultStr</code> argument if the <code>str</code> argument is empty ("") or <code>null</code>, or the <code>str</code> argument otherwise.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.defaultIfEmpty(null      , null)     // null
+         StringUtil.defaultIfEmpty(""        , null)     // null
+         StringUtil.defaultIfEmpty(null      , "abc")    // abc
+         StringUtil.defaultIfEmpty("abc"     , "")       // abc
+         StringUtil.defaultIfEmpty("abc"     , null)     // abc
+         StringUtil.defaultIfEmpty("   "     , "abc")    // abc
+         StringUtil.defaultIfEmpty("  \n\t  ", "abc")    // abc
+         </pre></div>
+		 
+		 </div></div><a name="endsWith()"></a><a name="endsWith(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">endsWith</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function endsWith(str:String, suffix:String, stringCase:StringCase):Boolean</code><p></p><p></p><p>
+		 Check if the <code>String</code> object ends with a specified suffix.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">suffix</span>:String</code> &mdash; 			the suffix to find. May be <code>null</code>. 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object ends with the suffix or if both arguments are <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.endsWith(null    , null)           // true
+         StringUtil.endsWith(""      , null)           // false
+         StringUtil.endsWith(null    , "abc")          // false
+         StringUtil.endsWith("abcdef", "f")            // true
+         StringUtil.endsWith("abcdef", "F")            // false
+         StringUtil.endsWith("abcdef", "F", false)     // true
+         StringUtil.endsWith("abcdEF", "eF")           // false
+         StringUtil.endsWith("abcdEF", "eF", false)    // true
+         StringUtil.endsWith("abcdef", "ef")           // true
+         StringUtil.endsWith("abcdef", "abcdef")       // true
+         StringUtil.endsWith("abcdef", "abcdefg")      // false
+         </pre></div>
+		 
+		 </div></div><a name="equals()"></a><a name="equals(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">equals</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function equals(str1:String, str2:String, stringCase:StringCase):Boolean</code><p></p><p></p><p>
+		 Compares two <code>String</code> objects, returning <code>true</code> if they are equal.
+		 <p>Two <code>null</code> references are considered to be equal.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str1</span>:String</code> &mdash; 			the first <code>String</code> object. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">str2</span>:String</code> &mdash; 			the second <code>String</code> object. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> objects are equal or both are <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         var obj:Object = {label:"jlm"};
+         var n1:int = 1;
+         var n2:Number = 2;
+         var n3:Number = 3.1;
+         var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+         
+         StringUtil.equals(null , null)            // true
+         StringUtil.equals(""   , null)            // false
+         StringUtil.equals(null , "abc")           // false
+         StringUtil.equals("abc", "a")             // false
+         StringUtil.equals("abc", "abc")           // true
+         StringUtil.equals("abc", "AbC")           // false
+         StringUtil.equals("abc", "AbC", false)    // true
+         </pre></div>
+		 
+		 </div></div><a name="firstChar()"></a><a name="firstChar(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">firstChar</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function firstChar(str:String):String</code><p></p><p></p><p>
+		 Returns the first char of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to return the first char. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the first char of the <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.firstChar(null)       // null
+         StringUtil.firstChar("")         // 
+         StringUtil.firstChar(" ")        //  
+         StringUtil.firstChar("a")        // a
+         StringUtil.firstChar("ab")       // a
+         StringUtil.firstChar("abc")      // a
+         StringUtil.firstChar(" abc")     //  
+         StringUtil.firstChar(" abc ")    //  
+         </pre></div>
+		 
+		 </div></div><a name="isAllLowerCase()"></a><a name="isAllLowerCase(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isAllLowerCase</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isAllLowerCase(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains only lowercase characters.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if only contains lowercase characters, and is not <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isAllLowerCase(null)        // false
+         StringUtil.isAllLowerCase("")          // false
+         StringUtil.isAllLowerCase("    ")      // false
+         StringUtil.isAllLowerCase("  \t  ")    // false
+         StringUtil.isAllLowerCase("abc")       // true
+         StringUtil.isAllLowerCase("Abc")       // false
+         StringUtil.isAllLowerCase("ABC")       // false
+         StringUtil.isAllLowerCase("óbc")       // true
+         StringUtil.isAllLowerCase("Óbc")       // false
+         StringUtil.isAllLowerCase("ÓBC")       // false
+         </pre></div>
+		 
+		 </div></div><a name="isAllUpperCase()"></a><a name="isAllUpperCase(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isAllUpperCase</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isAllUpperCase(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains only uppercase characters.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if only contains uppercase characters, and is not <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isAllUpperCase(null)          // false
+         StringUtil.isAllUpperCase("")            // false
+         StringUtil.isAllUpperCase("    ")        // false
+         StringUtil.isAllUpperCase("        ")    // false
+         StringUtil.isAllUpperCase("abc")         // false
+         StringUtil.isAllUpperCase("Abc")         // false
+         StringUtil.isAllUpperCase("ABC")         // true
+         StringUtil.isAllUpperCase("óbc")         // false
+         StringUtil.isAllUpperCase("Óbc")         // false
+         StringUtil.isAllUpperCase("ÓBC")         // true
+         </pre></div>
+		 
+		 </div></div><a name="isAlphanumeric()"></a><a name="isAlphanumeric(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isAlphanumeric</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isAlphanumeric(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains only unicode letters or digits.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>. 	
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if only contains unicode letters or digits, and is not <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isAlphanumeric(null)              // false
+         StringUtil.isAlphanumeric("")                // false
+         StringUtil.isAlphanumeric("    ")            // false
+         StringUtil.isAlphanumeric("  \t  ")          // false
+         StringUtil.isAlphanumeric("abc")             // true
+         StringUtil.isAlphanumeric("123456")          // true
+         StringUtil.isAlphanumeric("abc123")          // true
+         StringUtil.isAlphanumeric("123abc456def")    // true
+         StringUtil.isAlphanumeric("abc123 ")         // false
+         StringUtil.isAlphanumeric("ABC123 ")         // false
+         StringUtil.isAlphanumeric("áóbc123")         // true
+         StringUtil.isAlphanumeric("ÁÓbc123")         // true
+         StringUtil.isAlphanumeric("ÁÓbc123-")        // false
+         </pre></div>
+		 
+		 </div></div><a name="isAlphanumericSpace()"></a><a name="isAlphanumericSpace(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isAlphanumericSpace</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isAlphanumericSpace(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains only unicode letters, digits or spaces.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>. 	
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if only contains unicode letters, digits and spaces and is not <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isAlphanumericSpace(null)              // false
+         StringUtil.isAlphanumericSpace("")                // false
+         StringUtil.isAlphanumericSpace("    ")            // true
+         StringUtil.isAlphanumericSpace("  \t  ")          // false
+         StringUtil.isAlphanumericSpace("abc")             // true
+         StringUtil.isAlphanumericSpace("123456")          // true
+         StringUtil.isAlphanumericSpace("abc123")          // true
+         StringUtil.isAlphanumericSpace("123abc456def")    // true
+         StringUtil.isAlphanumericSpace("abc123 ")         // true
+         StringUtil.isAlphanumericSpace("ABC123 ")         // true
+         StringUtil.isAlphanumericSpace("áóbc123")         // true
+         StringUtil.isAlphanumericSpace("ÁÓbc123")         // true
+         StringUtil.isAlphanumericSpace("ÁÓbc123-")        // false
+         </pre></div>
+		 
+		 </div></div><a name="isBlank()"></a><a name="isBlank(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isBlank</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isBlank(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if a <code>String</code> object is empty (""), <code>null</code> or if it contains only control characters(char &lt;= 32).
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object is <code>null</code>, empty or contains only control characters(char &lt;= 32).
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isBlank(null)         // true
+         StringUtil.isBlank("")           // true
+         StringUtil.isBlank("    ")       // true
+         StringUtil.isBlank("  \t  ")     // true
+         StringUtil.isBlank("abc")        // false
+         StringUtil.isBlank(" abc ")      // false
+         </pre></div>
+		 
+		 </div></div><a name="isEmpty()"></a><a name="isEmpty(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isEmpty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isEmpty(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if a <code>String</code> object is empty ("") or <code>null</code>.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object is empty or <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isEmpty(null)         // true
+         StringUtil.isEmpty("")           // true
+         StringUtil.isEmpty("    ")       // false
+         StringUtil.isEmpty("  \t  ")     // false
+         StringUtil.isEmpty("abc")        // false
+         StringUtil.isEmpty(" abc ")      // false
+         </pre></div>
+		 
+		 </div></div><a name="isNotBlank()"></a><a name="isNotBlank(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isNotBlank</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isNotBlank(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if a <code>String</code> object is not empty (""), not <code>null</code> and not contains only control characters(char &lt;= 32).
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object is not empty, not <code>null</code> and not contains only control characters(char &lt;= 32).
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isNotBlank(null)         // false
+         StringUtil.isNotBlank("")           // false
+         StringUtil.isNotBlank("    ")       // false
+         StringUtil.isNotBlank("  \t  ")     // false
+         StringUtil.isNotBlank("abc")        // true
+         StringUtil.isNotBlank(" abc ")      // true
+         </pre></div>
+		 
+		 </div></div><a name="isNotEmpty()"></a><a name="isNotEmpty(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isNotEmpty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isNotEmpty(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if a <code>String</code> object is not empty ("") and not <code>null</code>.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object is not empty and is not <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isNotEmpty(null)         // false
+         StringUtil.isNotEmpty("")           // false
+         StringUtil.isNotEmpty("    ")       // true
+         StringUtil.isNotEmpty("  \t  ")     // true
+         StringUtil.isNotEmpty("abc")        // true
+         StringUtil.isNotEmpty(" abc ")      // true
+         </pre></div>
+		 
+		 </div></div><a name="isNumeric()"></a><a name="isNumeric(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isNumeric</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isNumeric(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains only unicode digits. A decimal point is not a unicode digit and returns <code>false</code>.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object only contains unicode digits and is not <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isNumeric(null)       // false
+         StringUtil.isNumeric("")         // true
+         StringUtil.isNumeric("    ")     // false
+         StringUtil.isNumeric("  \t ")    // false
+         StringUtil.isNumeric("123")      // true
+         StringUtil.isNumeric("12.3")     // false
+         StringUtil.isNumeric("a123")     // false
+         StringUtil.isNumeric(" 123")     // false
+         StringUtil.isNumeric("  123")    // false
+         </pre></div>
+		 
+		 </div></div><a name="isNumericSpace()"></a><a name="isNumericSpace(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isNumericSpace</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isNumericSpace(str:String):Boolean</code><p></p><p></p><p>
+		 Checks if the <code>String</code> object contains only unicode digits or spaces. A decimal point is not a unicode digit and returns <code>false</code>.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object only contains unicode digits or spaces and is not <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isNumericSpace(null)       // false
+         StringUtil.isNumericSpace("")         // true
+         StringUtil.isNumericSpace("    ")     // true
+         StringUtil.isNumericSpace("  \t ")    // false
+         StringUtil.isNumericSpace("123")      // true
+         StringUtil.isNumericSpace("12.3")     // false
+         StringUtil.isNumericSpace("a123")     // false
+         StringUtil.isNumericSpace(" 123")     // true
+         StringUtil.isNumericSpace("  123")    // true
+         </pre></div>
+		 
+		 </div></div><a name="isValidEmail()"></a><a name="isValidEmail(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isValidEmail</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function isValidEmail(str:String):Boolean</code><p></p><p></p><p>
+		 Validates an input e-mail address.
+		 <p>This implementation does not conform with any specification and is very restrictive.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to be validates as an e-mail address.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object is a valid e-mail address according to this implementation.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.isValidEmail(null)                   // false
+         StringUtil.isValidEmail("")                     // false
+         StringUtil.isValidEmail("a")                    // false
+         StringUtil.isValidEmail("a@a.a")                // false
+         StringUtil.isValidEmail("aa@aa.aa")             // true
+         StringUtil.isValidEmail("a/a@aa.aa")            // false
+         StringUtil.isValidEmail("a=a@aa.aa")            // false
+         StringUtil.isValidEmail("1a@1a.1a")             // false
+         StringUtil.isValidEmail("a1@a1.a1")             // false
+         StringUtil.isValidEmail("a1@a1.aa")             // true
+         StringUtil.isValidEmail("11@11.11")             // false
+         StringUtil.isValidEmail("aa-aa@a-a.a-a")        // false
+         StringUtil.isValidEmail("aa-aa@aa-aa.aa-aa")    // false
+         StringUtil.isValidEmail("aa-aa@aa-aa-aa.aa")    // true
+         StringUtil.isValidEmail("aa-aa@aa.aa.aa")       // true
+         StringUtil.isValidEmail("áa-aa@aa.aa.aa")       // false
+         StringUtil.isValidEmail("Aa-aa@aa.aa.aA")       // true
+         StringUtil.isValidEmail("aa-aa@aa.aa.aa")       // true
+         </pre></div>
+		 
+		 </div></div><a name="lastChar()"></a><a name="lastChar(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">lastChar</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function lastChar(str:String):String</code><p></p><p></p><p>
+		 Returns the last char of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to return the last char. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the last char of the <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.lastChar(null)       // null
+         StringUtil.lastChar("")         // 
+         StringUtil.lastChar(" ")        //  
+         StringUtil.lastChar("a")        // a
+         StringUtil.lastChar("ab")       // b
+         StringUtil.lastChar("abc")      // c
+         StringUtil.lastChar(" abc")     // c
+         StringUtil.lastChar(" abc ")    //  
+         </pre></div>
+		 
+		 </div></div><a name="ltrim()"></a><a name="ltrim(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ltrim</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function ltrim(str:String):String</code><p></p><p></p><p>
+		 Removes control characters(char &lt;= 32) from the start of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the <code>String</code> object to be trimmed. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the trimmed <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.ltrim(null)                    // null
+         StringUtil.ltrim("")                      // 
+         StringUtil.ltrim(" ")                     // 
+         StringUtil.ltrim("  ")                    // 
+         StringUtil.ltrim("     ")                 // 
+         StringUtil.ltrim("abc"):                  // abc
+         StringUtil.ltrim(" abc")                  // abc
+         StringUtil.ltrim("   abc")                // abc
+         StringUtil.ltrim("   abc ")               // abc 
+         StringUtil.ltrim(" \t\n  abc  ")          // abc  
+         StringUtil.ltrim(" \t\n  abc \t\n ")      // abc \t\n 
+         </pre></div>
+		 
+		 </div></div><a name="remove()"></a><a name="remove(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">remove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function remove(str:String, remove:String, stringCase:StringCase):String</code><p></p><p></p><p>
+		 Removes all occurrences of a substring from within the source <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to search. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">remove</span>:String</code> &mdash; 			the <code>String</code> object to search for and remove. May be <code>null</code>. 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>String</code> object with the substring removed if found. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.remove(null    , null)           // null
+         StringUtil.remove(""      , null)           // 
+         StringUtil.remove(null    , "abc")          // null
+         StringUtil.remove(""      , "")             // 
+         StringUtil.remove("abc"   , "")             // abc
+         StringUtil.remove(""      , "abc")          // 
+         StringUtil.remove("abcdef", "c")            // abdef
+         StringUtil.remove("abcdef", "C")            // abcdef
+         StringUtil.remove("abcdef", "C", false)     // abdef
+         StringUtil.remove("ABcdef", "aB")           // ABcdef
+         StringUtil.remove("ABcdef", "aB", false)    // cdef
+         StringUtil.remove("ABcdeF", "Ef")           // ABcdeF
+         StringUtil.remove("ABcdeF", "Ef", false)    // ABcd
+         StringUtil.remove("abcdef", "ab")           // cdef
+         StringUtil.remove("abcdef", "abcdef")       // 
+         StringUtil.remove("abcdef", "abcdefg")      // abcdef
+         </pre></div>
+		 
+		 </div></div><a name="removeAccentuation()"></a><a name="removeAccentuation(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeAccentuation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeAccentuation(str:String):String</code><p></p><p></p><p>
+		 Remove accented characters from the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to remove accented characters. May be <code>null</code>.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>String</code> object without accented characters.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.removeAccentuation(null)                  // null
+         StringUtil.removeAccentuation("")                    // 
+         StringUtil.removeAccentuation("    ")                //     
+         StringUtil.removeAccentuation("aáeéiíoóuúçÇÁbÜõ")    // aaeeiioouucCAbUo
+         </pre></div>
+		 
+		 </div></div><a name="removeEnd()"></a><a name="removeEnd(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeEnd</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeEnd(str:String, remove:String, stringCase:StringCase):String</code><p></p><p></p><p>
+		 Removes a substring only if it is at the end of the source <code>String</code> object, otherwise returns the source <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to search. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">remove</span>:String</code> &mdash; 			the <code>String</code> object to search for and remove. May be <code>null</code>. 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>String</code> object with the substring removed if found. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.removeEnd(null    , null)           // null
+         StringUtil.removeEnd(""      , null)           // 
+         StringUtil.removeEnd(null    , "abc")          // null
+         StringUtil.removeEnd(""      , "")             // 
+         StringUtil.removeEnd("abc"   , "")             // abc
+         StringUtil.removeEnd(""      , "abc")          // 
+         StringUtil.removeEnd("abcdef", "c")            // abcdef
+         StringUtil.removeEnd("abcdef", "C")            // abcdef
+         StringUtil.removeEnd("abcdef", "C", false)     // abcdef
+         StringUtil.removeEnd("ABcdef", "aB")           // ABcdef
+         StringUtil.removeEnd("ABcdef", "aB", false)    // ABcdef
+         StringUtil.removeEnd("ABcdeF", "Ef")           // ABcdeF
+         StringUtil.removeEnd("ABcdeF", "Ef", false)    // ABcd
+         StringUtil.removeEnd("abcdef", "ab")           // abcdef
+         StringUtil.removeEnd("abcdef", "abcdef")       // 
+         StringUtil.removeEnd("abcdef", "abcdefg")      // abcdef
+         </pre></div>
+		 
+		 </div></div><a name="removeFirstCharacter()"></a><a name="removeFirstCharacter(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeFirstCharacter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeFirstCharacter(str:String):String</code><p></p><p></p><p>
+		 Removes the first character of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to remove the first character from. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>String</code> object without first character. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.removeFirstCharacter(null)            // null
+         StringUtil.removeFirstCharacter(""):             // 
+         StringUtil.removeFirstCharacter("a"):            // 
+         StringUtil.removeFirstCharacter("ab")            // b
+         StringUtil.removeFirstCharacter("abc")           // bc
+         StringUtil.removeFirstCharacter("abc\t\ndef")    // bc\t\ndef
+         </pre></div>
+		 
+		 </div></div><a name="removeLastCharacter()"></a><a name="removeLastCharacter(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeLastCharacter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeLastCharacter(str:String):String</code><p></p><p></p><p>
+		 Removes the last character of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to remove last character from. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>String</code> object without last character. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.removeLastCharacter(null)            // null
+         StringUtil.removeLastCharacter(""):             // 
+         StringUtil.removeLastCharacter("a"):            // 
+         StringUtil.removeLastCharacter("ab")            // a
+         StringUtil.removeLastCharacter("abc")           // ab
+         StringUtil.removeLastCharacter("abc\t\ndef")    // abc\t\nde
+         </pre></div>
+		 
+		 </div></div><a name="removeStart()"></a><a name="removeStart(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeStart</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeStart(str:String, remove:String, stringCase:StringCase):String</code><p></p><p></p><p>
+		 Removes a substring only if it is at the start of the source <code>String</code> object, otherwise returns the source <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to search. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">remove</span>:String</code> &mdash; 			the <code>String</code> object to search for and remove. May be <code>null</code>. 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>String</code> object with the substring removed if found. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.removeStart(null    , null)           // null
+         StringUtil.removeStart(""      , null)           // 
+         StringUtil.removeStart(null    , "abc")          // null
+         StringUtil.removeStart(""      , "")             // 
+         StringUtil.removeStart("abc"   , "")             // abc
+         StringUtil.removeStart(""      , "abc")          // 
+         StringUtil.removeStart("abcdef", "c")            // abcdef
+         StringUtil.removeStart("abcdef", "C")            // abcdef
+         StringUtil.removeStart("abcdef", "C", false)     // abcdef
+         StringUtil.removeStart("ABcdef", "aB")           // ABcdef
+         StringUtil.removeStart("ABcdef", "aB", false)    // cdef
+         StringUtil.removeStart("ABcdeF", "Ef")           // ABcdeF
+         StringUtil.removeStart("ABcdeF", "Ef", false)    // ABcdeF
+         StringUtil.removeStart("abcdef", "ab")           // cdef
+         StringUtil.removeStart("abcdef", "abcdef")       // 
+         StringUtil.removeStart("abcdef", "abcdefg")      // abcdef
+         </pre></div>
+		 
+		 </div></div><a name="replaceExtended()"></a><a name="replaceExtended(String,String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">replaceExtended</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function replaceExtended(str:String, find:String, replaceBy:String, stringCase:StringCase):String</code><p></p><p></p><p>
+		 Search for all occurrences of the <code>String</code> <code>find</code> within the <code>String</code> <code>str</code> and replaces by the <code>String</code> <code>replaceBy</code>.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to search. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">find</span>:String</code> &mdash; 			the <code>String</code> object to search for and replace. May be <code>null</code>. 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">replaceBy</span>:String</code> &mdash; 		the <code>String</code> object that will replace the <code>String</code> <code>find</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>String</code> <code>str</code> with the <code>String</code> <code>find</code> replaced by the <code>String</code> <code>replaceBy</code>. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.replaceExtended(null        , null , "x")           // null
+         StringUtil.replaceExtended(""          , null , "x")           // 
+         StringUtil.replaceExtended(null        , "abc", "x")           // null
+         StringUtil.replaceExtended(""          , ""   , "x")           // 
+         StringUtil.replaceExtended("abc"       , ""   , "x")           // abc
+         StringUtil.replaceExtended(""          , "abc", "x")           // 
+         StringUtil.replaceExtended("abcdefabca", "a"  , "x")           // xbcdefxbcx
+         StringUtil.replaceExtended("AbcdefabcA", "a"  , "x")           // AbcdefxbcA
+         StringUtil.replaceExtended("AbcdefabcA", "a"  , "x", false)    // xbcdefxbcx
+         StringUtil.replaceExtended("abcdef"    , "y"  , "x")           // abcdef
+         </pre></div>
+		 
+		 </div></div><a name="reverse()"></a><a name="reverse(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">reverse</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function reverse(str:String):String</code><p></p><p></p><p>
+		 Reverses the chars of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to reverse. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the <code>String</code> object with the chars reversed. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.reverse(null)       // null
+         StringUtil.reverse("")         // 
+         StringUtil.reverse(" ")        //  
+         StringUtil.reverse("a")        // a
+         StringUtil.reverse("ab")       // ba
+         StringUtil.reverse("abc")      // cba
+         StringUtil.reverse(" abc")     // cba 
+         StringUtil.reverse(" abc ")    //  cba 
+         StringUtil.reverse("abc\td")   // d\tcba
+         </pre></div>
+		 
+		 </div></div><a name="rtrim()"></a><a name="rtrim(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">rtrim</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function rtrim(str:String):String</code><p></p><p></p><p>
+		 Removes control characters(char &lt;= 32) from the start of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the <code>String</code> object to be trimmed. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the trimmed <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.rtrim(null)                   // null
+         StringUtil.rtrim("")                     // 
+         StringUtil.rtrim(" ")                    // 
+         StringUtil.rtrim("abc")                  // abc
+         StringUtil.rtrim(" abc")                 //  abc
+         StringUtil.rtrim("   abc ")              //    abc
+         StringUtil.rtrim("   abc  ")             //    abc
+         StringUtil.rtrim(" \n\t  abc  ")         // \n\t  abc
+         StringUtil.rtrim(" \n\t  abc  \n\t ")    // \n\t  abc
+         </pre></div>
+		 
+		 </div></div><a name="startsWith()"></a><a name="startsWith(String,String,org.as3coreaddendum.system.StringCase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">startsWith</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function startsWith(str:String, prefix:String, stringCase:StringCase):Boolean</code><p></p><p></p><p>
+		 Check if the <code>String</code> object starts with a specified prefix.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 			the <code>String</code> object to check. May be <code>null</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">prefix</span>:String</code> &mdash; 			the prefix to find. May be <code>null</code>. 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stringCase</span>:StringCase</code> &mdash; 		indicates whether case sensitivity is considered or not in the comparison.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the <code>String</code> object starts with the prefix or if both arguments are <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.startsWith(null    , null)           // true
+         StringUtil.startsWith(""      , null)           // false
+         StringUtil.startsWith(null    , "abc")          // false
+         StringUtil.startsWith("abcdef", "a")            // true
+         StringUtil.startsWith("abcdef", "A")            // false
+         StringUtil.startsWith("abcdef", "A", false)     // true
+         StringUtil.startsWith("ABcdef", "aB")           // false
+         StringUtil.startsWith("ABcdef", "aB", false)    // true
+         StringUtil.startsWith("abcdef", "ab")           // true
+         StringUtil.startsWith("abcdef", "abcdef")       // true
+         StringUtil.startsWith("abcdef", "abcdefg")      // false
+         </pre></div>
+		 
+		 </div></div><a name="trim()"></a><a name="trim(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">trim</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function trim(str:String):String</code><p></p><p></p><p>
+		 Removes control characters(char &lt;= 32) from the start and end of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the <code>String</code> object to be trimmed. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the trimmed <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.trim(null)                   // null
+         StringUtil.trim("")                     // 
+         StringUtil.trim(" ")                    // 
+         StringUtil.trimToEmpty("  \t  ")        // 
+         StringUtil.trim("abc")                  // abc
+         StringUtil.trim(" abc")                 // abc
+         StringUtil.trim("   abc ")              // abc
+         StringUtil.trim("   abc  ")             // abc
+         StringUtil.trim(" \n\t  abc  ")         // abc
+         StringUtil.trim(" \n\t  abc  \n\t ")    // abc
+         </pre></div>
+		 
+		 </div></div><a name="trimToEmpty()"></a><a name="trimToEmpty(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">trimToEmpty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function trimToEmpty(str:String):String</code><p></p><p></p><p>
+		 Removes control characters(char &lt;= 32) from the start and end of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the <code>String</code> object to be trimmed. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the trimmed <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is an empty <code>String</code> ("").
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.trimToEmpty(null)                   // 
+         StringUtil.trimToEmpty("")                     // 
+         StringUtil.trimToEmpty(" ")                    // 
+         StringUtil.trimToEmpty("  ")                   // 
+         StringUtil.trimToEmpty("  \t  ")               // 
+         StringUtil.trimToEmpty("abc")                  // abc
+         StringUtil.trimToEmpty(" abc")                 // abc
+         StringUtil.trimToEmpty("   abc ")              // abc
+         StringUtil.trimToEmpty("   abc  ")             // abc
+         StringUtil.trimToEmpty(" \n\t  abc  ")         // abc
+         StringUtil.trimToEmpty(" \n\t  abc  \n\t ")    // abc
+         </pre></div>
+		 
+		 </div></div><a name="trimToNull()"></a><a name="trimToNull(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">trimToNull</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function trimToNull(str:String):String</code><p></p><p></p><p>
+		 Removes control characters(char &lt;= 32) from the start and end of the <code>String</code> object.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the <code>String</code> object to be trimmed. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the trimmed <code>String</code> object if it contains any characters that isn't control characters(char &lt;= 32), or <code>null</code> if it contains only those characters. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.trimToNull(null)                   // null
+         StringUtil.trimToNull("")                     // null
+         StringUtil.trimToNull(" ")                    // null
+         StringUtil.trimToNull("  ")                   // null
+         StringUtil.trimToNull("  \t  ")               // null
+         StringUtil.trimToNull("abc")                  // abc
+         StringUtil.trimToNull(" abc")                 // abc
+         StringUtil.trimToNull("   abc ")              // abc
+         StringUtil.trimToNull("   abc  ")             // abc
+         StringUtil.trimToNull(" \n\t  abc  ")         // abc
+         StringUtil.trimToNull(" \n\t  abc  \n\t ")    // abc
+         </pre></div>
+		 
+		 </div></div><a name="uncapitalize()"></a><a name="uncapitalize(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">uncapitalize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function uncapitalize(str:String):String</code><p></p><p></p><p>
+		 Uncapitalizes a <code>String</code> object, changing only the first letter to lowercase.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 	the <code>String</code> object to uncapitalize. May be <code>null</code>. 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the uncapitalized <code>String</code>. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 <div class="listing" version="3.0"><pre>
+         import org.as3coreaddendum.utils.StringUtil;
+         
+         StringUtil.uncapitalize(null)      // null
+         StringUtil.uncapitalize(" ")       // 
+         StringUtil.uncapitalize("a")       // a
+         StringUtil.uncapitalize("A")       // a
+         StringUtil.uncapitalize("ab")      // ab
+         StringUtil.uncapitalize("Ab")      // ab
+         StringUtil.uncapitalize("aB")      // aB
+         StringUtil.uncapitalize("AB")      // aB
+         StringUtil.uncapitalize("abc")     // abc
+         StringUtil.uncapitalize(" abc")    //  abc
+         StringUtil.uncapitalize(" Abc")    //  Abc
+         </pre></div>
+		 
+		 </div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright 2010-2011 Flavio Silva - http://flsilva.com</footer><br/>Sun Oct 9 2011, 06:33 PM -03:00  </center></div></body></html><!--Copyright 2010-2011 Flavio Silva - http://flsilva.com<br/>Sun Oct 9 2011, 06:33 PM -03:00  -->

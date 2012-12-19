@@ -1,0 +1,5363 @@
+<asdoc>
+
+<classRec name='MathUtil' fullname='org.as3utils:MathUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\MathUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class for working with mathematical operations.
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='MathUtil' fullname='org.as3utils:MathUtil/MathUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 MathUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	MathUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='degreesToRadians' fullname='org.as3utils:MathUtil/degreesToRadians' isStatic='true' isFinal='false' isOverride='false'  param_names='degrees;decimalPlaces' param_types='Number;int' param_defaults='undefined;18' result_type='Number'>
+<description><![CDATA[
+
+		 Converts degrees to radians.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.MathUtil;
+
+		 
+
+		 MathUtil.degreesToRadians(null)    // 0
+
+		 MathUtil.degreesToRadians(0)       // 0
+
+		 MathUtil.degreesToRadians(1)       // 0.017453292519943295
+
+		 MathUtil.degreesToRadians(1, 0)    // 0
+
+		 MathUtil.degreesToRadians(1, 1)    // 0
+
+		 MathUtil.degreesToRadians(1, 2)    // 0.02
+
+		 MathUtil.degreesToRadians(1, 3)    // 0.017
+
+		 MathUtil.degreesToRadians(1.5)     // 0.02617993877991494
+
+		 MathUtil.degreesToRadians(30)      // 0.5235987755982988
+
+		 MathUtil.degreesToRadians(-8)      // -0.13962634015954636
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[degrees 		the number of degrees to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of degrees converted to radians.
+
+		 ]]></return>
+</method>
+<method name='millisecondsToSeconds' fullname='org.as3utils:MathUtil/millisecondsToSeconds' isStatic='true' isFinal='false' isOverride='false'  param_names='milliseconds;decimalPlaces' param_types='Number;int' param_defaults='undefined;0' result_type='Number'>
+<description><![CDATA[
+
+		 Converts milliseconds to seconds.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.MathUtil;
+
+		 
+
+		 MathUtil.millisecondsToSeconds(null)        // 0
+
+		 MathUtil.millisecondsToSeconds(0)           // 0
+
+		 MathUtil.millisecondsToSeconds(1)           // 0
+
+		 MathUtil.millisecondsToSeconds(300)         // 0
+
+		 MathUtil.millisecondsToSeconds(300, 1)      // 0.3
+
+		 MathUtil.millisecondsToSeconds(500)         // 1
+
+		 MathUtil.millisecondsToSeconds(500, 1)      // 0.5
+
+		 MathUtil.millisecondsToSeconds(1000)        // 1
+
+		 MathUtil.millisecondsToSeconds(1000, 1)     // 1
+
+		 MathUtil.millisecondsToSeconds(1500)        // 2
+
+		 MathUtil.millisecondsToSeconds(1500, 1)     // 1.5
+
+		 MathUtil.millisecondsToSeconds(1500, 2)     // 1.5
+
+		 MathUtil.millisecondsToSeconds(2123)        // 2
+
+		 MathUtil.millisecondsToSeconds(2123, 1)     // 2.1
+
+		 MathUtil.millisecondsToSeconds(2123, 2)     // 2.12
+
+		 MathUtil.millisecondsToSeconds(-2123)       // -2
+
+		 MathUtil.millisecondsToSeconds(-2123, 1)    // -2.1
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[milliseconds 	the number of milliseconds to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of milliseconds converted to seconds.
+
+		 ]]></return>
+</method>
+<method name='percentToRange' fullname='org.as3utils:MathUtil/percentToRange' isStatic='true' isFinal='false' isOverride='false'  param_names='percent;min;max;rounding' param_types='Number;Number;Number;org.as3coreaddendum.system:NumericRounding' param_defaults='undefined;undefined;undefined;null' result_type='Number'>
+<description><![CDATA[
+
+		 Returns the number that corresponds to the percentage in a given range.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.MathUtil;
+
+		 
+
+		 MathUtil.percentToRange(50, 0, 100)                           // 50
+
+		 MathUtil.percentToRange(50, 100, 200)                         // 150
+
+		 MathUtil.percentToRange(1, 26, 77)                            // 26.51
+
+		 MathUtil.percentToRange(33, 26, 77)                           // 42.83
+
+		 MathUtil.percentToRange(33, 26, 77, NumericRounding.FLOOR)    // 42
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[percent 	the percent to be used in the range.
+
+		 ]]></param>
+<param><![CDATA[min 		the begin of the range.
+
+		 ]]></param>
+<param><![CDATA[max 		the end of the range.
+
+		 ]]></param>
+<param><![CDATA[rounding 	determines whether the number should be rounded.
+
+		 ]]></param>
+<return><![CDATA[the number that corresponds to the percentage in the range.
+
+		 ]]></return>
+</method>
+<method name='radiansToDegrees' fullname='org.as3utils:MathUtil/radiansToDegrees' isStatic='true' isFinal='false' isOverride='false'  param_names='radians;decimalPlaces' param_types='Number;int' param_defaults='undefined;18' result_type='Number'>
+<description><![CDATA[
+
+		 Converts radians to degrees.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.MathUtil;
+
+		 
+
+		 MathUtil.radiansToDegrees(null)    // 0
+
+		 MathUtil.radiansToDegrees(0)       // 0
+
+		 MathUtil.radiansToDegrees(1)       // 57.29577951308232
+
+		 MathUtil.radiansToDegrees(1, 0)    // 57
+
+		 MathUtil.radiansToDegrees(1, 1)    // 57.3
+
+		 MathUtil.radiansToDegrees(1, 2)    // 57.3
+
+		 MathUtil.radiansToDegrees(1, 3)    // 57.296
+
+		 MathUtil.radiansToDegrees(1.5)     // 85.94366926962348
+
+		 MathUtil.radiansToDegrees(30)      // 1718.8733853924698
+
+		 MathUtil.radiansToDegrees(-8)      // -458.3662361046586
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[degrees 		the number of degrees to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of radians converted to degrees.
+
+		 ]]></return>
+</method>
+<method name='rangeToPercent' fullname='org.as3utils:MathUtil/rangeToPercent' isStatic='true' isFinal='false' isOverride='false'  param_names='num;min;max;rounding' param_types='Number;Number;Number;org.as3coreaddendum.system:NumericRounding' param_defaults='undefined;undefined;undefined;null' result_type='Number'>
+<description><![CDATA[
+
+		 Returns the percentage corresponding to the number in a given range.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.MathUtil;
+
+		 
+
+		 MathUtil.rangeToPercent(50, 0, 100)                           // 50
+
+		 MathUtil.rangeToPercent(50, 100, 200)                         // -50
+
+		 MathUtil.rangeToPercent(150, 100, 200)                        // 50
+
+		 MathUtil.rangeToPercent(27, 26, 77)                           // 1.9607843137254901
+
+		 MathUtil.rangeToPercent(33, 26, 77)                           // 13.725490196078432
+
+		 MathUtil.rangeToPercent(33, 26, 77, NumericRounding.FLOOR)    // 13
+
+		 MathUtil.rangeToPercent(51.5, 26, 77)                         // 50
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[num 		the number to be used in the range.
+
+		 ]]></param>
+<param><![CDATA[min 		the begin of the range.
+
+		 ]]></param>
+<param><![CDATA[max 		the end of the range.
+
+		 ]]></param>
+<param><![CDATA[rounding 	determines whether the number should be rounded.
+
+		 ]]></param>
+<return><![CDATA[the percentage that corresponds to the number in the range.
+
+		 ]]></return>
+</method>
+<field name='SECOND' fullname='org.as3utils:MathUtil/private:SECOND' type='int' isStatic='true' isConst='true' defaultValue='1000' >
+</field>
+<classRec name='RandomUtil' fullname='org.as3utils:RandomUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\RandomUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class for working with random numbers.
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='RandomUtil' fullname='org.as3utils:RandomUtil/RandomUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 RandomUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	RandomUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='randomArray' fullname='org.as3utils:RandomUtil/randomArray' isStatic='true' isFinal='false' isOverride='false'  param_names='min;max;length;decimalPlaces' param_types='Number;Number;int;int' param_defaults='undefined;undefined;undefined;0' result_type='Array'>
+<description><![CDATA[
+
+		 Returns an array of random numbers that can be repeated.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.RandomUtil;
+
+		 
+
+		 RandomUtil.randomArray(0, 10, 5)             // [7,5,3,3,9]
+
+		 RandomUtil.randomArray(0, 10, 5, 1)          // [5.6,4.6,8.7,3.5,0.9]
+
+		 RandomUtil.randomArray(10, 20, 5)            // [16,10,15,16,16]
+
+		 RandomUtil.randomArray(-10, 10, 5)           // [-7,-4,-10,7,-3]
+
+		 RandomUtil.randomArray(-7, 4, 5)             // [-2,-7,2,2,3]
+
+		 RandomUtil.randomArray(-7, 4, 5, 2)          // [-4.88,-4.98,3.38,-0.3,2.41]
+
+		 RandomUtil.randomArray(-20, -10, 5)          // [-15,-14,-18,-13,-15]
+
+		 RandomUtil.randomArray(-1000, 1000, 5, 2)    // [146.31,-839.97,-85.05,-525.63,-739.22]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[min 			the begin of the range.
+
+		 ]]></param>
+<param><![CDATA[max 			the end of the range.
+
+		 ]]></param>
+<param><![CDATA[length 			the length of the array, must be greater than zero.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[an array of random numbers that can be repeated.
+
+		 ]]></return>
+<throws><![CDATA[ArgumentError 	if the <code>length</code> argument is less than zero.
+
+		 ]]></throws>
+</method>
+<method name='random' fullname='org.as3utils:RandomUtil/random' isStatic='true' isFinal='false' isOverride='false'  param_names='min;max;decimalPlaces' param_types='Number;Number;int' param_defaults='undefined;undefined;0' result_type='Number'>
+<description><![CDATA[
+
+		 Returns a random number between a range.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.RandomUtil;
+
+		 
+
+		 RandomUtil.random(0, 10)              // 3
+
+		 RandomUtil.random(0, 10)              // 0
+
+		 RandomUtil.random(0, 10)              // 10
+
+		 RandomUtil.random(0, 10, 1)           // 0.9
+
+		 RandomUtil.random(0, 10, 1)           // 9.6
+
+		 RandomUtil.random(0, 10, 1)           // 5.4
+
+		 RandomUtil.random(0, 10, 2)           // 2.87
+
+		 RandomUtil.random(0, 10, 3)           // 4.602
+
+		 RandomUtil.random(-13, 11, 1)         // -9.8
+
+		 RandomUtil.random(-13, 11, 1)         // -12.9
+
+		 RandomUtil.random(-13, 11, 1)         // 10.6
+
+		 RandomUtil.random(-1000, 1000, 1)     // 273.6
+
+		 RandomUtil.random(-1000, 1000, 1)     // -847.2
+
+		 RandomUtil.random(-20, -10)           // -15
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[min 			the begin of the range.
+
+		 ]]></param>
+<param><![CDATA[max 			the end of the range.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[a random number between the range (min, max).
+
+		 ]]></return>
+<throws><![CDATA[ArgumentError 	if the <code>max</code> argument is less than the <code>min</code> argument.
+
+		 ]]></throws>
+</method>
+<classRec name='ByteConversionUtil' fullname='org.as3utils:ByteConversionUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\ByteConversionUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class for working with conversion of bytes.
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='ByteConversionUtil' fullname='org.as3utils:ByteConversionUtil/ByteConversionUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 ByteConversionUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	ByteConversionUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='bytesToGigabytes' fullname='org.as3utils:ByteConversionUtil/bytesToGigabytes' isStatic='true' isFinal='false' isOverride='false'  param_names='bytes;decimalPlaces' param_types='Number;int' param_defaults='undefined;1' result_type='Number'>
+<description><![CDATA[
+
+		 Converts the number of bytes to gigabytes.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+
+		 
+
+		 var num:Number;
+
+		 
+
+		 trace("num: " + num)                               // NaN
+
+		 
+
+		 ByteConversionUtil.bytesToGigabytes(null)          // 0
+
+		 ByteConversionUtil.bytesToGigabytes(num)           // NaN
+
+		 ByteConversionUtil.bytesToGigabytes(0)             // 0
+
+		 ByteConversionUtil.bytesToGigabytes(1)             // 0.1
+
+		 ByteConversionUtil.bytesToGigabytes(1, 0)          // 1
+
+		 ByteConversionUtil.bytesToGigabytes(1024)          // 0.1
+
+		 ByteConversionUtil.bytesToGigabytes(2048)          // 0
+
+		 ByteConversionUtil.bytesToGigabytes(2048, 2)       // 0
+
+		 ByteConversionUtil.bytesToGigabytes(35347)         // 0
+
+		 ByteConversionUtil.bytesToGigabytes(353470)        // 0
+
+		 ByteConversionUtil.bytesToGigabytes(3534701)       // 0
+
+		 ByteConversionUtil.bytesToGigabytes(35347012)      // 0
+
+		 ByteConversionUtil.bytesToGigabytes(353470123)     // 0.3
+
+		 ByteConversionUtil.bytesToGigabytes(3534701234)    // 3.3
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[bytes 			the number of bytes to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of bytes converted to gigabytes.
+
+		 ]]></return>
+</method>
+<method name='bytesToKilobytes' fullname='org.as3utils:ByteConversionUtil/bytesToKilobytes' isStatic='true' isFinal='false' isOverride='false'  param_names='bytes;decimalPlaces' param_types='Number;int' param_defaults='undefined;1' result_type='Number'>
+<description><![CDATA[
+
+		 Converts the number of bytes to kilobytes.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+
+		 
+
+		 var num:Number;
+
+		 
+
+		 trace("num: " + num)                               // NaN
+
+		 
+
+		 ByteConversionUtil.bytesToKilobytes(null)          // 0
+
+		 ByteConversionUtil.bytesToKilobytes(num)           // NaN
+
+		 ByteConversionUtil.bytesToKilobytes(0)             // 0
+
+		 ByteConversionUtil.bytesToKilobytes(1)             // 0.1
+
+		 ByteConversionUtil.bytesToKilobytes(1, 0)          // 1
+
+		 ByteConversionUtil.bytesToKilobytes(1000)          // 1
+
+		 ByteConversionUtil.bytesToKilobytes(1024)          // 1
+
+		 ByteConversionUtil.bytesToKilobytes(2048)          // 2
+
+		 ByteConversionUtil.bytesToKilobytes(2048, 2)       // 2
+
+		 ByteConversionUtil.bytesToKilobytes(2560)          // 2.5
+
+		 ByteConversionUtil.bytesToKilobytes(2560, 2)       // 2.5
+
+		 ByteConversionUtil.bytesToKilobytes(2560, 3)       // 2.5
+
+		 ByteConversionUtil.bytesToKilobytes(2363)          // 2.3
+
+		 ByteConversionUtil.bytesToKilobytes(2363, 0)       // 2
+
+		 ByteConversionUtil.bytesToKilobytes(2363, 2)       // 2.31
+
+		 ByteConversionUtil.bytesToKilobytes(2363, 3)       // 2.308
+
+		 ByteConversionUtil.bytesToKilobytes(2963)          // 2.9
+
+		 ByteConversionUtil.bytesToKilobytes(2963, 0)       // 3
+
+		 ByteConversionUtil.bytesToKilobytes(35347)         // 34.5
+
+		 ByteConversionUtil.bytesToKilobytes(353470)        // 345.2
+
+		 ByteConversionUtil.bytesToKilobytes(3534701)       // 3451.9
+
+		 ByteConversionUtil.bytesToKilobytes(35347012)      // 34518.6
+
+		 ByteConversionUtil.bytesToKilobytes(353470123)     // 345185.7
+
+		 ByteConversionUtil.bytesToKilobytes(3534701234)    // 3451856.7
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[bytes 			the number of bytes to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of bytes converted to kilobytes.
+
+		 ]]></return>
+</method>
+<method name='bytesToMegabytes' fullname='org.as3utils:ByteConversionUtil/bytesToMegabytes' isStatic='true' isFinal='false' isOverride='false'  param_names='bytes;decimalPlaces' param_types='Number;int' param_defaults='undefined;1' result_type='Number'>
+<description><![CDATA[
+
+		 Converts the number of bytes to megabytes.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+
+		 
+
+		 var num:Number;
+
+		 
+
+		 trace("num: " + num)                               // NaN
+
+		 
+
+		 ByteConversionUtil.bytesToMegabytes(null)          // 0
+
+		 ByteConversionUtil.bytesToMegabytes(num)           // NaN
+
+		 ByteConversionUtil.bytesToMegabytes(0)             // 0
+
+		 ByteConversionUtil.bytesToMegabytes(1)             // 0.1
+
+		 ByteConversionUtil.bytesToMegabytes(1, 0)          // 1
+
+		 ByteConversionUtil.bytesToMegabytes(1024)          // 0.1
+
+		 ByteConversionUtil.bytesToMegabytes(2048)          // 0
+
+		 ByteConversionUtil.bytesToMegabytes(2048, 1)       // 0
+
+		 ByteConversionUtil.bytesToMegabytes(2048, 2)       // 0
+
+		 ByteConversionUtil.bytesToMegabytes(2363)          // 0
+
+		 ByteConversionUtil.bytesToMegabytes(2363, 0)       // 0
+
+		 ByteConversionUtil.bytesToMegabytes(2363, 2)       // 0
+
+		 ByteConversionUtil.bytesToMegabytes(2363, 3)       // 0.002
+
+		 ByteConversionUtil.bytesToMegabytes(35347)         // 0
+
+		 ByteConversionUtil.bytesToMegabytes(353470)        // 0.3
+
+		 ByteConversionUtil.bytesToMegabytes(3534701)       // 3.4
+
+		 ByteConversionUtil.bytesToMegabytes(35347012)      // 33.7
+
+		 ByteConversionUtil.bytesToMegabytes(353470123)     // 337.1
+
+		 ByteConversionUtil.bytesToMegabytes(3534701234)    // 3371
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[bytes 			the number of bytes to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of bytes converted to megabytes.
+
+		 ]]></return>
+</method>
+<method name='bytesToTerabytes' fullname='org.as3utils:ByteConversionUtil/bytesToTerabytes' isStatic='true' isFinal='false' isOverride='false'  param_names='bytes;decimalPlaces' param_types='Number;int' param_defaults='undefined;1' result_type='Number'>
+<description><![CDATA[
+
+		 Converts the number of bytes to terabytes.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+
+		 
+
+		 var num:Number;
+
+		 
+
+		 trace("num: " + num)                                  // NaN
+
+		 
+
+		 ByteConversionUtil.bytesToTerabytes(null)             // 0
+
+		 ByteConversionUtil.bytesToTerabytes(num)              // NaN
+
+		 ByteConversionUtil.bytesToTerabytes(0)                // 0
+
+		 ByteConversionUtil.bytesToTerabytes(1)                // 0.1
+
+		 ByteConversionUtil.bytesToTerabytes(1, 0)             // 1
+
+		 ByteConversionUtil.bytesToTerabytes(1024)             // 0.1
+
+		 ByteConversionUtil.bytesToTerabytes(2048)             // 0
+
+		 ByteConversionUtil.bytesToTerabytes(2048, 1)          // 0
+
+		 ByteConversionUtil.bytesToTerabytes(2048, 2)          // 0
+
+		 ByteConversionUtil.bytesToTerabytes(35347)            // 0
+
+		 ByteConversionUtil.bytesToTerabytes(353470)           // 0
+
+		 ByteConversionUtil.bytesToTerabytes(3534701)          // 0
+
+		 ByteConversionUtil.bytesToTerabytes(35347012)         // 0
+
+		 ByteConversionUtil.bytesToTerabytes(353470123)        // 0
+
+		 ByteConversionUtil.bytesToTerabytes(3534701234)       // 0
+
+		 ByteConversionUtil.bytesToTerabytes(35347012345)      // 0
+
+		 ByteConversionUtil.bytesToTerabytes(353470123456)     // 0.3
+
+		 ByteConversionUtil.bytesToTerabytes(3534701234567)    // 3.2
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[bytes 			the number of bytes to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of bytes converted to terabytes.
+
+		 ]]></return>
+</method>
+<method name='gigabytesToBytes' fullname='org.as3utils:ByteConversionUtil/gigabytesToBytes' isStatic='true' isFinal='false' isOverride='false'  param_names='gigabytes;decimalPlaces' param_types='Number;int' param_defaults='undefined;0' result_type='Number'>
+<description><![CDATA[
+
+		 Converts the number of gigabytes to bytes.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+
+		 
+
+		 ByteConversionUtil.gigabytesToBytes(null)      // 0
+
+		 ByteConversionUtil.gigabytesToBytes(0.1)       // 107374182
+
+		 ByteConversionUtil.gigabytesToBytes(0.1, 1)    // 107374182.4
+
+		 ByteConversionUtil.gigabytesToBytes(1)         // 1073741824
+
+		 ByteConversionUtil.gigabytesToBytes(1.1)       // 1181116006
+
+		 ByteConversionUtil.gigabytesToBytes(1.1, 1)    // 1181116006.4
+
+		 ByteConversionUtil.gigabytesToBytes(1.5)       // 1610612736
+
+		 ByteConversionUtil.gigabytesToBytes(1.5, 1)    // 1610612736
+
+		 ByteConversionUtil.gigabytesToBytes(2)         // 2147483648
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[gigabytes		the number of gigabytes to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of gigabytes converted to bytes.
+
+		 ]]></return>
+</method>
+<method name='kilobytesToBytes' fullname='org.as3utils:ByteConversionUtil/kilobytesToBytes' isStatic='true' isFinal='false' isOverride='false'  param_names='kilobytes;decimalPlaces' param_types='Number;int' param_defaults='undefined;0' result_type='Number'>
+<description><![CDATA[
+
+		 Converts the number of kilobytes to bytes.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+
+		 
+
+		 ByteConversionUtil.kilobytesToBytes(null)      // 0
+
+		 ByteConversionUtil.kilobytesToBytes(1)         // 1024
+
+		 ByteConversionUtil.kilobytesToBytes(1.1)       // 1126
+
+		 ByteConversionUtil.kilobytesToBytes(1.1, 1)    // 1126.4
+
+		 ByteConversionUtil.kilobytesToBytes(1.5)       // 1536
+
+		 ByteConversionUtil.kilobytesToBytes(1.5, 1)    // 1536
+
+		 ByteConversionUtil.kilobytesToBytes(2)         // 2048
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[kilobytes		the number of kilobytes to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of kilobytes converted to bytes.
+
+		 ]]></return>
+</method>
+<method name='megabytesToBytes' fullname='org.as3utils:ByteConversionUtil/megabytesToBytes' isStatic='true' isFinal='false' isOverride='false'  param_names='megabytes;decimalPlaces' param_types='Number;int' param_defaults='undefined;0' result_type='Number'>
+<description><![CDATA[
+
+		 Converts the number of megabytes to bytes.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+
+		 
+
+		 ByteConversionUtil.megabytesToBytes(null)      // 0
+
+		 ByteConversionUtil.megabytesToBytes(0.1)       // 104858
+
+		 ByteConversionUtil.megabytesToBytes(0.1, 1)    // 104857.6
+
+		 ByteConversionUtil.megabytesToBytes(1)         // 1048576
+
+		 ByteConversionUtil.megabytesToBytes(1.1)       // 1153434
+
+		 ByteConversionUtil.megabytesToBytes(1.1, 1)    // 1153433.6
+
+		 ByteConversionUtil.megabytesToBytes(1.5)       // 1572864
+
+		 ByteConversionUtil.megabytesToBytes(1.5, 1)    // 1572864
+
+		 ByteConversionUtil.megabytesToBytes(2)         // 2097152
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[megabytes		the number of megabytes to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of megabytes converted to bytes.
+
+		 ]]></return>
+</method>
+<method name='terabytesToBytes' fullname='org.as3utils:ByteConversionUtil/terabytesToBytes' isStatic='true' isFinal='false' isOverride='false'  param_names='terabytes;decimalPlaces' param_types='Number;int' param_defaults='undefined;0' result_type='Number'>
+<description><![CDATA[
+
+		 Converts the number of terabytes to bytes.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ByteConversionUtil;
+
+		 
+
+		 ByteConversionUtil.terabytesToBytes(null)      // 0
+
+		 ByteConversionUtil.terabytesToBytes(0.1)       // 109951162778
+
+		 ByteConversionUtil.terabytesToBytes(0.1, 1)    // 109951162777.6
+
+		 ByteConversionUtil.terabytesToBytes(1)         // 1099511627776
+
+		 ByteConversionUtil.terabytesToBytes(1.1)       // 1209462790554
+
+		 ByteConversionUtil.terabytesToBytes(1.1, 1)    // 1209462790553.6
+
+		 ByteConversionUtil.terabytesToBytes(1.5)       // 1649267441664
+
+		 ByteConversionUtil.terabytesToBytes(1.5, 1)    // 1649267441664
+
+		 ByteConversionUtil.terabytesToBytes(2)         // 2199023255552
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[terabytes		the number of terabytes to be converted.
+
+		 ]]></param>
+<param><![CDATA[decimalPlaces 	the number of decimal places.
+
+		 ]]></param>
+<return><![CDATA[the number of terabytes converted to bytes.
+
+		 ]]></return>
+</method>
+<field name='GIGABYTE' fullname='org.as3utils:ByteConversionUtil/GIGABYTE' type='Number' isStatic='true' isConst='true' defaultValue='1073741824' >
+<description><![CDATA[
+
+		 Defines the value of 1 gigabyte in bytes.
+
+		 ]]></description>
+</field>
+<field name='KILOBYTE' fullname='org.as3utils:ByteConversionUtil/KILOBYTE' type='Number' isStatic='true' isConst='true' defaultValue='1024' >
+<description><![CDATA[
+
+		 Defines the value of 1 kilobyte in bytes.
+
+		 ]]></description>
+</field>
+<field name='MEGABYTE' fullname='org.as3utils:ByteConversionUtil/MEGABYTE' type='Number' isStatic='true' isConst='true' defaultValue='1048576' >
+<description><![CDATA[
+
+		 Defines the value of 1 megabyte in bytes.
+
+		 ]]></description>
+</field>
+<field name='TERABYTE' fullname='org.as3utils:ByteConversionUtil/TERABYTE' type='Number' isStatic='true' isConst='true' defaultValue='1099511627776' >
+<description><![CDATA[
+
+		 Defines the value of 1 terabyte in bytes.
+
+		 ]]></description>
+</field>
+<classRec name='DrawUtil' fullname='org.as3utils:DrawUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\DrawUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class for working with drawings.
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='DrawUtil' fullname='org.as3utils:DrawUtil/DrawUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 DrawUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	DrawUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='border' fullname='org.as3utils:DrawUtil/border' isStatic='true' isFinal='false' isOverride='false'  param_names='bounds;thickness;color;alpha' param_types='flash.geom:Rectangle;Number;uint;Number' param_defaults='undefined;1;0xFFFFFF;1' result_type='flash.display:Shape'>
+</method>
+<method name='circ' fullname='org.as3utils:DrawUtil/circ' isStatic='true' isFinal='false' isOverride='false'  param_names='x;y;radius;color;alpha' param_types='Number;Number;Number;uint;Number' param_defaults='undefined;undefined;undefined;0xFFFFFF;1' result_type='flash.display:Shape'>
+<description><![CDATA[
+
+		 Returns a <code>Shape</code> object using the <code>Shape.Graphics.drawCircle</code> method.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import flash.display.Shape;
+
+		 import org.as3coreaddendum.utils.DrawUtil;
+
+		 
+
+		 var s:Shape = DrawUtil.circ(0, 0, 50, 0xFF0000);
+
+		 addChild(s);
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[x 			the <em>x</em> location of the center of the circle relative to the registration point of the <code>Shape</code> object (in pixels).
+
+		 ]]></param>
+<param><![CDATA[y 			the <em>y</em> location of the center of the circle relative to the registration point of the <code>Shape</code> object (in pixels).
+
+		 ]]></param>
+<param><![CDATA[radius		the radius of the circle (in pixels).
+
+		 ]]></param>
+<param><![CDATA[color 		the color of the <code>Shape</code>.
+
+		 ]]></param>
+<param><![CDATA[alpha 		the alpha of the <code>Shape</code>.
+
+		 ]]></param>
+<return><![CDATA[a <code>Shape</code> object using the <code>Shape.Graphics.drawCircle</code> method.
+
+		 ]]></return>
+</method>
+<method name='rect' fullname='org.as3utils:DrawUtil/rect' isStatic='true' isFinal='false' isOverride='false'  param_names='x;y;w;h;color;alpha' param_types='Number;Number;Number;Number;uint;Number' param_defaults='undefined;undefined;undefined;undefined;0xFFFFFF;1' result_type='flash.display:Shape'>
+<description><![CDATA[
+
+		 Returns a <code>Shape</code> object using the <code>Shape.Graphics.drawRect</code> method.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import flash.display.Shape;
+
+		 import org.as3coreaddendum.utils.DrawUtil;
+
+		 
+
+		 var s:Shape = DrawUtil.rect(0, 0, 250, 250, 0xFF0000);
+
+		 addChild(s);
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[x 			a number indicating the horizontal position relative to the registration point of the <code>Shape</code> object (in pixels).
+
+		 ]]></param>
+<param><![CDATA[y 			a number indicating the vertical position relative to the registration point of the <code>Shape</code> object (in pixels).
+
+		 ]]></param>
+<param><![CDATA[w 			the width of the <code>Shape</code> (in pixels).
+
+		 ]]></param>
+<param><![CDATA[h 			the height of the <code>Shape</code> (in pixels).
+
+		 ]]></param>
+<param><![CDATA[color 		the color of the <code>Shape</code>.
+
+		 ]]></param>
+<param><![CDATA[alpha 		the alpha of the <code>Shape</code>.
+
+		 ]]></param>
+<return><![CDATA[a <code>Shape</code> object using the <code>Shape.Graphics.drawRect</code> method.
+
+		 ]]></return>
+</method>
+<classRec name='ArrayUtil' fullname='org.as3utils:ArrayUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\ArrayUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class to work with <code>Array</code> objects.
+
+	 <p>ArrayUtil handles <code>null</code> input arrays quietly in almost all methods.
+
+	 When not, it's documented in the method.
+
+	 That is to say that a <code>null</code> input will not thrown an error in almost all methods.</p>
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='ArrayUtil' fullname='org.as3utils:ArrayUtil/ArrayUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 ArrayUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	ArrayUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='_containsOnlyType' fullname='org.as3utils:ArrayUtil/private:_containsOnlyType' isStatic='true' isFinal='false' isOverride='false'  param_names='element;index;arr' param_types='*;int;Array' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='_containsType' fullname='org.as3utils:ArrayUtil/private:_containsType' isStatic='true' isFinal='false' isOverride='false'  param_names='element;index;arr' param_types='*;int;Array' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='addAt' fullname='org.as3utils:ArrayUtil/addAt' isStatic='true' isFinal='false' isOverride='false'  param_names='array;index;element' param_types='Array;int;*' param_defaults='undefined;undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Adds the element at the specified position in the specified array.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+
+		 
+
+		 ArrayUtil.addAt(arr, 0, 0)       // [0,abc,def,123,1,2,3,abc,7]
+
+		 ArrayUtil.addAt(arr, 7, 4)       // [0,abc,def,123,1,2,3,4,abc,7]
+
+		 ArrayUtil.addAt(arr, 10, "z")    // [0,abc,def,123,1,2,3,4,abc,7,z]
+
+		 
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to remove the element from.
+
+		 ]]></param>
+<param><![CDATA[index 		the position of the element to be removed.
+
+		 ]]></param>
+<param><![CDATA[element 	the element to add.
+
+		 ]]></param>
+<return><![CDATA[the array with the element added.
+
+		 ]]></return>
+<throws><![CDATA[ArgumentError 	if the <code>array</code> argument is <code>null</code>.
+
+		 ]]></throws>
+<throws><![CDATA[RangeError 		if the <code>index</code> argument is a negative integer or greater than the <code>array.length - 1</code>.
+
+		 ]]></throws>
+</method>
+<method name='containsDuplication' fullname='org.as3utils:ArrayUtil/containsDuplication' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='containsOnlyType' fullname='org.as3utils:ArrayUtil/containsOnlyType' isStatic='true' isFinal='false' isOverride='false'  param_names='array;type;strict' param_types='Array;*;Boolean' param_defaults='undefined;undefined;false' result_type='Boolean'>
+<description><![CDATA[
+
+		 Returns <code>true</code> if the array contains only elements of the <code>type</code> argument.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 ArrayUtil.containsOnlyType(["a", "b", "c"], String)                  // true
+
+		 ArrayUtil.containsOnlyType(["a", "b", "c"], String, true)            // true
+
+		 ArrayUtil.containsOnlyType(["a", "b", "c", 5], String)               // false
+
+		 ArrayUtil.containsOnlyType([[], [], [], [], []], Array)              // true
+
+		 ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Array)           // false
+
+		 ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Object)          // true
+
+		 ArrayUtil.containsOnlyType([[], [], [], 3, [], []], Object, true)    // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[element 	the type of the elements.
+
+		 ]]></param>
+<param><![CDATA[strict 		defines if the type of the elements should be strictly equal.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the array contains only elements of the <code>type</code> argument. If the array is <code>null</code> or empty returns <code>false</code>.
+
+		 ]]></return>
+</method>
+<method name='containsType' fullname='org.as3utils:ArrayUtil/containsType' isStatic='true' isFinal='false' isOverride='false'  param_names='array;type;strict' param_types='Array;*;Boolean' param_defaults='undefined;undefined;false' result_type='Boolean'>
+<description><![CDATA[
+
+		 Returns <code>true</code> if the array contains some element of the <code>type</code> argument.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 ArrayUtil.containsType(["a", "b", "c"], String)                  // true
+
+		 ArrayUtil.containsType(["a", "b", "c"], String, true)            // true
+
+		 ArrayUtil.containsType(["a", "b", "c", 5], String)               // true
+
+		 ArrayUtil.containsType(["a", "b", "c"], Number):                 // false
+
+		 ArrayUtil.containsType(["a", "b", "c", 5], Number)               // true
+
+		 ArrayUtil.containsType([[], [], [], [], []], Array)              // true
+
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Array)           // true
+
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Number)          // true
+
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Object)          // true
+
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Object, true)    // false
+
+		 ArrayUtil.containsType([[], [], [], 3, [], []], Boolean)         // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[element 	the type of the elements.
+
+		 ]]></param>
+<param><![CDATA[strict 		defines if the type of the elements should be strictly equal.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the array contains some element of the <code>type</code> argument. If the array is <code>null</code> or empty returns <code>false</code>.
+
+		 ]]></return>
+</method>
+<method name='contains' fullname='org.as3utils:ArrayUtil/contains' isStatic='true' isFinal='false' isOverride='false'  param_names='array;element' param_types='Array;*' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the element is in the given array.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var obj:Object = {label:"ghi"};
+
+		 var arr:Array = ["abc", 123, {label:"def"}, obj];
+
+		 
+
+		 ArrayUtil.contains([], null)              // false
+
+		 ArrayUtil.contains([null], null)          // true
+
+		 ArrayUtil.contains(arr, "abc")            // true
+
+		 ArrayUtil.contains(arr, "ab")             // false
+
+		 ArrayUtil.contains(arr, "abcd")           // false
+
+		 ArrayUtil.contains(arr, 123)              // true
+
+		 ArrayUtil.contains(arr, "123")            // false
+
+		 ArrayUtil.contains(arr, 1234)             // false
+
+		 ArrayUtil.contains(arr, {label:"def"})    // false
+
+		 ArrayUtil.contains(arr, {label:"ghi"})    // false
+
+		 ArrayUtil.contains(arr, obj)              // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to search through. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[element 	the element to find.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the array contains the element.
+
+		 ]]></return>
+</method>
+<method name='equals' fullname='org.as3utils:ArrayUtil/equals' isStatic='true' isFinal='false' isOverride='false'  param_names='array1;array2' param_types='Array;Array' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Compares two arrays, returning <code>true</code> if they are equal (same length, objects and order).
+
+		 <p>Two <code>null</code> references are considered to be equal.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var obj:Object = {label:"jlm"};
+
+		 var n1:int = 1;
+
+		 var n2:Number = 2;
+
+		 var n3:Number = 3.1;
+
+		 var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+
+		 var arr2:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+
+		 var arr3:Array = ["abc", "def", 123, obj, n1, n2, n3];
+
+		 var arr4:Array = ["abc", "def", 123, obj, n1, n2, n3];
+
+		 var arr5:Array = ["abc", "def", 123, obj, n2, n1, n3];
+
+		 
+
+		 ArrayUtil.equals(null, null)           // true
+
+		 ArrayUtil.equals(null, [])             // false
+
+		 ArrayUtil.equals([], [])               // true
+
+		 ArrayUtil.equals([1], [1])             // true
+
+		 ArrayUtil.equals(["abc"], ["abc"])     // true
+
+		 ArrayUtil.equals(["abc"], ["abcd"])    // false
+
+		 ArrayUtil.equals(arr, [])              // false
+
+		 ArrayUtil.equals(arr, arr)             // true
+
+		 ArrayUtil.equals(arr, arr2)            // false
+
+		 ArrayUtil.equals(arr3, arr4)           // true
+
+		 ArrayUtil.equals(arr4, arr5)           // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array1 	the first array. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[array2 	the second array. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the arrays are equal or both are <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='filterByType' fullname='org.as3utils:ArrayUtil/filterByType' isStatic='true' isFinal='false' isOverride='false'  param_names='array;type;strict' param_types='Array;Class;Boolean' param_defaults='undefined;undefined;false' result_type='Array'>
+<description><![CDATA[
+
+		 Returns the array containing only objects of the type of the <code>type</code> argument.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var obj:Object = {label:"jlm"};
+
+		 var n1:int = 1;
+
+		 var n2:Number = 2;
+
+		 var n3:Number = 3.1;
+
+		 var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+
+		 
+
+		 ArrayUtil.filterByType(null, null)             // null
+
+		 ArrayUtil.filterByType([], null)               // 
+
+		 ArrayUtil.filterByType(null, Array)            // null
+
+		 ArrayUtil.filterByType(arr, String)            // abc,def
+
+		 ArrayUtil.filterByType(arr, String, true)      // abc,def
+
+		 ArrayUtil.filterByType(arr, Object)            // abc,def,123,[object Object],[object Object],1,2,3.1
+
+		 ArrayUtil.filterByType(arr, Object, true)      // [object Object],[object Object]
+
+		 ArrayUtil.filterByType(arr, Number)            // 123,1,2,3.1
+
+		 ArrayUtil.filterByType(arr, Number, true)      // 3.1
+
+		 ArrayUtil.filterByType(arr, int)               // 123,1,2
+
+		 ArrayUtil.filterByType(arr, int, true)         // 123,1,2
+
+		 
+
+		 // for this to work the array must be re-declared with values for each call, because filterByType changes the original array.
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array for filtering. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[type 	the type of the objects that should remain in the array.
+
+		 ]]></param>
+<param><![CDATA[strict 	defines if the type of the elements should be strictly equal.
+
+		 ]]></param>
+<return><![CDATA[the array containing only objects of the type of the <code>type</code> argument.
+
+		 ]]></return>
+</method>
+<method name='getDuplicate' fullname='org.as3utils:ArrayUtil/getDuplicate' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='isEmpty' fullname='org.as3utils:ArrayUtil/isEmpty' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if an array is empty (zero-length) or <code>null</code>.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 ArrayUtil.isEmpty(null)      // true
+
+		 ArrayUtil.isEmpty([])        // true
+
+		 ArrayUtil.isEmpty([null])    // false
+
+		 ArrayUtil.isEmpty([123])     // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to check.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the array is empty or <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isNotEmpty' fullname='org.as3utils:ArrayUtil/isNotEmpty' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the array is not empty (zero-length) nor not <code>null</code>.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 ArrayUtil.isNotEmpty(null)      // false
+
+		 ArrayUtil.isNotEmpty([])        // false
+
+		 ArrayUtil.isNotEmpty([null])    // true
+
+		 ArrayUtil.isNotEmpty([123])     // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to check.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the array is not empty nor not <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isSameLength' fullname='org.as3utils:ArrayUtil/isSameLength' isStatic='true' isFinal='false' isOverride='false'  param_names='array1;array2' param_types='Array;Array' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks whether two arrays are the same length, treating <code>null</code> arrays as length 0.
+
+		 <p>Two <code>null</code> references are considered to be equal.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 ArrayUtil.isSameLength(null, null)            // true
+
+		 ArrayUtil.isSameLength(null, [])              // true
+
+		 ArrayUtil.isSameLength([], [])                // true
+
+		 ArrayUtil.isSameLength([1], [2])              // true
+
+		 ArrayUtil.isSameLength([1, "a"], [2])         // false
+
+		 ArrayUtil.isSameLength([1, "a"], [2, "b"])    // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array1 	the first array. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[array2 	the second array. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if length of arrays matches, treating <code>null</code> as an empty array.
+
+		 ]]></return>
+</method>
+<method name='maxValueIndex' fullname='org.as3utils:ArrayUtil/maxValueIndex' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='int'>
+<description><![CDATA[
+
+		 Returns the index position of the largest number in the array.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [5, 3, 9.1, 9.12, -10];
+
+		 var arr2:Array = [-15, -8, -25, -90, -66];
+
+		 
+
+		 ArrayUtil.maxValue(null)    // -1
+
+		 ArrayUtil.maxValue([])      // -1
+
+		 ArrayUtil.maxValue(arr)     // 3
+
+		 ArrayUtil.maxValue(arr2)    // 1
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to check. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[the index position of the largest number in the array. If the <code>array</code> argument is <code>null</code> or empty then the return is -1.
+
+		 ]]></return>
+</method>
+<method name='maxValue' fullname='org.as3utils:ArrayUtil/maxValue' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Number'>
+<description><![CDATA[
+
+		 Returns the largest number in the array.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [5, 3, 9.1, 9.12, -10];
+
+		 var arr2:Array = [-15, -8, -25, -90, -66];
+
+		 
+
+		 ArrayUtil.maxValue(null)    // NaN
+
+		 ArrayUtil.maxValue([])      // NaN
+
+		 ArrayUtil.maxValue(arr)     // 9.12
+
+		 ArrayUtil.maxValue(arr2)    // -8
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to check. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[the largest number in the array. If the <code>array</code> argument is <code>null</code> or empty then the return is <code>NaN</code>.
+
+		 ]]></return>
+</method>
+<method name='nullToEmpty' fullname='org.as3utils:ArrayUtil/nullToEmpty' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Returns an empty array for a <code>null</code> input array.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 ArrayUtil.nullToEmpty(null)            // []
+
+		 ArrayUtil.nullToEmpty([])              // []
+
+		 ArrayUtil.nullToEmpty([1])             // [1]
+
+		 ArrayUtil.nullToEmpty(["abc", 123])    // [abc,123]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to check for <code>null</code> or empty.
+
+		 ]]></param>
+<return><![CDATA[the same array or an empty array if <code>null</code> input.
+
+		 ]]></return>
+</method>
+<method name='removeAllOccurances' fullname='org.as3utils:ArrayUtil/removeAllOccurances' isStatic='true' isFinal='false' isOverride='false'  param_names='array;element' param_types='Array;*' param_defaults='undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Removes all occurances of a the given <code>element</code> argument from the given <code>array</code> argument.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+
+		 
+
+		 ArrayUtil.removeAllOccurances(arr, "abc")    // [def,123,1,2,3,7]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to remove the element. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[element 	the element to be removed from the array.
+
+		 ]]></param>
+<return><![CDATA[the updated array or <code>null</code> if the <code>array</code> argument is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='removeAt' fullname='org.as3utils:ArrayUtil/removeAt' isStatic='true' isFinal='false' isOverride='false'  param_names='array;index' param_types='Array;int' param_defaults='undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Removes the element at the specified position from the specified array.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+
+		 
+
+		 ArrayUtil.removeAt(arr, 0)    // [def,123,1,2,3,abc,7]
+
+		 ArrayUtil.removeAt(arr, 5)    // [abc,def,123,1,2,abc,7]
+
+		 ArrayUtil.removeAt(arr, 6)    // [abc,def,123,1,2,3,7]
+
+		 
+
+		 //for this to work exactly that way is necessary to redefine the array for every call because the original array is modified at each call.
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to remove the element from.
+
+		 ]]></param>
+<param><![CDATA[index 	the position of the element to be removed.
+
+		 ]]></param>
+<return><![CDATA[the array with the element removed.
+
+		 ]]></return>
+<throws><![CDATA[ArgumentError 	if the <code>array</code> argument is <code>null</code> or empty.
+
+		 ]]></throws>
+<throws><![CDATA[RangeError 		if the <code>index</code> argument is a negative integer or greater than the <code>array.length - 1</code>.
+
+		 ]]></throws>
+</method>
+<method name='removeFirstOccurance' fullname='org.as3utils:ArrayUtil/removeFirstOccurance' isStatic='true' isFinal='false' isOverride='false'  param_names='array;element' param_types='Array;*' param_defaults='undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Removes the first occurrence of the specified element from the specified array.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+
+		 
+
+		 ArrayUtil.removeFirstOccurance(arr, "abc")    // [def,123,1,2,3,abc,7]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to remove the element from.
+
+		 ]]></param>
+<param><![CDATA[element 	the element to be removed.
+
+		 ]]></param>
+<return><![CDATA[the array with the element removed.
+
+		 ]]></return>
+<throws><![CDATA[ArgumentError 	if the <code>array</code> argument is <code>null</code> or empty.
+
+		 ]]></throws>
+</method>
+<method name='removeLastOccurance' fullname='org.as3utils:ArrayUtil/removeLastOccurance' isStatic='true' isFinal='false' isOverride='false'  param_names='array;element' param_types='Array;*' param_defaults='undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Removes the last occurrence of the specified element from the specified array.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+
+		 
+
+		 ArrayUtil.removeLastOccurance(arr, "abc")    // [abc,def,123,1,2,3,7]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to remove the element from.
+
+		 ]]></param>
+<param><![CDATA[element 	the element to be removed.
+
+		 ]]></param>
+<return><![CDATA[the array with the element removed.
+
+		 ]]></return>
+<throws><![CDATA[ArgumentError 	if the <code>array</code> argument is <code>null</code> or empty.
+
+		 ]]></throws>
+</method>
+<method name='shuffle' fullname='org.as3utils:ArrayUtil/shuffle' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Shuffles the position of the elements of the given <code>array</code>.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["abc", "def", 123, 1, 2, 3, "abc", 7];
+
+		 
+
+		 ArrayUtil.shuffle(arr)    // [123,abc,2,def,abc,7,3,1]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to shuffle. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[the modified array.
+
+		 ]]></return>
+</method>
+<method name='sortAlphabeticallyByObjectProperty' fullname='org.as3utils:ArrayUtil/sortAlphabeticallyByObjectProperty' isStatic='true' isFinal='false' isOverride='false'  param_names='array;property;comparison' param_types='Array;String;org.as3coreaddendum.system.comparators:AlphabeticalComparison' param_defaults='undefined;undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Sorts the array of objects alphabetically through the object's <code>property</code>.
+
+		 <p>This method uses the <code>org.as3coreaddendum.system.comparators.AlphabeticalComparator</code> and <code>org.as3coreaddendum.system.comparators.PropertyComparator</code> objects together.</p>
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [{label:"a"}, {label:"ab"}, {label:"abc"}, {label:"aba"}, {label:"A"}, {label:"Ab"}, {label:"Abc"}, {label:"Aba"}, {label:"AB"}, {label:"ABC"}, {label:"ABA"}];
+
+		 
+
+		 ArrayUtil.shuffle(arr)
+
+		 ArrayUtil.sortAlphabeticallyByObjectProperty(arr, "label", AlphabeticalComparison.CASE_INSENSITIVE)
+
+		 
+
+		 arr[0].label    // A
+
+		 arr[1].label    // a
+
+		 arr[2].label    // Ab
+
+		 arr[3].label    // ab
+
+		 arr[4].label    // AB
+
+		 arr[5].label    // Aba
+
+		 arr[6].label    // ABA
+
+		 arr[7].label    // aba
+
+		 arr[8].label    // ABC
+
+		 arr[9].label    // abc
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 			the array to sort.
+
+		 ]]></param>
+<param><![CDATA[property 		the name of the property to be recovered and compared between the objects.
+
+		 ]]></param>
+<param><![CDATA[comparison		indicates which type of comparison will be used.
+
+		 ]]></param>
+<return><![CDATA[the sorted array.
+
+		 ]]></return>
+<see><![CDATA[org.as3coreaddendum.system.comparators.AlphabeticalComparator	AlphabeticalComparator
+
+		 ]]></see>
+<see><![CDATA[org.as3coreaddendum.system.comparators.PropertyComparator	PropertyComparator
+
+		 ]]></see>
+</method>
+<method name='sortAlphabetically' fullname='org.as3utils:ArrayUtil/sortAlphabetically' isStatic='true' isFinal='false' isOverride='false'  param_names='array;comparison' param_types='Array;org.as3coreaddendum.system.comparators:AlphabeticalComparison' param_defaults='undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Sorts the array of <code>String</code> objects alphabetically.
+
+		 <p>This method uses the <code>org.as3coreaddendum.system.comparators.AlphabeticalComparator</code> object.</p>
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["a", "ab", "abc", "aba", "A", "Ab", "Abc", "Aba", "AB", "ABC", "ABA"];
+
+		 
+
+		 ArrayUtil.shuffle(arr)                                                          // [aba,Ab,ABC,AB,abc,Aba,ab,ABA,a,Abc,A]
+
+		 
+
+		 ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.LOWER_CASE_FIRST)      // [a,ab,aba,abc,A,Ab,Aba,Abc,AB,ABA,ABC]
+
+		 ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.UPPER_CASE_FIRST)      // [A,AB,ABA,ABC,Ab,Aba,Abc,a,ab,aba,abc]
+
+		 ArrayUtil.sortAlphabetically(arr, AlphabeticalComparison.CASE_INSENSITIVE)      // [a,A,AB,ab,Ab,ABA,Aba,aba,ABC,Abc,abc]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 			the array to sort.
+
+		 ]]></param>
+<param><![CDATA[comparison		indicates which type of comparison will be used.
+
+		 ]]></param>
+<return><![CDATA[the sorted array.
+
+		 ]]></return>
+<see><![CDATA[org.as3coreaddendum.system.comparators.AlphabeticalComparator	AlphabeticalComparator
+
+		 ]]></see>
+</method>
+<method name='sortAscendingByObjectProperty' fullname='org.as3utils:ArrayUtil/sortAscendingByObjectProperty' isStatic='true' isFinal='false' isOverride='false'  param_names='array;property' param_types='Array;String' param_defaults='undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Sorts the array of objects ascending through the object's property (must be a numeric value).
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [{num:-3}, {num:-2.55}, {num:-2.54}, {num:-1}, {num:0}, {num:1}, {num:2}, {num:3}, {num:4}, {num:4.1}, {num:5}, {num:5.01}, {num:5.02}, {num:6}, {num:7}, {num:8}];
+
+		 
+
+		 ArrayUtil.shuffle(arr)             // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+
+		 
+
+		 ArrayUtil.sortAscendingByObjectProperty(arr, "num")
+
+		 
+
+		 arr[0].num     // -3
+
+		 arr[1].num     // -2.55
+
+		 arr[2].num     // -2.54
+
+		 arr[3].num     // -1
+
+		 arr[4].num     // 0
+
+		 arr[5].num     // 1
+
+		 arr[6].num     // 2
+
+		 arr[7].num     // 3
+
+		 arr[8].num     // 4
+
+		 arr[9].num     // 4.1
+
+		 arr[10].num    // 5
+
+		 arr[11].num    // 5.01
+
+		 arr[12].num    // 5.02
+
+		 arr[13].num    // 6
+
+		 arr[14].num    // 7
+
+		 arr[15].num    // 8
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to sort.
+
+		 ]]></param>
+<param><![CDATA[property 	the name of the property to be recovered and compared between the objects.
+
+		 ]]></param>
+<return><![CDATA[the sorted array.
+
+		 ]]></return>
+</method>
+<method name='sortAscending' fullname='org.as3utils:ArrayUtil/sortAscending' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Sorts the array of <code>Number</code> objects ascending.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [-3, -2.55, -2.54, -1, 0, 1, 2, 3, 4, 4.1, 5, 5.01, 5.02, 6, 7, 8];
+
+		 
+
+		 ArrayUtil.shuffle(arr)          // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+
+		 
+
+		 ArrayUtil.sortAscending(arr)    // [-3,-2.55,-2.54,-1,0,1,2,3,4,4.1,5,5.01,5.02,6,7,8]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to sort.
+
+		 ]]></param>
+<return><![CDATA[the sorted array.
+
+		 ]]></return>
+</method>
+<method name='sortDescendingByObjectProperty' fullname='org.as3utils:ArrayUtil/sortDescendingByObjectProperty' isStatic='true' isFinal='false' isOverride='false'  param_names='array;property' param_types='Array;String' param_defaults='undefined;undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Sorts the array of objects descending through the object's property (must be a numeric value).
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [{num:-3}, {num:-2.55}, {num:-2.54}, {num:-1}, {num:0}, {num:1}, {num:2}, {num:3}, {num:4}, {num:4.1}, {num:5}, {num:5.01}, {num:5.02}, {num:6}, {num:7}, {num:8}];
+
+		 
+
+		 ArrayUtil.shuffle(arr)             // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+
+		 
+
+		 ArrayUtil.sortDescendingByObjectProperty(arr, "num")
+
+		 
+
+		 arr[0].num     // 8
+
+		 arr[1].num     // 7
+
+		 arr[2].num     // 6
+
+		 arr[3].num     // 5.02
+
+		 arr[4].num     // 5.01
+
+		 arr[5].num     // 5
+
+		 arr[6].num     // 4.1
+
+		 arr[7].num     // 4
+
+		 arr[8].num     // 3
+
+		 arr[9].num     // 2
+
+		 arr[10].num    // 1
+
+		 arr[11].num    // 0
+
+		 arr[12].num    // -1
+
+		 arr[13].num    // -2.54
+
+		 arr[14].num    // -2.55
+
+		 arr[15].num    // -3
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to sort.
+
+		 ]]></param>
+<param><![CDATA[property 	the name of the property to be recovered and compared between the objects.
+
+		 ]]></param>
+<return><![CDATA[the sorted array.
+
+		 ]]></return>
+</method>
+<method name='sortDescending' fullname='org.as3utils:ArrayUtil/sortDescending' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Sorts the array of <code>Number</code> objects descending.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [-3, -2.55, -2.54, -1, 0, 1, 2, 3, 4, 4.1, 5, 5.01, 5.02, 6, 7, 8];
+
+		 
+
+		 ArrayUtil.shuffle(arr)           // [-1,4.1,6,3,-3,4,5.02,8,2,1,5,-2.54,5.01,7,-2.55,0]
+
+		 
+
+		 ArrayUtil.sortDescending(arr)    // [8,7,6,5.02,5.01,5,4.1,4,3,2,1,0,-1,-2.54,-2.55,-3]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to sort.
+
+		 ]]></param>
+<return><![CDATA[the sorted array.
+
+		 ]]></return>
+</method>
+<method name='swapAt' fullname='org.as3utils:ArrayUtil/swapAt' isStatic='true' isFinal='false' isOverride='false'  param_names='array;index1;index2' param_types='Array;*;*' param_defaults='undefined;undefined;undefined' result_type='void'>
+<description><![CDATA[
+
+		 Swaps the position of the elements in the specified indexes.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [1, 9, 3, 7, 5];
+
+		 
+
+		 ArrayUtil.swapAt(arr, 1, 4)      // [1,5,3,7,9]
+
+		 
+
+		 ArrayUtil.swapAt(arr, 2, 1)      // [1,3,5,7,9]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to swap the position of the elements.
+
+		 ]]></param>
+<param><![CDATA[index1 	the index of the first element.
+
+		 ]]></param>
+<param><![CDATA[index2 	the index of the second element.
+
+		 ]]></param>
+</method>
+<method name='swapPositions' fullname='org.as3utils:ArrayUtil/swapPositions' isStatic='true' isFinal='false' isOverride='false'  param_names='array;newPositions' param_types='Array;Array' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+
+		 Swaps the position of all elements in the array according to <code>newPositions</code>.
+
+		 <p>
+
+		 <ul><li><code>array[0]</code> will be equal <code>array[ newPositions[0] ]</code></li>
+
+		 <li><code>array[1]</code> will be equal <code>array[ newPositions[1] ]</code></li>
+
+		 <li>and so on...</li></ul></p>
+
+		 <p>The length of both arrays must be equal.</p>
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["c", "a", "b", "e", "d"];
+
+		 
+
+		 var positions:Array = [1, 2, 0, 4, 3];
+
+		 
+
+		 ArrayUtil.swapPositions(arr, positions)     // [a,b,c,d,e]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 			the array to swap the position of all elements.
+
+		 ]]></param>
+<param><![CDATA[newPositions 	the array with the new positions.
+
+		 ]]></param>
+</method>
+<method name='swap' fullname='org.as3utils:ArrayUtil/swap' isStatic='true' isFinal='false' isOverride='false'  param_names='array;element1;element2' param_types='Array;*;*' param_defaults='undefined;undefined;undefined' result_type='void'>
+<description><![CDATA[
+
+		 Swaps the position of the elements.
+
+		 <p>This method modifies the original array.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = [1, 9, 3, 7, 5];
+
+		 
+
+		 ArrayUtil.swap(arr, 9, 5)      // [1,5,3,7,9]
+
+		 
+
+		 ArrayUtil.swap(arr, 3, 5)      // [1,3,5,7,9]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 		the array to swap the position of the elements.
+
+		 ]]></param>
+<param><![CDATA[element1 	the first element.
+
+		 ]]></param>
+<param><![CDATA[element2 	the second element.
+
+		 ]]></param>
+</method>
+<method name='uniqueCopy' fullname='org.as3utils:ArrayUtil/uniqueCopy' isStatic='true' isFinal='false' isOverride='false'  param_names='array' param_types='Array' param_defaults='undefined' result_type='Array'>
+<description><![CDATA[
+
+		 Creates a new array containing only unique instances of the objects in the given array. In other words, removes duplicated objects.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.ArrayUtil;
+
+		 
+
+		 var arr:Array = ["a", "b", "c", "a", "b", "a"];
+
+		 
+
+		 ArrayUtil.uniqueCopy(arr)    // [a,b,c]
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[array 	the array to copy.
+
+		 ]]></param>
+<return><![CDATA[a new array without duplicated objects.
+
+		 ]]></return>
+</method>
+<field name='_checkType' fullname='org.as3utils:ArrayUtil/private:_checkType' type='' isStatic='true' isConst='false' >
+</field>
+<field name='_strictCheckType' fullname='org.as3utils:ArrayUtil/private:_strictCheckType' type='Boolean' isStatic='true' isConst='false' >
+</field>
+<classRec name='BooleanUtil' fullname='org.as3utils:BooleanUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\BooleanUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class to work with <code>Boolean</code> objects.
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='BooleanUtil' fullname='org.as3utils:BooleanUtil/BooleanUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 BooleanUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	BooleanUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='isBooleanString' fullname='org.as3utils:BooleanUtil/isBooleanString' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='string2Boolean' fullname='org.as3utils:BooleanUtil/string2Boolean' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<classRec name='EquatableUtil' fullname='org.as3utils:EquatableUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\EquatableUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class to work with objects that implement <code>org.as3coreaddendum.system.IEquatable</code>.
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='EquatableUtil' fullname='org.as3utils:EquatableUtil/EquatableUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 NumberUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	NumberUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='areEqual' fullname='org.as3utils:EquatableUtil/areEqual' isStatic='true' isFinal='false' isOverride='false'  param_names='o1;o2' param_types='*;*' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if objects are equal.
+
+		 <p>First thi method compare objects using <code>o1 == o2</code>.
+
+		 If it returns true then the method returns true.
+
+		 Otherwise it will be checked if both objects implement <code>org.as3coreaddendum.system.IEquatable</code> interface and then use <code>o1.equals(o2)</code>.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 package test
+
+		 {
+
+		     import org.as3coreaddendum.system.IEquatable;
+
+		     import org.as3utils.ReflectionUtil;
+
+		 
+
+		     public class EquatableObject implements IEquatable
+
+		     {
+
+		         private var _id:String;
+
+		 
+
+		         public function get id(): String { return _id; }
+
+		 
+
+		         public function EquatableObject(id:String)
+
+		         {
+
+		             _id = id;
+
+		         }
+
+		 
+
+		         public function equals(other:: Boolean
+
+		         {
+
+		             if (!other) return false;
+
+		             if (!ReflectionUtil.classPathEquals(this, other)) return false;
+
+		             return id == (other as EquatableObject).id;
+
+		         }
+
+		     }
+
+		 }
+
+		 </listing>
+
+		 
+
+		 <listing version="3.0">
+
+		 import test.EquatableObject;
+
+		 import org.as3coreaddendum.system.IEquatable;
+
+		 
+
+		 trace(EquatableUtil.areEqual(1, 1))            // false
+
+		 trace(EquatableUtil.areEqual("test1", 99))     // false
+
+		 
+
+		 var equatableObject1A:EquatableObject = new EquatableObject("object-1");
+
+		 var equatableObject1B:EquatableObject = new EquatableObject("object-1");
+
+		 var equatableObject2:EquatableObject = new EquatableObject("object-2");
+
+		 
+
+		 trace(EquatableUtil.areEqual(equatableObject1A, equatableObject1B))            // true
+
+		 trace(EquatableUtil.areEqual(equatableObject1A, equatableObject2))             // false
+
+		 
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[num 	 a <code>Number</code> object to evaluate.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the value is NaN (not a number) and <code>false</code> otherwise.
+
+		 ]]></return>
+</method>
+<classRec name='ReflectionUtil' fullname='org.as3utils:ReflectionUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\ReflectionUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[
+
+	 Provides a very basic reflection API.
+	 <p>This is a static class and shouldn't be instantiated.</p>
+
+	 
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+	 ]]></author>
+<example><![CDATA[
+	 
+
+	 <b>getClassName()</b>
+
+	 <listing version="3.0">
+
+	 import flash.display.Sprite;
+
+	 import org.as3coreaddendum.system.Reflection;
+
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+
+	 
+
+	 var str  :String             = "";
+
+	 var s    :Sprite             = new Sprite();
+
+	 var n    :NumberComparator   = new NumberComparator();
+
+	 
+	 Reflection.getClassName(str)                 // String
+
+	 Reflection.getClassName(String)              // String
+
+	   
+
+	 Reflection.getClassName(s)                   // Sprite
+
+	 Reflection.getClassName(Sprite)              // Sprite
+
+	 
+
+	 Reflection.getClassName(n)                   // NumberComparator
+
+	 Reflection.getClassName(NumberComparator)    // NumberComparator
+
+	 </listing>
+
+	 
+
+	 <b>getClassPackage()</b>
+
+	 <listing version="3.0">
+
+	 import flash.display.Sprite;
+
+	 import org.as3coreaddendum.system.Reflection;
+
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+
+	 
+
+	 var str  :String             = "";
+
+	 var s    :Sprite             = new Sprite();
+
+	 var n    :NumberComparator   = new NumberComparator();
+
+	 
+	 Reflection.getClassPackage(str)                 // null
+
+	 Reflection.getClassPackage(String)              // null
+
+	   
+
+	 Reflection.getClassPackage(s)                   // flash.display
+
+	 Reflection.getClassPackage(Sprite)              // flash.display
+
+	 
+
+	 Reflection.getClassPackage(n)                   // org.as3coreaddendum.system.comparators
+
+	 Reflection.getClassPackage(NumberComparator)    // org.as3coreaddendum.system.comparators
+
+	 </listing>
+
+	 
+
+	 <b>getClassPath()</b>
+
+	 <listing version="3.0">
+
+	 import flash.display.Sprite;
+
+	 import org.as3coreaddendum.system.Reflection;
+
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+
+	 
+
+	 var str  :String             = "";
+
+	 var s    :Sprite             = new Sprite();
+
+	 var n    :NumberComparator   = new NumberComparator();
+
+	 
+	 Reflection.getClassPath(str)                 // String
+
+	 Reflection.getClassPath(String)              // String
+
+	   
+
+	 Reflection.getClassPath(s)                   // flash.display.Sprite
+
+	 Reflection.getClassPath(Sprite)              // flash.display.Sprite
+
+	 
+
+	 Reflection.getClassPath(n)                   // org.as3coreaddendum.system.comparators.NumberComparator
+
+	 Reflection.getClassPath(NumberComparator)    // org.as3coreaddendum.system.comparators.NumberComparator
+
+	 </listing>
+
+	 
+
+	 <b>getSuperClassName()</b>
+
+	 <listing version="3.0">
+
+	 import flash.display.Sprite;
+
+	 import org.as3coreaddendum.system.Reflection;
+
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+
+	 
+
+	 var str  :String             = "";
+
+	 var s    :Sprite             = new Sprite();
+
+	 var n    :NumberComparator   = new NumberComparator();
+
+	 
+	 Reflection.getSuperClassName(str)                 // Object
+
+	 Reflection.getSuperClassName(String)              // Object
+
+	   
+
+	 Reflection.getSuperClassName(s)                   // DisplayObjectContainer
+
+	 Reflection.getSuperClassName(Sprite)              // DisplayObjectContainer
+
+	 
+
+	 Reflection.getSuperClassName(n)                   // Object
+
+	 Reflection.getSuperClassName(NumberComparator)    // Object
+
+	 </listing>
+
+	 
+
+	 <b>getSuperClassPackage()</b>
+
+	 <listing version="3.0">
+
+	 import flash.display.Sprite;
+
+	 import org.as3coreaddendum.system.Reflection;
+
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+
+	 
+
+	 var str  :String             = "";
+
+	 var s    :Sprite             = new Sprite();
+
+	 var n    :NumberComparator   = new NumberComparator();
+
+	 
+	 Reflection.getSuperClassPackage(str)                 // null
+
+	 Reflection.getSuperClassPackage(String)              // null
+
+	   
+
+	 Reflection.getSuperClassPackage(s)                   // flash.display
+
+	 Reflection.getSuperClassPackage(Sprite)              // flash.display
+
+	 
+
+	 Reflection.getSuperClassPackage(n)                   // null
+
+	 Reflection.getSuperClassPackage(NumberComparator)    // null
+
+	 </listing>
+
+	 
+
+	 <b>getSuperClassPath()</b>
+
+	 <listing version="3.0">
+
+	 import flash.display.Sprite;
+
+	 import org.as3coreaddendum.system.Reflection;
+
+	 import org.as3coreaddendum.system.comparators.NumberComparator;
+
+	 
+
+	 var str  :String             = "";
+
+	 var s    :Sprite             = new Sprite();
+
+	 var n    :NumberComparator   = new NumberComparator();
+
+	 
+	 Reflection.getSuperClassPath(str)                 // Object
+
+	 Reflection.getSuperClassPath(String)              // Object
+
+	   
+
+	 Reflection.getSuperClassPath(s)                   // flash.display.DisplayObjectContainer
+
+	 Reflection.getSuperClassPath(Sprite)              // flash.display.DisplayObjectContainer
+
+	 
+
+	 Reflection.getSuperClassPath(n)                   // Object
+
+	 Reflection.getSuperClassPath(NumberComparator)    // Object
+
+	 </listing>
+
+	 
+
+	 ]]></example>
+</classRec>
+<method name='ReflectionUtil' fullname='org.as3utils:ReflectionUtil/ReflectionUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 Reflection is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	Reflection is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='classNameEquals' fullname='org.as3utils:ReflectionUtil/classNameEquals' isStatic='true' isFinal='false' isOverride='false'  param_names='o1;o2' param_types='*;*' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Performs the comparison between the two arguments using the <code>getClassName()</code> method.
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o1	The first instance or type (Class) to be compared.
+
+		 ]]></param>
+<param><![CDATA[o2	The second instance or type (Class) to be compared.
+
+		 ]]></param>
+<return><![CDATA[<code>True</code> if the class names are equal.
+
+		 ]]></return>
+</method>
+<method name='classPackageEquals' fullname='org.as3utils:ReflectionUtil/classPackageEquals' isStatic='true' isFinal='false' isOverride='false'  param_names='o1;o2' param_types='*;*' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Performs the comparison between the two arguments using the <code>getClassPackage()</code> method.
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o1	The first instance or type (Class) to be compared.
+
+		 ]]></param>
+<param><![CDATA[o2	The second instance or type (Class) to be compared.
+
+		 ]]></param>
+<return><![CDATA[<code>True</code> if the class packages are equal.
+
+		 ]]></return>
+</method>
+<method name='classPathEquals' fullname='org.as3utils:ReflectionUtil/classPathEquals' isStatic='true' isFinal='false' isOverride='false'  param_names='o1;o2' param_types='*;*' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Performs the comparison between the two arguments using the <code>getClassPath()</code> method.
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o1	The first instance or type (Class) to be compared.
+
+		 ]]></param>
+<param><![CDATA[o2	The second instance or type (Class) to be compared.
+
+		 ]]></param>
+<return><![CDATA[<code>True</code> if the class path are equal.
+
+		 ]]></return>
+</method>
+<method name='getClassName' fullname='org.as3utils:ReflectionUtil/getClassName' isStatic='true' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Retrieves the class name of the target instance or type (Class).
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o 	The target instance or type (Class).
+
+		 ]]></param>
+<return><![CDATA[The class name of the target instance or type (Class).
+		 ]]></return>
+</method>
+<method name='getClassPackage' fullname='org.as3utils:ReflectionUtil/getClassPackage' isStatic='true' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Retrieves the class package of the target instance or type (Class).
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o	The target instance or type (Class).
+
+		 ]]></param>
+<return><![CDATA[The package string representation of the target instance or type (Class).
+		 ]]></return>
+</method>
+<method name='getClassPath' fullname='org.as3utils:ReflectionUtil/getClassPath' isStatic='true' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Retrieves the full qualified class name of the target instance or type (Class).
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o	The target instance or type (Class).
+
+		 ]]></param>
+<return><![CDATA[The full qualified class name string representation (package + name) of the target instance or type (Class).
+		 ]]></return>
+</method>
+<method name='getSuperClassName' fullname='org.as3utils:ReflectionUtil/getSuperClassName' isStatic='true' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Retrieves the super class name of the target instance or type (Class).
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o	The target instance or type (Class).
+
+		 ]]></param>
+<return><![CDATA[The super class name of the target instance or type (Class).
+		 ]]></return>
+</method>
+<method name='getSuperClassPackage' fullname='org.as3utils:ReflectionUtil/getSuperClassPackage' isStatic='true' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Retrieves the super class package of the target instance or type (Class).
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o	The target instance or type (Class).
+
+		 ]]></param>
+<return><![CDATA[The package string representation of the target instance or type (Class).
+		 ]]></return>
+</method>
+<method name='getSuperClassPath' fullname='org.as3utils:ReflectionUtil/getSuperClassPath' isStatic='true' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Retrieves the full qualified class name of the super class of the target instance or type (Class).
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o	The target instance or type (Class).
+
+		 ]]></param>
+<return><![CDATA[The full qualified class name string representation (package + name) of the super class of the target instance or type (Class).
+		 ]]></return>
+</method>
+<method name='superClassNameEquals' fullname='org.as3utils:ReflectionUtil/superClassNameEquals' isStatic='true' isFinal='false' isOverride='false'  param_names='o1;o2' param_types='*;*' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Performs the comparison between the two arguments using the <code>getSuperClassName()</code> method.
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o1	The first instance or type (Class) to be compared.
+
+		 ]]></param>
+<param><![CDATA[o2	The second instance or type (Class) to be compared.
+
+		 ]]></param>
+<return><![CDATA[<code>True</code> if the super class names are equal.
+
+		 ]]></return>
+</method>
+<method name='superClassPackageEquals' fullname='org.as3utils:ReflectionUtil/superClassPackageEquals' isStatic='true' isFinal='false' isOverride='false'  param_names='o1;o2' param_types='*;*' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Performs the comparison between the two arguments using the <code>getSuperClassPackage()</code> method.
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o1	The first instance or type (Class) to be compared.
+
+		 ]]></param>
+<param><![CDATA[o2	The second instance or type (Class) to be compared.
+
+		 ]]></param>
+<return><![CDATA[<code>True</code> if the class packages are equal.
+
+		 ]]></return>
+</method>
+<method name='superClassPathEquals' fullname='org.as3utils:ReflectionUtil/superClassPathEquals' isStatic='true' isFinal='false' isOverride='false'  param_names='o1;o2' param_types='*;*' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Performs the comparison between the two arguments using the <code>getSuperClassPath()</code> method.
+
+		 
+
+		 ]]></description>
+<param><![CDATA[o1	The first instance or type (Class) to be compared.
+
+		 ]]></param>
+<param><![CDATA[o2	The second instance or type (Class) to be compared.
+
+		 ]]></param>
+<return><![CDATA[<code>True</code> if the class path are equal.
+
+		 ]]></return>
+</method>
+<classRec name='NumberUtil' fullname='org.as3utils:NumberUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\NumberUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class to work with <code>Number</code> objects.
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='NumberUtil' fullname='org.as3utils:NumberUtil/NumberUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 NumberUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	NumberUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='isEven' fullname='org.as3utils:NumberUtil/isEven' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='Number' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='isNotNumber' fullname='org.as3utils:NumberUtil/isNotNumber' isStatic='true' isFinal='false' isOverride='false'  param_names='num' param_types='Number' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the value of the <code>Number</code> object is NaN(not a number).
+
+		 <p>This method uses the native AS3 <code>isNaN()</code> global function</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.NumberUtil;
+
+		 
+
+		 var num:Number;
+
+		 
+
+		 trace("num: " + num)            // NaN
+
+		 
+
+		 NumberUtil.isNotNumber(null)    // false
+
+		 NumberUtil.isNotNumber(num)     // true
+
+		 NumberUtil.isNotNumber(1)       // false
+
+		 NumberUtil.isNotNumber(-1)      // false
+
+		 NumberUtil.isNotNumber(NaN)     // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[num 	 a <code>Number</code> object to evaluate.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the value is NaN (not a number) and <code>false</code> otherwise.
+
+		 ]]></return>
+</method>
+<method name='isNumber' fullname='org.as3utils:NumberUtil/isNumber' isStatic='true' isFinal='false' isOverride='false'  param_names='num' param_types='Number' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the value of the <code>Number</code> object is a number.
+
+		 <p>This method uses the native AS3 <code>isNaN()</code> global function</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.NumberUtil;
+
+		 
+
+		 var num:Number;
+
+		 
+
+		 trace("num: " + num)         // NaN
+
+		 
+
+		 NumberUtil.isNumber(null)    // true
+
+		 NumberUtil.isNumber(num)     // false
+
+		 NumberUtil.isNumber(1)       // true
+
+		 NumberUtil.isNumber(-1)      // true
+
+		 NumberUtil.isNumber(NaN)     // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[num 	 a <code>Number</code> object to evaluate.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the value is a number and <code>false</code> if it is NaN (not a number).
+
+		 ]]></return>
+</method>
+<method name='isOdd' fullname='org.as3utils:NumberUtil/isOdd' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='Number' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='round' fullname='org.as3utils:NumberUtil/round' isStatic='true' isFinal='false' isOverride='false'  param_names='num;rounding' param_types='Number;org.as3coreaddendum.system:NumericRounding' param_defaults='undefined;undefined' result_type='Number'>
+</method>
+<method name='zeroPrecedent' fullname='org.as3utils:NumberUtil/zeroPrecedent' isStatic='true' isFinal='false' isOverride='false'  param_names='num;lessThan' param_types='Number;Number' param_defaults='undefined;10' result_type='String'>
+</method>
+<classRec name='StringUtil' fullname='org.as3utils:StringUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\StringUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class to work with <code>String</code> objects.
+
+	 <p>StringUtil handles <code>null</code> input Strings quietly. That is to say that a <code>null</code> input will return <code>null</code>.
+
+	 Where a <code>Boolean</code> or <code>int</code> is being returned details vary by method.</p>
+
+	 <p>Some terms used by this class related to <code>String</code> handling:</p>
+
+	 <p><ul>
+
+	 <li>empty: a zero-length <code>String</code> ("")</li>
+
+	 <li>space: the space character (" ", char 32)</li>
+
+	 <li>blank: a <code>String</code> object only with control chars (space, \t, \n, \s)</li>
+
+	 </ul></p>
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='StringUtil' fullname='org.as3utils:StringUtil/StringUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 StringUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	StringUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='abbreviate' fullname='org.as3utils:StringUtil/abbreviate' isStatic='true' isFinal='false' isOverride='false'  param_names='str;maxWidth' param_types='String;int' param_defaults='undefined;undefined' result_type='String'>
+<description><![CDATA[
+
+		 Abbreviates a <code>String</code> object using ellipses.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.abbreviate(null          , 4)    // null
+
+		 StringUtil.abbreviate(""            , 4)    // 
+
+		 StringUtil.abbreviate(" "           , 4)    //  
+
+		 StringUtil.abbreviate("a"           , 4)    // a
+
+		 StringUtil.abbreviate("ab"          , 4)    // ab
+
+		 StringUtil.abbreviate("abcdefghij"  , 4)    // a...
+
+		 StringUtil.abbreviate("abcdefghij"  , 5)    // ab...
+
+		 StringUtil.abbreviate(" abcdefghij" , 5)    //  a...
+
+		 StringUtil.abbreviate("a bcdefghij" , 5)    // a...
+
+		 StringUtil.abbreviate(" a bcdefghij", 5)    //  a...
+
+		 StringUtil.abbreviate("abcdefghij"  , 6)    // abc...
+
+		 StringUtil.abbreviate(" abcdefghij" , 6)    //  ab...
+
+		 StringUtil.abbreviate("a bcdefghij" , 6)    // a b...
+
+		 StringUtil.abbreviate(" a bcdefghij", 6)    //  a...
+
+		 StringUtil.abbreviate("abcdefghij"  , 7)    // abcd...
+
+		 StringUtil.abbreviate("abcdefghij"  , 8)    // abcde...
+
+		 StringUtil.abbreviate("abcdefghij"  , 9)    // abcdef...
+
+		 StringUtil.abbreviate("abcdefghij"  , 10)   // abcdefghij
+
+		 StringUtil.abbreviate("abcdefghij"  , 11)   // abcdefghij
+
+		 StringUtil.abbreviate("abcdefghij"  , 12)   // abcdefghij
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 		the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[maxWidth	maximum length of the result <code>String</code> object, must be at least 4.
+
+		 ]]></param>
+<return><![CDATA[the abbreviated <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>. 
+
+		 ]]></return>
+<throws><![CDATA[ArgumentError 	If the <code>maxWidth</code> argument is less than 4.
+
+		 ]]></throws>
+</method>
+<method name='capitalize' fullname='org.as3utils:StringUtil/capitalize' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Capitalizes a <code>String</code> object, changing only the first letter to uppercase.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.capitalize(null)      // null
+
+		 StringUtil.capitalize(" ")       // 
+
+		 StringUtil.capitalize("a")       // A
+
+		 StringUtil.capitalize("A")       // A
+
+		 StringUtil.capitalize("ab")      // Ab
+
+		 StringUtil.capitalize("Ab")      // Ab
+
+		 StringUtil.capitalize("aB")      // AB
+
+		 StringUtil.capitalize("AB")      // AB
+
+		 StringUtil.capitalize("abc")     // Abc
+
+		 StringUtil.capitalize(" abc")    //  abc
+
+		 StringUtil.capitalize(" Abc")    //  Abc
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to capitalize. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the capitalized <code>String</code>. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='containsAny' fullname='org.as3utils:StringUtil/containsAny' isStatic='true' isFinal='false' isOverride='false'  param_names='str;search;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains any character in the given set of characters.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.containsAny(null , null)            // false
+
+		 StringUtil.containsAny("abc", "")              // false
+
+		 StringUtil.containsAny("abc", "a")             // true
+
+		 StringUtil.containsAny("b"  , "abc")           // true
+
+		 StringUtil.containsAny("A"  , "abc")           // false
+
+		 StringUtil.containsAny("A"  , "abc", false)    // true
+
+		 StringUtil.containsAny("a"  , "ABC")           // false
+
+		 StringUtil.containsAny("a"  , "ABC", false)    // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[search 			the chars to find. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object contains any of the chars of the search <code>String</code> object, <code>false</code> if not. If the <code>str</code> or <code>search</code> argument is <code>null</code> then the return is <code>false</code>.
+
+		 ]]></return>
+</method>
+<method name='containsNone' fullname='org.as3utils:StringUtil/containsNone' isStatic='true' isFinal='false' isOverride='false'  param_names='str;invalidChars;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object does not contain any of the characters of the given set of characters.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.containsNone(null  , null)           // true
+
+		 StringUtil.containsNone("abc" , "")             // true
+
+		 StringUtil.containsNone("abc", "a")             // false
+
+		 StringUtil.containsNone("b"  , "abc")           // false
+
+		 StringUtil.containsNone("A"  , "abc")           // true
+
+		 StringUtil.containsNone("A"  , "abc", false)    // false
+
+		 StringUtil.containsNone("a"  , "ABC")           // true
+
+		 StringUtil.containsNone("a"  , "ABC", false)    // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[invalidChars	the invalid chars. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object does not contains any of the chars of the invalidChars <code>String</code> object, <code>false</code> if does. If the <code>str</code> or <code>invalidChars</code> argument is <code>null</code> then the return is <code>true</code>.
+
+		 ]]></return>
+</method>
+<method name='containsOnly' fullname='org.as3utils:StringUtil/containsOnly' isStatic='true' isFinal='false' isOverride='false'  param_names='str;validChars;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains only characters in the given set of characters.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.containsOnly(null , null)            // false
+
+		 StringUtil.containsOnly("abc", "")              // false
+
+		 StringUtil.containsOnly("abc", "a")             // false
+
+		 StringUtil.containsOnly("abc", "b")             // false
+
+		 StringUtil.containsOnly("b"  , "abc")           // true
+
+		 StringUtil.containsOnly("ba" , "abc")           // true
+
+		 StringUtil.containsOnly("A"  , "abc")           // false
+
+		 StringUtil.containsOnly("A"  , "abc", false)    // true
+
+		 StringUtil.containsOnly("a"  , "ABC")           // false
+
+		 StringUtil.containsOnly("a"  , "ABC", false)    // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[validChars		the valid chars. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object contains only characters that exist in the <code>validChars</code> argument, <code>false</code> if contains any other characters. If the <code>str</code> or <code>validChars</code> argument is <code>null</code> then the return is <code>false</code>.
+
+		 ]]></return>
+</method>
+<method name='contains' fullname='org.as3utils:StringUtil/contains' isStatic='true' isFinal='false' isOverride='false'  param_names='str;search;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains the specified search <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.contains(null , null)          // false
+
+		 StringUtil.contains(null , "")            // false
+
+		 StringUtil.contains(""   , null)          // false
+
+		 StringUtil.contains(" "  , " ")           // true
+
+		 StringUtil.contains(" "  , "")            // true
+
+		 StringUtil.contains(""   , " ")           // false
+
+		 StringUtil.contains("abc", "")            // true
+
+		 StringUtil.contains(""   , "abc")         // false
+
+		 StringUtil.contains("abc", "a")           // true
+
+		 StringUtil.contains("abc", "A")           // false
+
+		 StringUtil.contains("abc", "A", false)    // true
+
+		 StringUtil.contains("Abc", "a")           // false
+
+		 StringUtil.contains("Abc", "a", false)    // true
+
+		 StringUtil.contains("abc", "á")           // false
+
+		 StringUtil.contains("ábc", "a")           // false
+
+		 StringUtil.contains("ábc", "á")           // true
+
+		 StringUtil.contains("a"  , "abc")         // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[search 			the <code>String</code> object to find. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object contains the search <code>String</code> object, <code>false</code> if not. If the <code>str</code> or <code>search</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='countMatches' fullname='org.as3utils:StringUtil/countMatches' isStatic='true' isFinal='false' isOverride='false'  param_names='str;sub;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='int'>
+<description><![CDATA[
+
+		 Counts how many times the substring appears in the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.countMatches(null   , null)          // 0
+
+		 StringUtil.countMatches("abc"  , "")            // 0
+
+		 StringUtil.countMatches("abc"  , "a")           // 1
+
+		 StringUtil.countMatches("abc"  , "á")           // 0
+
+		 StringUtil.countMatches("ábca" , "á")           // 1
+
+		 StringUtil.countMatches("abc"  , "b")           // 1
+
+		 StringUtil.countMatches("a"    , "abc")         // 0
+
+		 StringUtil.countMatches("abc"  , "aa")          // 0
+
+		 StringUtil.countMatches("abca" , "a")           // 2
+
+		 StringUtil.countMatches("abca" , "aa")          // 0
+
+		 StringUtil.countMatches("aabca", "aa")          // 1
+
+		 StringUtil.countMatches("abc"  , "ba")          // 0
+
+		 StringUtil.countMatches("abc"  , "A")           // 0
+
+		 StringUtil.countMatches("abc"  , "A", false)    // 1
+
+		 StringUtil.countMatches("abca" , "A", false)    // 2
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[sub 			the substring to count. May be <code>null</code>. 
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[the number of occurrences or 0 if either argument is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='defaultIfEmpty' fullname='org.as3utils:StringUtil/defaultIfEmpty' isStatic='true' isFinal='false' isOverride='false'  param_names='str;defaultStr' param_types='String;String' param_defaults='undefined;undefined' result_type='String'>
+<description><![CDATA[
+
+		 Returns either the passed in <code>String</code> object, or if the <code>String</code> object is empty ("") or <code>null</code>, the value of defaultStr.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.defaultIfEmpty(null      , null)     // null
+
+		 StringUtil.defaultIfEmpty(""        , null)     // null
+
+		 StringUtil.defaultIfEmpty(null      , "abc")    // abc
+
+		 StringUtil.defaultIfEmpty("abc"     , "")       // abc
+
+		 StringUtil.defaultIfEmpty("abc"     , null)     // abc
+
+		 StringUtil.defaultIfEmpty("   "     , "abc")    // abc
+
+		 StringUtil.defaultIfEmpty("  \n\t  ", "abc")    // abc
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 		the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[default 	the default <code>String</code> object to return if the <code>str</code> argument is empty ("") or <code>null</code>. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the <code>defaultStr</code> argument if the <code>str</code> argument is empty ("") or <code>null</code>, or the <code>str</code> argument otherwise.
+
+		 ]]></return>
+</method>
+<method name='endsWith' fullname='org.as3utils:StringUtil/endsWith' isStatic='true' isFinal='false' isOverride='false'  param_names='str;suffix;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Check if the <code>String</code> object ends with a specified suffix.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.endsWith(null    , null)           // true
+
+		 StringUtil.endsWith(""      , null)           // false
+
+		 StringUtil.endsWith(null    , "abc")          // false
+
+		 StringUtil.endsWith("abcdef", "f")            // true
+
+		 StringUtil.endsWith("abcdef", "F")            // false
+
+		 StringUtil.endsWith("abcdef", "F", false)     // true
+
+		 StringUtil.endsWith("abcdEF", "eF")           // false
+
+		 StringUtil.endsWith("abcdEF", "eF", false)    // true
+
+		 StringUtil.endsWith("abcdef", "ef")           // true
+
+		 StringUtil.endsWith("abcdef", "abcdef")       // true
+
+		 StringUtil.endsWith("abcdef", "abcdefg")      // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str				the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[suffix 			the suffix to find. May be <code>null</code>. 
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object ends with the suffix or if both arguments are <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='equals' fullname='org.as3utils:StringUtil/equals' isStatic='true' isFinal='false' isOverride='false'  param_names='str1;str2;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Compares two <code>String</code> objects, returning <code>true</code> if they are equal.
+
+		 <p>Two <code>null</code> references are considered to be equal.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 var obj:Object = {label:"jlm"};
+
+		 var n1:int = 1;
+
+		 var n2:Number = 2;
+
+		 var n3:Number = 3.1;
+
+		 var arr:Array = ["abc", "def", 123, {label:"ghi"}, obj, n1, n2, n3];
+
+		 
+
+		 StringUtil.equals(null , null)            // true
+
+		 StringUtil.equals(""   , null)            // false
+
+		 StringUtil.equals(null , "abc")           // false
+
+		 StringUtil.equals("abc", "a")             // false
+
+		 StringUtil.equals("abc", "abc")           // true
+
+		 StringUtil.equals("abc", "AbC")           // false
+
+		 StringUtil.equals("abc", "AbC", false)    // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str1 			the first <code>String</code> object. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[str2 			the second <code>String</code> object. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> objects are equal or both are <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='firstChar' fullname='org.as3utils:StringUtil/firstChar' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Returns the first char of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.firstChar(null)       // null
+
+		 StringUtil.firstChar("")         // 
+
+		 StringUtil.firstChar(" ")        //  
+
+		 StringUtil.firstChar("a")        // a
+
+		 StringUtil.firstChar("ab")       // a
+
+		 StringUtil.firstChar("abc")      // a
+
+		 StringUtil.firstChar(" abc")     //  
+
+		 StringUtil.firstChar(" abc ")    //  
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to return the first char. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the first char of the <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isAllLowerCase' fullname='org.as3utils:StringUtil/isAllLowerCase' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains only lowercase characters.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isAllLowerCase(null)        // false
+
+		 StringUtil.isAllLowerCase("")          // false
+
+		 StringUtil.isAllLowerCase("    ")      // false
+
+		 StringUtil.isAllLowerCase("  \t  ")    // false
+
+		 StringUtil.isAllLowerCase("abc")       // true
+
+		 StringUtil.isAllLowerCase("Abc")       // false
+
+		 StringUtil.isAllLowerCase("ABC")       // false
+
+		 StringUtil.isAllLowerCase("óbc")       // true
+
+		 StringUtil.isAllLowerCase("Óbc")       // false
+
+		 StringUtil.isAllLowerCase("ÓBC")       // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if only contains lowercase characters, and is not <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isAllUpperCase' fullname='org.as3utils:StringUtil/isAllUpperCase' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains only uppercase characters.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isAllUpperCase(null)          // false
+
+		 StringUtil.isAllUpperCase("")            // false
+
+		 StringUtil.isAllUpperCase("    ")        // false
+
+		 StringUtil.isAllUpperCase("  	  ")    // false
+
+		 StringUtil.isAllUpperCase("abc")         // false
+
+		 StringUtil.isAllUpperCase("Abc")         // false
+
+		 StringUtil.isAllUpperCase("ABC")         // true
+
+		 StringUtil.isAllUpperCase("óbc")         // false
+
+		 StringUtil.isAllUpperCase("Óbc")         // false
+
+		 StringUtil.isAllUpperCase("ÓBC")         // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if only contains uppercase characters, and is not <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isAlphanumericSpace' fullname='org.as3utils:StringUtil/isAlphanumericSpace' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains only unicode letters, digits or spaces.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isAlphanumericSpace(null)              // false
+
+		 StringUtil.isAlphanumericSpace("")                // false
+
+		 StringUtil.isAlphanumericSpace("    ")            // true
+
+		 StringUtil.isAlphanumericSpace("  \t  ")          // false
+
+		 StringUtil.isAlphanumericSpace("abc")             // true
+
+		 StringUtil.isAlphanumericSpace("123456")          // true
+
+		 StringUtil.isAlphanumericSpace("abc123")          // true
+
+		 StringUtil.isAlphanumericSpace("123abc456def")    // true
+
+		 StringUtil.isAlphanumericSpace("abc123 ")         // true
+
+		 StringUtil.isAlphanumericSpace("ABC123 ")         // true
+
+		 StringUtil.isAlphanumericSpace("áóbc123")         // true
+
+		 StringUtil.isAlphanumericSpace("ÁÓbc123")         // true
+
+		 StringUtil.isAlphanumericSpace("ÁÓbc123-")        // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>. 	
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if only contains unicode letters, digits and spaces and is not <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isAlphanumeric' fullname='org.as3utils:StringUtil/isAlphanumeric' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains only unicode letters or digits.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isAlphanumeric(null)              // false
+
+		 StringUtil.isAlphanumeric("")                // false
+
+		 StringUtil.isAlphanumeric("    ")            // false
+
+		 StringUtil.isAlphanumeric("  \t  ")          // false
+
+		 StringUtil.isAlphanumeric("abc")             // true
+
+		 StringUtil.isAlphanumeric("123456")          // true
+
+		 StringUtil.isAlphanumeric("abc123")          // true
+
+		 StringUtil.isAlphanumeric("123abc456def")    // true
+
+		 StringUtil.isAlphanumeric("abc123 ")         // false
+
+		 StringUtil.isAlphanumeric("ABC123 ")         // false
+
+		 StringUtil.isAlphanumeric("áóbc123")         // true
+
+		 StringUtil.isAlphanumeric("ÁÓbc123")         // true
+
+		 StringUtil.isAlphanumeric("ÁÓbc123-")        // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>. 	
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if only contains unicode letters or digits, and is not <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isBlank' fullname='org.as3utils:StringUtil/isBlank' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if a <code>String</code> object is empty (""), <code>null</code> or if it contains only control characters(char &lt;= 32).
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isBlank(null)         // true
+
+		 StringUtil.isBlank("")           // true
+
+		 StringUtil.isBlank("    ")       // true
+
+		 StringUtil.isBlank("  \t  ")     // true
+
+		 StringUtil.isBlank("abc")        // false
+
+		 StringUtil.isBlank(" abc ")      // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object is <code>null</code>, empty or contains only control characters(char &lt;= 32).
+
+		 ]]></return>
+</method>
+<method name='isEmpty' fullname='org.as3utils:StringUtil/isEmpty' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if a <code>String</code> object is empty ("") or <code>null</code>.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isEmpty(null)         // true
+
+		 StringUtil.isEmpty("")           // true
+
+		 StringUtil.isEmpty("    ")       // false
+
+		 StringUtil.isEmpty("  \t  ")     // false
+
+		 StringUtil.isEmpty("abc")        // false
+
+		 StringUtil.isEmpty(" abc ")      // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object is empty or <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isNotBlank' fullname='org.as3utils:StringUtil/isNotBlank' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if a <code>String</code> object is not empty (""), not <code>null</code> and not contains only control characters(char &lt;= 32).
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isNotBlank(null)         // false
+
+		 StringUtil.isNotBlank("")           // false
+
+		 StringUtil.isNotBlank("    ")       // false
+
+		 StringUtil.isNotBlank("  \t  ")     // false
+
+		 StringUtil.isNotBlank("abc")        // true
+
+		 StringUtil.isNotBlank(" abc ")      // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object is not empty, not <code>null</code> and not contains only control characters(char &lt;= 32).
+
+		 ]]></return>
+</method>
+<method name='isNotEmpty' fullname='org.as3utils:StringUtil/isNotEmpty' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if a <code>String</code> object is not empty ("") and not <code>null</code>.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isNotEmpty(null)         // false
+
+		 StringUtil.isNotEmpty("")           // false
+
+		 StringUtil.isNotEmpty("    ")       // true
+
+		 StringUtil.isNotEmpty("  \t  ")     // true
+
+		 StringUtil.isNotEmpty("abc")        // true
+
+		 StringUtil.isNotEmpty(" abc ")      // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object is not empty and is not <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isNumericSpace' fullname='org.as3utils:StringUtil/isNumericSpace' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains only unicode digits or spaces. A decimal point is not a unicode digit and returns <code>false</code>.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isNumericSpace(null)       // false
+
+		 StringUtil.isNumericSpace("")         // true
+
+		 StringUtil.isNumericSpace("    ")     // true
+
+		 StringUtil.isNumericSpace("  \t ")    // false
+
+		 StringUtil.isNumericSpace("123")      // true
+
+		 StringUtil.isNumericSpace("12.3")     // false
+
+		 StringUtil.isNumericSpace("a123")     // false
+
+		 StringUtil.isNumericSpace(" 123")     // true
+
+		 StringUtil.isNumericSpace("  123")    // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object only contains unicode digits or spaces and is not <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isNumeric' fullname='org.as3utils:StringUtil/isNumeric' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Checks if the <code>String</code> object contains only unicode digits. A decimal point is not a unicode digit and returns <code>false</code>.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isNumeric(null)       // false
+
+		 StringUtil.isNumeric("")         // true
+
+		 StringUtil.isNumeric("    ")     // false
+
+		 StringUtil.isNumeric("  \t ")    // false
+
+		 StringUtil.isNumeric("123")      // true
+
+		 StringUtil.isNumeric("12.3")     // false
+
+		 StringUtil.isNumeric("a123")     // false
+
+		 StringUtil.isNumeric(" 123")     // false
+
+		 StringUtil.isNumeric("  123")    // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object only contains unicode digits and is not <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='isValidEmail' fullname='org.as3utils:StringUtil/isValidEmail' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Validates an input e-mail address.
+
+		 <p>This implementation does not conform with any specification and is very restrictive.</p>
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.isValidEmail(null)                   // false
+
+		 StringUtil.isValidEmail("")                     // false
+
+		 StringUtil.isValidEmail("a")                    // false
+
+		 StringUtil.isValidEmail("a&#64;a.a")                // false
+
+		 StringUtil.isValidEmail("aa&#64;aa.aa")             // true
+
+		 StringUtil.isValidEmail("a/a&#64;aa.aa")            // false
+
+		 StringUtil.isValidEmail("a=a&#64;aa.aa")            // false
+
+		 StringUtil.isValidEmail("1a&#64;1a.1a")             // false
+
+		 StringUtil.isValidEmail("a1&#64;a1.a1")             // false
+
+		 StringUtil.isValidEmail("a1&#64;a1.aa")             // true
+
+		 StringUtil.isValidEmail("11&#64;11.11")             // false
+
+		 StringUtil.isValidEmail("aa-aa&#64;a-a.a-a")        // false
+
+		 StringUtil.isValidEmail("aa-aa&#64;aa-aa.aa-aa")    // false
+
+		 StringUtil.isValidEmail("aa-aa&#64;aa-aa-aa.aa")    // true
+
+		 StringUtil.isValidEmail("aa-aa&#64;aa.aa.aa")       // true
+
+		 StringUtil.isValidEmail("áa-aa&#64;aa.aa.aa")       // false
+
+		 StringUtil.isValidEmail("Aa-aa&#64;aa.aa.aA")       // true
+
+		 StringUtil.isValidEmail("aa-aa&#64;aa.aa.aa")       // true
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to be validates as an e-mail address.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object is a valid e-mail address according to this implementation.
+
+		 ]]></return>
+</method>
+<method name='lastChar' fullname='org.as3utils:StringUtil/lastChar' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Returns the last char of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.lastChar(null)       // null
+
+		 StringUtil.lastChar("")         // 
+
+		 StringUtil.lastChar(" ")        //  
+
+		 StringUtil.lastChar("a")        // a
+
+		 StringUtil.lastChar("ab")       // b
+
+		 StringUtil.lastChar("abc")      // c
+
+		 StringUtil.lastChar(" abc")     // c
+
+		 StringUtil.lastChar(" abc ")    //  
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to return the last char. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the last char of the <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='ltrim' fullname='org.as3utils:StringUtil/ltrim' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes control characters(char &lt;= 32) from the start of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.ltrim(null)                    // null
+
+		 StringUtil.ltrim("")                      // 
+
+		 StringUtil.ltrim(" ")                     // 
+
+		 StringUtil.ltrim("  ")                    // 
+
+		 StringUtil.ltrim("     ")                 // 
+
+		 StringUtil.ltrim("abc"):                  // abc
+
+		 StringUtil.ltrim(" abc")                  // abc
+
+		 StringUtil.ltrim("   abc")                // abc
+
+		 StringUtil.ltrim("   abc ")               // abc 
+
+		 StringUtil.ltrim(" \t\n  abc  ")          // abc  
+
+		 StringUtil.ltrim(" \t\n  abc \t\n ")      // abc \t\n 
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str	the <code>String</code> object to be trimmed. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the trimmed <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='removeAccentuation' fullname='org.as3utils:StringUtil/removeAccentuation' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Remove accented characters from the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.removeAccentuation(null)                  // null
+
+		 StringUtil.removeAccentuation("")                    // 
+
+		 StringUtil.removeAccentuation("    ")                //     
+
+		 StringUtil.removeAccentuation("aáeéiíoóuúçÇÁbÜõ")    // aaeeiioouucCAbUo
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to remove accented characters. May be <code>null</code>.
+
+		 ]]></param>
+<return><![CDATA[the <code>String</code> object without accented characters.
+
+		 ]]></return>
+</method>
+<method name='removeEnd' fullname='org.as3utils:StringUtil/removeEnd' isStatic='true' isFinal='false' isOverride='false'  param_names='str;remove;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes a substring only if it is at the end of the source <code>String</code> object, otherwise returns the source <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.removeEnd(null    , null)           // null
+
+		 StringUtil.removeEnd(""      , null)           // 
+
+		 StringUtil.removeEnd(null    , "abc")          // null
+
+		 StringUtil.removeEnd(""      , "")             // 
+
+		 StringUtil.removeEnd("abc"   , "")             // abc
+
+		 StringUtil.removeEnd(""      , "abc")          // 
+
+		 StringUtil.removeEnd("abcdef", "c")            // abcdef
+
+		 StringUtil.removeEnd("abcdef", "C")            // abcdef
+
+		 StringUtil.removeEnd("abcdef", "C", false)     // abcdef
+
+		 StringUtil.removeEnd("ABcdef", "aB")           // ABcdef
+
+		 StringUtil.removeEnd("ABcdef", "aB", false)    // ABcdef
+
+		 StringUtil.removeEnd("ABcdeF", "Ef")           // ABcdeF
+
+		 StringUtil.removeEnd("ABcdeF", "Ef", false)    // ABcd
+
+		 StringUtil.removeEnd("abcdef", "ab")           // abcdef
+
+		 StringUtil.removeEnd("abcdef", "abcdef")       // 
+
+		 StringUtil.removeEnd("abcdef", "abcdefg")      // abcdef
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to search. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[remove 			the <code>String</code> object to search for and remove. May be <code>null</code>. 
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[the <code>String</code> object with the substring removed if found. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='removeFirstCharacter' fullname='org.as3utils:StringUtil/removeFirstCharacter' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes the first character of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.removeFirstCharacter(null)            // null
+
+		 StringUtil.removeFirstCharacter(""):             // 
+
+		 StringUtil.removeFirstCharacter("a"):            // 
+
+		 StringUtil.removeFirstCharacter("ab")            // b
+
+		 StringUtil.removeFirstCharacter("abc")           // bc
+
+		 StringUtil.removeFirstCharacter("abc\t\ndef")    // bc\t\ndef
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to remove the first character from. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the <code>String</code> object without first character. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='removeLastCharacter' fullname='org.as3utils:StringUtil/removeLastCharacter' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes the last character of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.removeLastCharacter(null)            // null
+
+		 StringUtil.removeLastCharacter(""):             // 
+
+		 StringUtil.removeLastCharacter("a"):            // 
+
+		 StringUtil.removeLastCharacter("ab")            // a
+
+		 StringUtil.removeLastCharacter("abc")           // ab
+
+		 StringUtil.removeLastCharacter("abc\t\ndef")    // abc\t\nde
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to remove last character from. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the <code>String</code> object without last character. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='removeStart' fullname='org.as3utils:StringUtil/removeStart' isStatic='true' isFinal='false' isOverride='false'  param_names='str;remove;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes a substring only if it is at the start of the source <code>String</code> object, otherwise returns the source <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.removeStart(null    , null)           // null
+
+		 StringUtil.removeStart(""      , null)           // 
+
+		 StringUtil.removeStart(null    , "abc")          // null
+
+		 StringUtil.removeStart(""      , "")             // 
+
+		 StringUtil.removeStart("abc"   , "")             // abc
+
+		 StringUtil.removeStart(""      , "abc")          // 
+
+		 StringUtil.removeStart("abcdef", "c")            // abcdef
+
+		 StringUtil.removeStart("abcdef", "C")            // abcdef
+
+		 StringUtil.removeStart("abcdef", "C", false)     // abcdef
+
+		 StringUtil.removeStart("ABcdef", "aB")           // ABcdef
+
+		 StringUtil.removeStart("ABcdef", "aB", false)    // cdef
+
+		 StringUtil.removeStart("ABcdeF", "Ef")           // ABcdeF
+
+		 StringUtil.removeStart("ABcdeF", "Ef", false)    // ABcdeF
+
+		 StringUtil.removeStart("abcdef", "ab")           // cdef
+
+		 StringUtil.removeStart("abcdef", "abcdef")       // 
+
+		 StringUtil.removeStart("abcdef", "abcdefg")      // abcdef
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to search. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[remove 			the <code>String</code> object to search for and remove. May be <code>null</code>. 
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[the <code>String</code> object with the substring removed if found. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='remove' fullname='org.as3utils:StringUtil/remove' isStatic='true' isFinal='false' isOverride='false'  param_names='str;remove;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes all occurrences of a substring from within the source <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.remove(null    , null)           // null
+
+		 StringUtil.remove(""      , null)           // 
+
+		 StringUtil.remove(null    , "abc")          // null
+
+		 StringUtil.remove(""      , "")             // 
+
+		 StringUtil.remove("abc"   , "")             // abc
+
+		 StringUtil.remove(""      , "abc")          // 
+
+		 StringUtil.remove("abcdef", "c")            // abdef
+
+		 StringUtil.remove("abcdef", "C")            // abcdef
+
+		 StringUtil.remove("abcdef", "C", false)     // abdef
+
+		 StringUtil.remove("ABcdef", "aB")           // ABcdef
+
+		 StringUtil.remove("ABcdef", "aB", false)    // cdef
+
+		 StringUtil.remove("ABcdeF", "Ef")           // ABcdeF
+
+		 StringUtil.remove("ABcdeF", "Ef", false)    // ABcd
+
+		 StringUtil.remove("abcdef", "ab")           // cdef
+
+		 StringUtil.remove("abcdef", "abcdef")       // 
+
+		 StringUtil.remove("abcdef", "abcdefg")      // abcdef
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to search. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[remove 			the <code>String</code> object to search for and remove. May be <code>null</code>. 
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[the <code>String</code> object with the substring removed if found. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='replaceExtended' fullname='org.as3utils:StringUtil/replaceExtended' isStatic='true' isFinal='false' isOverride='false'  param_names='str;find;replaceBy;stringCase' param_types='String;String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined;undefined' result_type='String'>
+<description><![CDATA[
+
+		 Search for all occurrences of the <code>String</code> <code>find</code> within the <code>String</code> <code>str</code> and replaces by the <code>String</code> <code>replaceBy</code>.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.replaceExtended(null        , null , "x")           // null
+
+		 StringUtil.replaceExtended(""          , null , "x")           // 
+
+		 StringUtil.replaceExtended(null        , "abc", "x")           // null
+
+		 StringUtil.replaceExtended(""          , ""   , "x")           // 
+
+		 StringUtil.replaceExtended("abc"       , ""   , "x")           // abc
+
+		 StringUtil.replaceExtended(""          , "abc", "x")           // 
+
+		 StringUtil.replaceExtended("abcdefabca", "a"  , "x")           // xbcdefxbcx
+
+		 StringUtil.replaceExtended("AbcdefabcA", "a"  , "x")           // AbcdefxbcA
+
+		 StringUtil.replaceExtended("AbcdefabcA", "a"  , "x", false)    // xbcdefxbcx
+
+		 StringUtil.replaceExtended("abcdef"    , "y"  , "x")           // abcdef
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 			the <code>String</code> object to search. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[find 			the <code>String</code> object to search for and replace. May be <code>null</code>. 
+
+		 ]]></param>
+<param><![CDATA[replaceBy 		the <code>String</code> object that will replace the <code>String</code> <code>find</code>.
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[the <code>String</code> <code>str</code> with the <code>String</code> <code>find</code> replaced by the <code>String</code> <code>replaceBy</code>. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='reverse' fullname='org.as3utils:StringUtil/reverse' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Reverses the chars of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.reverse(null)       // null
+
+		 StringUtil.reverse("")         // 
+
+		 StringUtil.reverse(" ")        //  
+
+		 StringUtil.reverse("a")        // a
+
+		 StringUtil.reverse("ab")       // ba
+
+		 StringUtil.reverse("abc")      // cba
+
+		 StringUtil.reverse(" abc")     // cba 
+
+		 StringUtil.reverse(" abc ")    //  cba 
+
+		 StringUtil.reverse("abc\td")   // d\tcba
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to reverse. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the <code>String</code> object with the chars reversed. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='rtrim' fullname='org.as3utils:StringUtil/rtrim' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes control characters(char &lt;= 32) from the start of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.rtrim(null)                   // null
+
+		 StringUtil.rtrim("")                     // 
+
+		 StringUtil.rtrim(" ")                    // 
+
+		 StringUtil.rtrim("abc")                  // abc
+
+		 StringUtil.rtrim(" abc")                 //  abc
+
+		 StringUtil.rtrim("   abc ")              //    abc
+
+		 StringUtil.rtrim("   abc  ")             //    abc
+
+		 StringUtil.rtrim(" \n\t  abc  ")         // \n\t  abc
+
+		 StringUtil.rtrim(" \n\t  abc  \n\t ")    // \n\t  abc
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str	the <code>String</code> object to be trimmed. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the trimmed <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='startsWith' fullname='org.as3utils:StringUtil/startsWith' isStatic='true' isFinal='false' isOverride='false'  param_names='str;prefix;stringCase' param_types='String;String;org.as3coreaddendum.system:StringCase' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[
+
+		 Check if the <code>String</code> object starts with a specified prefix.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.startsWith(null    , null)           // true
+
+		 StringUtil.startsWith(""      , null)           // false
+
+		 StringUtil.startsWith(null    , "abc")          // false
+
+		 StringUtil.startsWith("abcdef", "a")            // true
+
+		 StringUtil.startsWith("abcdef", "A")            // false
+
+		 StringUtil.startsWith("abcdef", "A", false)     // true
+
+		 StringUtil.startsWith("ABcdef", "aB")           // false
+
+		 StringUtil.startsWith("ABcdef", "aB", false)    // true
+
+		 StringUtil.startsWith("abcdef", "ab")           // true
+
+		 StringUtil.startsWith("abcdef", "abcdef")       // true
+
+		 StringUtil.startsWith("abcdef", "abcdefg")      // false
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str				the <code>String</code> object to check. May be <code>null</code>.
+
+		 ]]></param>
+<param><![CDATA[prefix 			the prefix to find. May be <code>null</code>. 
+
+		 ]]></param>
+<param><![CDATA[stringCase 		indicates whether case sensitivity is considered or not in the comparison.
+
+		 ]]></param>
+<return><![CDATA[<code>true</code> if the <code>String</code> object starts with the prefix or if both arguments are <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='trimToEmpty' fullname='org.as3utils:StringUtil/trimToEmpty' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes control characters(char &lt;= 32) from the start and end of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.trimToEmpty(null)                   // 
+
+		 StringUtil.trimToEmpty("")                     // 
+
+		 StringUtil.trimToEmpty(" ")                    // 
+
+		 StringUtil.trimToEmpty("  ")                   // 
+
+		 StringUtil.trimToEmpty("  \t  ")               // 
+
+		 StringUtil.trimToEmpty("abc")                  // abc
+
+		 StringUtil.trimToEmpty(" abc")                 // abc
+
+		 StringUtil.trimToEmpty("   abc ")              // abc
+
+		 StringUtil.trimToEmpty("   abc  ")             // abc
+
+		 StringUtil.trimToEmpty(" \n\t  abc  ")         // abc
+
+		 StringUtil.trimToEmpty(" \n\t  abc  \n\t ")    // abc
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str	the <code>String</code> object to be trimmed. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the trimmed <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is an empty <code>String</code> ("").
+
+		 ]]></return>
+</method>
+<method name='trimToNull' fullname='org.as3utils:StringUtil/trimToNull' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes control characters(char &lt;= 32) from the start and end of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.trimToNull(null)                   // null
+
+		 StringUtil.trimToNull("")                     // null
+
+		 StringUtil.trimToNull(" ")                    // null
+
+		 StringUtil.trimToNull("  ")                   // null
+
+		 StringUtil.trimToNull("  \t  ")               // null
+
+		 StringUtil.trimToNull("abc")                  // abc
+
+		 StringUtil.trimToNull(" abc")                 // abc
+
+		 StringUtil.trimToNull("   abc ")              // abc
+
+		 StringUtil.trimToNull("   abc  ")             // abc
+
+		 StringUtil.trimToNull(" \n\t  abc  ")         // abc
+
+		 StringUtil.trimToNull(" \n\t  abc  \n\t ")    // abc
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str	the <code>String</code> object to be trimmed. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the trimmed <code>String</code> object if it contains any characters that isn't control characters(char &lt;= 32), or <code>null</code> if it contains only those characters. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='trim' fullname='org.as3utils:StringUtil/trim' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Removes control characters(char &lt;= 32) from the start and end of the <code>String</code> object.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.trim(null)                   // null
+
+		 StringUtil.trim("")                     // 
+
+		 StringUtil.trim(" ")                    // 
+
+		 StringUtil.trimToEmpty("  \t  ")        // 
+
+		 StringUtil.trim("abc")                  // abc
+
+		 StringUtil.trim(" abc")                 // abc
+
+		 StringUtil.trim("   abc ")              // abc
+
+		 StringUtil.trim("   abc  ")             // abc
+
+		 StringUtil.trim(" \n\t  abc  ")         // abc
+
+		 StringUtil.trim(" \n\t  abc  \n\t ")    // abc
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str	the <code>String</code> object to be trimmed. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the trimmed <code>String</code> object. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<method name='uncapitalize' fullname='org.as3utils:StringUtil/uncapitalize' isStatic='true' isFinal='false' isOverride='false'  param_names='str' param_types='String' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+		 Uncapitalizes a <code>String</code> object, changing only the first letter to lowercase.
+
+		 
+
+		 ]]></description>
+<example><![CDATA[
+		 
+
+		 <listing version="3.0">
+
+		 import org.as3coreaddendum.utils.StringUtil;
+
+		 
+
+		 StringUtil.uncapitalize(null)      // null
+
+		 StringUtil.uncapitalize(" ")       // 
+
+		 StringUtil.uncapitalize("a")       // a
+
+		 StringUtil.uncapitalize("A")       // a
+
+		 StringUtil.uncapitalize("ab")      // ab
+
+		 StringUtil.uncapitalize("Ab")      // ab
+
+		 StringUtil.uncapitalize("aB")      // aB
+
+		 StringUtil.uncapitalize("AB")      // aB
+
+		 StringUtil.uncapitalize("abc")     // abc
+
+		 StringUtil.uncapitalize(" abc")    //  abc
+
+		 StringUtil.uncapitalize(" Abc")    //  Abc
+
+		 </listing>
+
+		 
+
+		 ]]></example>
+<param><![CDATA[str 	the <code>String</code> object to uncapitalize. May be <code>null</code>. 
+
+		 ]]></param>
+<return><![CDATA[the uncapitalized <code>String</code>. If the <code>str</code> argument is <code>null</code> then the return is <code>null</code>.
+
+		 ]]></return>
+</method>
+<field name='REGEXP_LTRIM' fullname='org.as3utils:StringUtil/private:REGEXP_LTRIM' type='RegExp' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='REGEXP_RTRIM' fullname='org.as3utils:StringUtil/private:REGEXP_RTRIM' type='RegExp' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<classRec name='URLUtil' fullname='org.as3utils:URLUtil' sourcefile='D:\Flavio\Programacao\Flash-Platform\Framework\as3utils\src\main\as3\org\as3utils\URLUtil.as' namespace='org.as3utils' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[
+
+	 A utility class to work with <code>URL</code> strings.
+
+	 
+
+	 ]]></description>
+<author><![CDATA[Flávio Silva
+
+	 ]]></author>
+</classRec>
+<method name='URLUtil' fullname='org.as3utils:URLUtil/URLUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+
+		 URLUtil is a static class and shouldn't be instantiated.
+
+		 
+
+		 ]]></description>
+<throws><![CDATA[IllegalOperationError 	URLUtil is a static class and shouldn't be instantiated.
+
+		 ]]></throws>
+</method>
+<method name='appendVar' fullname='org.as3utils:URLUtil/appendVar' isStatic='true' isFinal='false' isOverride='false'  param_names='url;varName;varValue' param_types='String;String;String' param_defaults='undefined;undefined;undefined' result_type='String'>
+</method>
+<method name='getURLRequest' fullname='org.as3utils:URLUtil/getURLRequest' isStatic='true' isFinal='false' isOverride='false'  param_names='url' param_types='String' param_defaults='undefined' result_type='flash.net:URLRequest'>
+</method>
+<method name='isHttps' fullname='org.as3utils:URLUtil/isHttps' isStatic='true' isFinal='false' isOverride='false'  param_names='url' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='isHttp' fullname='org.as3utils:URLUtil/isHttp' isStatic='true' isFinal='false' isOverride='false'  param_names='url' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='navigateToURL' fullname='org.as3utils:URLUtil/navigateToURL' isStatic='true' isFinal='false' isOverride='false'  param_names='url;window' param_types='String;String' param_defaults='undefined;null' result_type='void'>
+</method>
+<field name='HTTPS_PROTOCOL' fullname='org.as3utils:URLUtil/private:HTTPS_PROTOCOL' type='String' isStatic='true' isConst='true' defaultValue='https://' >
+</field>
+<field name='HTTP_PROTOCOL' fullname='org.as3utils:URLUtil/private:HTTP_PROTOCOL' type='String' isStatic='true' isConst='true' defaultValue='http://' >
+</field>
+</asdoc>
