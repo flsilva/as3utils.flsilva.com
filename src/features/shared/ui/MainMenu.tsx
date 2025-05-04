@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+
 import { textClassName } from "./typography/textClassName";
 import { A } from "./typography/Typography";
 
@@ -17,13 +17,13 @@ export const MainMenu = ({ onItemClick }: MainMenuProps) => {
     <nav className="w-full overflow-hidden mt-8 lg:mt-0">
       <ul className="flex flex-col items-center m-0 p-0 lg:flex-row lg:items-start lg:m-[-0.375rem_0_0_4rem]">
         <li className={menuItemClassName}>
-          <Link
+          <A
             href="/docs/asdoc"
             className={twMerge(textClassName, menuItemLinkClassName)}
             {...dynamicProps}
           >
             ASDOC
-          </Link>
+          </A>
         </li>
         <li className={menuItemClassName}>
           <A
