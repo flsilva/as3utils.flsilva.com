@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AS3Utils",
+  title: "AS3Utils: utility library for AS3 apps",
   description:
     "AS3Utils is an utility library with common implementations (e.g. StringUtil, ArrayUtil, RandomUtil) for Flash/Flex/AIR AS3 daily work.",
 };
